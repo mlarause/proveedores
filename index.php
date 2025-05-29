@@ -1,4 +1,4 @@
-<?//php include 'database.php'; ?>
+<//php include 'database.php'; ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -77,7 +77,7 @@
                                 <!-- Tipo de Proveedor -->
                                 <div class="col-md-12">
                                     <label for="tipo_proveedor" class="form-label">Tipo de Proveedor <span class="text-danger">*</span></label>
-                                    <select class="form-select" id="tipo_proveedor" name="tipo_proveedor" required onchange="mostrarSeccionDocumentacion()">
+                                    <select class="form-select" id="tipo_proveedor" name="tipo_proveedor" required>
                                         <option value="" selected disabled>Seleccione...</option>
                                         <option value="Proveedor Crítico">Proveedor Crítico</option>
                                         <option value="Proveedor No Crítico">Proveedor No Crítico</option>
@@ -103,12 +103,12 @@
                     <!-- Botones de navegación -->
                     <div class="d-flex justify-content-between mt-4">
                         <button type="button" class="btn btn-secondary disabled">Anterior</button>
-                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+                        <button type="button" class="btn btn-primary" onclick="validarSeccion1()">Siguiente</button>
                     </div>
                 </div>
                 
                 <!-- Sección 2: Documentación Proveedor Crítico -->
-                <div class="tab-pane fade" id="pills-seccion2" role="tabpanel" aria-labelledby="pills-seccion2-tab">
+                <<div class="tab-pane fade" id="pills-seccion2" role="tabpanel" aria-labelledby="pills-seccion2-tab">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h5 class="card-title mb-0">REQUISITOS Y FORMATOS (Documentación - Proveedor Crítico)</h5>
@@ -268,7 +268,7 @@
                     
                     <!-- Botones de navegación -->
                     <div class="d-flex justify-content-between mt-4">
-                        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
+                        <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
                         <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
                     </div>
                 </div>
@@ -389,8 +389,8 @@
                     </div>
                     
                     <!-- Botones de navegación -->
-                    <div class="d-flex justify-content-between mt-4">
-                        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
+                     <div class="d-flex justify-content-between mt-4">
+                        <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
                         <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
                     </div>
                 </div>
@@ -401,6 +401,7 @@
                         <div class="card-header bg-primary text-white">
                             <h5 class="card-title mb-0">Documentación - Proveedor Natural Especial</h5>
                         </div>
+
                         <div class="card-body">
                             <div class="alert alert-info">
                                 <i class="fas fa-info-circle"></i> Asegúrese de subir todos los documentos requeridos en los formatos aceptados (.PDF, .JPG, .PNG)
@@ -449,15 +450,213 @@
                                     <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
                                 </div>
                             </div>
+                          <div class="d-flex justify-content-between mt-4">
+                        <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
+                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+                    
+                    
+                      <!-- Sección 5: Información de Contacto y Empresa -->
+                <div class="tab-pane fade" id="pills-seccion5" role="tabpanel" aria-labelledby="pills-seccion5-tab">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">Información de Contacto y Empresa</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <!-- Dirección de Domicilio Principal -->
+                                <div class="col-md-12">
+                                    <label for="direccion_domicilio" class="form-label">10. Dirección de Domicilio Principal <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="direccion_domicilio" name="direccion_domicilio" required>
+                                </div>
+                                
+                                <!-- País -->
+                                <div class="col-md-6">
+                                    <label for="pais" class="form-label">11. País <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="pais" name="pais" value="Colombia" readonly>
+                                </div>
+                                
+                                <!-- Departamento -->
+                                <div class="col-md-6">
+                                    <label for="departamento" class="form-label">12. Departamento <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="departamento" name="departamento" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="Amazonas">Amazonas</option>
+                                        <option value="Antioquia">Antioquia</option>
+                                        <option value="Arauca">Arauca</option>
+                                        <option value="Atlántico">Atlántico</option>
+                                        <option value="Bolívar">Bolívar</option>
+                                        <option value="Boyacá">Boyacá</option>
+                                        <option value="Caldas">Caldas</option>
+                                        <option value="Caquetá">Caquetá</option>
+                                        <option value="Casanare">Casanare</option>
+                                        <option value="Cauca">Cauca</option>
+                                        <option value="Cesar">Cesar</option>
+                                        <option value="Chocó">Chocó</option>
+                                        <option value="Córdoba">Córdoba</option>
+                                        <option value="Cundinamarca">Cundinamarca</option>
+                                        <option value="Guainía">Guainía</option>
+                                        <option value="Guaviare">Guaviare</option>
+                                        <option value="Huila">Huila</option>
+                                        <option value="La Guajira">La Guajira</option>
+                                        <option value="Magdalena">Magdalena</option>
+                                        <option value="Meta">Meta</option>
+                                        <option value="Nariño">Nariño</option>
+                                        <option value="Norte de Santander">Norte de Santander</option>
+                                        <option value="Putumayo">Putumayo</option>
+                                        <option value="Quindío">Quindío</option>
+                                        <option value="Risaralda">Risaralda</option>
+                                        <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                                        <option value="Santander">Santander</option>
+                                        <option value="Sucre">Sucre</option>
+                                        <option value="Tolima">Tolima</option>
+                                        <option value="Valle del Cauca">Valle del Cauca</option>
+                                        <option value="Vaupés">Vaupés</option>
+                                        <option value="Vichada">Vichada</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Ciudad -->
+                                <div class="col-md-6">
+                                    <label for="ciudad" class="form-label">13. Ciudad <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+                                </div>
+                                
+                                <!-- Teléfono -->
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label">14. Teléfono <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email_contacto" class="form-label">15. E-mail <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email_contacto" name="email_contacto" required>
+                                </div>
+                                
+                                <!-- Código Postal -->
+                                <div class="col-md-6">
+                                    <label for="codigo_postal" class="form-label">16. Código Postal</label>
+                                    <input type="text" class="form-control" id="codigo_postal" name="codigo_postal">
+                                </div>
+                                
+                                <!-- Años de experiencia -->
+                                <div class="col-md-6">
+                                    <label for="anios_experiencia" class="form-label">17. Años de experiencia en el mercado <span class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="anios_experiencia" name="anios_experiencia" min="0" required>
+                                </div>
+                                
+                                <!-- Es Autoretenedor -->
+                                <div class="col-md-6">
+                                    <label for="autoretenedor" class="form-label">18. Es Autoretenedor <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="autoretenedor" name="autoretenedor" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Es Gran Contribuyente -->
+                                <div class="col-md-6">
+                                    <label for="gran_contribuyente" class="form-label">19. Es Gran Contribuyente <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="gran_contribuyente" name="gran_contribuyente" required onchange="toggleCamposContribuyente()">
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- No. Resolución - Gran contribuyente (condicional) -->
+                                <div class="col-md-6" id="grupo_resolucion" style="display: none;">
+                                    <label for="numero_resolucion" class="form-label">20. No. Resolución - Gran contribuyente <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="numero_resolucion" name="numero_resolucion">
+                                </div>
+                                
+                                <!-- Fecha de Resolución (condicional) -->
+                                <div class="col-md-6" id="grupo_fecha_resolucion" style="display: none;">
+                                    <label for="fecha_resolucion" class="form-label">21. Fecha de Resolución <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="fecha_resolucion" name="fecha_resolucion">
+                                </div>
+                                
+                                <!-- Tipo de empresa -->
+                                <div class="col-md-6">
+                                    <label for="tipo_empresa" class="form-label">22. Tipo de empresa <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="tipo_empresa" name="tipo_empresa" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="Privada">Privada</option>
+                                        <option value="Publica">Pública</option>
+                                        <option value="Mixta">Mixta</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Tipo de Sociedad -->
+                                <div class="col-md-6">
+                                    <label for="tipo_sociedad" class="form-label">23. Tipo de Sociedad <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="tipo_sociedad" name="tipo_sociedad" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="S.A.S.">S.A.S. – Sociedad por Acciones Simplificada</option>
+                                        <option value="S.A.">S.A. – Sociedad Anónima</option>
+                                        <option value="Ltda.">Ltda. – Sociedad de Responsabilidad Limitada</option>
+                                        <option value="S. en C.">S. en C. – Sociedad en Comandita</option>
+                                        <option value="S. en C.A.">S. en C.A. – Sociedad en Comandita por Acciones</option>
+                                        <option value="E.U.">E.U. – Empresa Unipersonal</option>
+                                        <option value="Cooperativas">Cooperativas y Asociaciones Mutuales</option>
+                                        <option value="Persona Juridica">Persona Juridica</option>
+                                        <option value="Persona Natural">Persona Natural</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Fecha de constitución -->
+                                <div class="col-md-6">
+                                    <label for="fecha_constitucion" class="form-label">24. Fecha de la constitución de la persona jurídica <span class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="fecha_constitucion" name="fecha_constitucion" required>
+                                </div>
+                                
+                                <!-- Productos Ofrecidos -->
+                                <div class="col-md-6">
+                                    <label for="productos_ofrecidos" class="form-label">25. Productos Ofrecidos (Objeto contractual) <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="productos_ofrecidos" name="productos_ofrecidos" required onchange="toggleOtrosProductos()">
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="Materiales de embalaje">Materiales de embalaje</option>
+                                        <option value="Servicio de transporte">Servicio de transporte</option>
+                                        <option value="Servicios tecnológicos">Servicios tecnológicos</option>
+                                        <option value="Servicios aduaneros">Servicios aduaneros</option>
+                                        <option value="Servicios de almacenamiento">Servicios de almacenamiento</option>
+                                        <option value="Otras">Otras</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Campo "Otras" productos (condicional) -->
+                                <div class="col-md-12" id="grupo_otros_productos" style="display: none;">
+                                    <label for="otros_productos" class="form-label">Especifique otros productos <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="otros_productos" name="otros_productos">
+                                </div>
+                                
+                                <!-- Zona franca -->
+                                <div class="col-md-6">
+                                    <label for="zona_franca" class="form-label">26. Se encuentra en una zona franca <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="zona_franca" name="zona_franca" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
                     <!-- Botones de navegación -->
                     <div class="d-flex justify-content-between mt-4">
                         <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
-                        <button type="submit" class="btn btn-success">Enviar Registro</button>
+                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
                     </div>
                 </div>
+                
+                <!-- Las demás secciones (6-15) irían aquí -->
             </div>
         </form>
     </div>
@@ -467,27 +666,74 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
-        // Función para mostrar la sección de documentación correspondiente
-        function mostrarSeccionDocumentacion() {
-            const tipoProveedor = document.getElementById('tipo_proveedor').value;
-            
-            // Ocultar todas las pestañas de documentación primero
+        // Función para ir a la sección 1 desde cualquier sección
+        function irASeccion1() {
+            // Ocultar todas las pestañas de documentación
             document.querySelectorAll('#pills-tab li.nav-item:not(:first-child)').forEach(item => {
                 item.style.display = 'none';
             });
             
-            // Mostrar la pestaña correspondiente
-            if (tipoProveedor === 'Proveedor Crítico') {
-                document.getElementById('pills-seccion2-tab').style.display = 'block';
-            } else if (tipoProveedor === 'Proveedor No Crítico') {
-                document.getElementById('pills-seccion3-tab').style.display = 'block';
-            } else if (tipoProveedor === 'Proveedor Natural Especial') {
-                document.getElementById('pills-seccion4-tab').style.display = 'block';
+            // Actualizar barra de progreso
+            document.querySelector('.progress-bar').style.width = '25%';
+            document.querySelector('.progress-bar').textContent = '1/4';
+            document.querySelector('.progress-bar').setAttribute('aria-valuenow', 25);
+            
+            // Cambiar a la pestaña 1
+            const seccion1Tab = document.querySelector('#pills-seccion1-tab');
+            const tabInstance = new bootstrap.Tab(seccion1Tab);
+            tabInstance.show();
+        }
+
+        // Función para validar la sección 1 y avanzar a la sección correspondiente
+        function validarSeccion1() {
+            const inputsRequeridos = document.querySelectorAll('#pills-seccion1 [required]');
+            let valido = true;
+            
+            inputsRequeridos.forEach(input => {
+                if (!input.value) {
+                    input.classList.add('is-invalid');
+                    valido = false;
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+            
+            if (valido) {
+                const tipoProveedor = document.getElementById('tipo_proveedor').value;
+                let siguienteSeccionNumero = 2; // Por defecto para Proveedor Crítico
+                
+                if (tipoProveedor === 'Proveedor No Crítico') {
+                    siguienteSeccionNumero = 3;
+                } else if (tipoProveedor === 'Proveedor Natural Especial') {
+                    siguienteSeccionNumero = 4;
+                }
+                
+                // Ocultar todas las pestañas de documentación
+                document.querySelectorAll('#pills-tab li.nav-item:not(:first-child)').forEach(item => {
+                    item.style.display = 'none';
+                });
+                
+                // Mostrar solo la pestaña correspondiente
+                document.getElementById(`pills-seccion${siguienteSeccionNumero}-tab`).style.display = 'block';
+                
+                // Actualizar barra de progreso
+                document.querySelector('.progress-bar').style.width = '50%';
+                document.querySelector('.progress-bar').textContent = '2/4';
+                document.querySelector('.progress-bar').setAttribute('aria-valuenow', 50);
+                
+                // Cambiar a la pestaña correspondiente
+                const siguienteTab = document.querySelector(`#pills-seccion${siguienteSeccionNumero}-tab`);
+                const tabInstance = new bootstrap.Tab(siguienteTab);
+                tabInstance.show();
+            } else {
+                alert('Por favor complete todos los campos requeridos.');
             }
         }
         
-        // Función para validar y avanzar a la siguiente sección
+        // Función para avanzar a la siguiente sección (genérica)
         function validarYAvanzar() {
             const seccionActual = document.querySelector('.tab-pane.active');
             const inputsRequeridos = seccionActual.querySelectorAll('[required]');
@@ -508,7 +754,40 @@
                 alert('Por favor complete todos los campos requeridos.');
             }
         }
+        // Función para mostrar/ocultar campos de Gran Contribuyente
+        function toggleCamposContribuyente() {
+            const esGranContribuyente = document.getElementById('gran_contribuyente').value === 'SI';
+            document.getElementById('grupo_resolucion').style.display = esGranContribuyente ? 'block' : 'none';
+            document.getElementById('grupo_fecha_resolucion').style.display = esGranContribuyente ? 'block' : 'none';
+            
+            // Hacer requeridos o no los campos según la selección
+            document.getElementById('numero_resolucion').required = esGranContribuyente;
+            document.getElementById('fecha_resolucion').required = esGranContribuyente;
+        }
         
+        // Función para mostrar/ocultar campo "Otros productos"
+        function toggleOtrosProductos() {
+            const productosSeleccionados = document.getElementById('productos_ofrecidos').value === 'Otras';
+            document.getElementById('grupo_otros_productos').style.display = productosSeleccionados ? 'block' : 'none';
+            document.getElementById('otros_productos').required = productosSeleccionados;
+        }
+        
+        // Función para validar la sección 5
+        function validarSeccion5() {
+            const inputsRequeridos = document.querySelectorAll('#pills-seccion5 [required]');
+            let valido = true;
+            
+            inputsRequeridos.forEach(input => {
+                if (!input.value) {
+                    input.classList.add('is-invalid');
+                    valido = false;
+                } else {
+                    input.classList.remove('is-invalid');
+                }
+            });
+            
+            return valido;
+        }
         // Función para avanzar a la siguiente sección
         function siguienteSeccion() {
             const seccionActual = document.querySelector('.tab-pane.active');
@@ -530,47 +809,7 @@
             }
         }
 
-        // Función para retroceder a la sección anterior
-        function anteriorSeccion() {
-            const seccionActual = document.querySelector('.tab-pane.active');
-            const seccionActualId = seccionActual.id;
-            const seccionNumero = parseInt(seccionActualId.replace('pills-seccion', ''));
-            const anteriorSeccionNumero = seccionNumero - 1;
-            
-            if (anteriorSeccionNumero > 0) {
-                // Actualizar barra de progreso
-                const porcentaje = (anteriorSeccionNumero / 4) * 100;
-                document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
-                document.querySelector('.progress-bar').textContent = `${anteriorSeccionNumero}/4`;
-                document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
-                
-                // Cambiar a la pestaña anterior
-                const anteriorTab = document.querySelector(`#pills-seccion${anteriorSeccionNumero}-tab`);
-                const tabInstance = new bootstrap.Tab(anteriorTab);
-                tabInstance.show();
-            }
-        }
-
-        // Validación de archivos
-        document.addEventListener('change', function(e) {
-            if (e.target && e.target.matches('input[type="file"]')) {
-                const allowedExtensions = /(\.pdf|\.jpg|\.png)$/i;
-                if (e.target.value && !allowedExtensions.exec(e.target.value)) {
-                    alert('Por favor suba archivos solo con extensión .pdf, .jpg o .png');
-                    e.target.value = '';
-                    return false;
-                }
-                
-                // Mostrar nombre del archivo seleccionado
-                if (e.target.files && e.target.files[0]) {
-                    const fileName = e.target.files[0].name;
-                    const fileInfo = e.target.closest('.col-md-12')?.querySelector('.file-info');
-                    if (fileInfo) {
-                        fileInfo.textContent = `Archivo seleccionado: ${fileName}`;
-                    }
-                }
-            }
-        });
+        
 
         // Validación en tiempo real para el número de identificación
         document.getElementById('numero_identificacion').addEventListener('input', function(e) {

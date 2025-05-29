@@ -66,6 +66,28 @@ try {
         fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         ultima_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         estado VARCHAR(20) DEFAULT 'Pendiente'
+
+          -- Campos de la sección 5
+        direccion_domicilio VARCHAR(255) NOT NULL,
+        pais VARCHAR(50) NOT NULL DEFAULT 'Colombia',
+        departamento VARCHAR(50) NOT NULL,
+        ciudad VARCHAR(50) NOT NULL,
+        telefono VARCHAR(20) NOT NULL,
+        email_contacto VARCHAR(100) NOT NULL,
+        codigo_postal VARCHAR(20),
+        anios_experiencia INT NOT NULL,
+        autoretenedor ENUM('SI','NO') NOT NULL,
+        gran_contribuyente ENUM('SI','NO') NOT NULL,
+        numero_resolucion VARCHAR(50),
+        fecha_resolucion DATE,
+        tipo_empresa ENUM('Privada','Publica','Mixta') NOT NULL,
+        tipo_sociedad VARCHAR(50) NOT NULL,
+        fecha_constitucion DATE NOT NULL,
+        productos_ofrecidos VARCHAR(100) NOT NULL,
+        otros_productos VARCHAR(255),
+        zona_franca ENUM('SI','NO') NOT NULL,
+
+
     )";
     
     $conn->exec($sql);
