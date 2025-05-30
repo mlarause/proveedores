@@ -866,6 +866,7 @@
         <div class="card-header bg-primary text-white">
             <h5 class="card-title mb-0">CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)</h5>
         </div>
+        </div>
                         <div class="card-body">
                             <div class="alert alert-info mb-4">
                                 <p><strong>DEFINICIÓN:</strong> PERSONA EXPUESTA POLITICAMENTE (PEP): son servidores públicos de cualquier sistema de nomenclatura y clasificación de empleos de la administración pública nacional y territorial, cuando en los cargos que ocupen, tengan en las funciones del área a la que pertenecen o en las de ficha del empleo que ocupan, bajo su responsabilidad directa o por delegación, la dirección general, de formulación de políticas institucionales y de adopción de planes, programas y proyectos, y el manejo directo de bienes, dineros o valores del estado.</p>
@@ -989,10 +990,11 @@
                     </div>
                     
                     <!-- Botones de navegación -->
-                    <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
-                        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
-                    </div>
-                </div>
+                     <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
+    </div>
+</div>
 
 
 
@@ -1038,8 +1040,8 @@
     </div>
     
     <!-- Botones de navegación -->
-    <div class="d-flex justify-content-between mt-4">
-        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+     <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
         <button type="button" class="btn btn-primary" onclick="validarSeccion9()">Siguiente</button>
     </div>
 </div>
@@ -1470,7 +1472,7 @@ function validarSeccion9() {
         alert('Por favor responda todas las preguntas requeridas.');
     }
 }// Función para corregir títulos
-function corregirTitulos() {
+/*function corregirTitulos() {
     // Corregir título sección 8
     const titulo8 = document.querySelector('#pills-seccion8 .card-title');
     if (titulo8) titulo8.textContent = "CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)";
@@ -1478,12 +1480,57 @@ function corregirTitulos() {
     // Corregir título sección 9
     const titulo9 = document.querySelector('#pills-seccion9 .card-title');
     if (titulo9) titulo9.textContent = "CONOCIMIENTO DE BENEFICIARIOS FINALES";
+}*/
+
+// Función para validar sección 8 (igual que validarSeccion7)
+function validarSeccion8() {
+    // Validar campos requeridos
+    const valido = validarCamposRequeridos('pills-seccion8');
+    
+    if (valido) {
+        // Navegación idéntica a sesión 7
+        document.getElementById('pills-seccion9-tab').style.display = 'block';
+        actualizarProgreso(9);
+        const tab = new bootstrap.Tab(document.getElementById('pills-seccion9-tab'));
+        tab.show();
+    }
 }
 
-// Ejecutar al cargar y al cambiar de sección
-document.addEventListener('DOMContentLoaded', corregirTitulos);
-document.querySelector('#pills-tab').addEventListener('click', corregirTitulos);
+// Función para validar sección 9 (igual que validarSeccion7)
+function validarSeccion9() {
+    // Validar campos requeridos
+    const valido = validarCamposRequeridos('pills-seccion9');
+    
+    if (valido) {
+        // Navegación idéntica a sesión 7
+        document.getElementById('pills-seccion10-tab').style.display = 'block';
+        actualizarProgreso(10);
+        const tab = new bootstrap.Tab(document.getElementById('pills-seccion10-tab'));
+        tab.show();
+    }
+}
 
+// Función auxiliar (usada en sesión 7)
+function validarCamposRequeridos(seccionId) {
+    let valido = true;
+    document.querySelectorAll(`#${seccionId} [required]`).forEach(input => {
+        if (!input.value) {
+            input.classList.add('is-invalid');
+            valido = false;
+        } else {
+            input.classList.remove('is-invalid');
+        }
+    });
+    return valido;
+}
+
+// Función auxiliar (usada en sesión 7)
+function actualizarProgreso(seccion) {
+    const porcentaje = (seccion / 15) * 100;
+    const barra = document.querySelector('.progress-bar');
+    barra.style.width = `${porcentaje}%`;
+    barra.textContent = `${seccion}/15`;
+}
 
 
                 
