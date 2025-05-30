@@ -995,7 +995,7 @@
                 </div>
 
 
-                
+
        <!-- Sección 9: Conocimiento de Beneficiarios Finales -->
 <div class="tab-pane fade" id="pills-seccion9" role="tabpanel" aria-labelledby="pills-seccion9-tab">
     <div class="card">
@@ -1469,7 +1469,22 @@ function validarSeccion9() {
     } else {
         alert('Por favor responda todas las preguntas requeridas.');
     }
+}// Función para corregir títulos
+function corregirTitulos() {
+    // Corregir título sección 8
+    const titulo8 = document.querySelector('#pills-seccion8 .card-title');
+    if (titulo8) titulo8.textContent = "CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)";
+    
+    // Corregir título sección 9
+    const titulo9 = document.querySelector('#pills-seccion9 .card-title');
+    if (titulo9) titulo9.textContent = "CONOCIMIENTO DE BENEFICIARIOS FINALES";
 }
+
+// Ejecutar al cargar y al cambiar de sección
+document.addEventListener('DOMContentLoaded', corregirTitulos);
+document.querySelector('#pills-tab').addEventListener('click', corregirTitulos);
+
+
 
                 
 
