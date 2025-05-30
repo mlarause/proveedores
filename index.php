@@ -19,7 +19,7 @@
         <form id="formProveedor" action="procesar.php" method="post" enctype="multipart/form-data">
             <!-- Barra de progreso -->
             <div class="progress mb-4">
-                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">1/4</div>
+                <div class="progress-bar" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">1/15</div>
             </div>
             
             <!-- Indicador de secciones -->
@@ -35,6 +35,9 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-seccion4-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion4" type="button" role="tab" aria-controls="pills-seccion4" aria-selected="false" style="display:none;">Documentación Natural</button>
+                </li>
+                 <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-seccion5-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion5" type="button" role="tab" aria-controls="pills-seccion5" aria-selected="false">Información de Contacto</button>
                 </li>
             </ul>
             
@@ -108,7 +111,7 @@
                 </div>
                 
                 <!-- Sección 2: Documentación Proveedor Crítico -->
-                <<div class="tab-pane fade" id="pills-seccion2" role="tabpanel" aria-labelledby="pills-seccion2-tab">
+                <div class="tab-pane fade" id="pills-seccion2" role="tabpanel" aria-labelledby="pills-seccion2-tab">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h5 class="card-title mb-0">REQUISITOS Y FORMATOS (Documentación - Proveedor Crítico)</h5>
@@ -269,7 +272,7 @@
                     <!-- Botones de navegación -->
                     <div class="d-flex justify-content-between mt-4">
                         <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
-                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+                       <button type="button" onclick="irASeccion5()" class="btn btn-primary">Avanzar</button>
                     </div>
                 </div>
                 
@@ -391,7 +394,7 @@
                     <!-- Botones de navegación -->
                      <div class="d-flex justify-content-between mt-4">
                         <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
-                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+                        <button type="button" onclick="irASeccion5()" class="btn btn-primary">Avanzar</button>
                     </div>
                 </div>
                 
@@ -452,7 +455,7 @@
                             </div>
                           <div class="d-flex justify-content-between mt-4">
                         <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
-                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+                       <button type="button" onclick="irASeccion5()" class="btn btn-primary">Avanzar</button>
                     </div>
                 </div>
             </div>
@@ -651,12 +654,151 @@
                     
                     <!-- Botones de navegación -->
                     <div class="d-flex justify-content-between mt-4">
-                        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
+                       <button type="button" class="btn btn-secondary" onclick="regresarASeccionAnterior()">Anterior</button>
                         <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
                     </div>
                 </div>
+            
                 
-                <!-- Las demás secciones (6-15) irían aquí -->
+                <!-- Sección 6: Información del Representante Legal Principal -->
+<div class="tab-pane fade" id="pills-seccion6" role="tabpanel" aria-labelledby="pills-seccion6-tab">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">INFORMACIÓN DEL REPRESENTANTE LEGAL PRINCIPAL</h5>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-circle"></i> Nota: Esta pregunta es obligatoria, por lo tanto se debe responder al menos una fila completa, de lo contrario el sistema no dejará continuar.
+            </div>
+            
+            <div class="row g-3">
+                <!-- Nombres y Apellidos -->
+                <div class="col-md-12">
+                    <label for="representante_nombres" class="form-label">27. Nombres y Apellidos <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="representante_nombres" name="representante_nombres" required>
+                </div>
+                
+                <!-- Tipo de Identificación -->
+                <div class="col-md-6">
+                    <label for="representante_tipo_id" class="form-label">28. Tipo de Identificación <span class="text-danger">*</span></label>
+                    <select class="form-select" id="representante_tipo_id" name="representante_tipo_id" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="Cedula">Cédula</option>
+                        <option value="Cedula de Extranjería">Cédula de Extranjería</option>
+                        <option value="Diplomático">Diplomático</option>
+                        <option value="Documento de identidad Extranjeros">Documento de identidad Extranjeros</option>
+                        <option value="Identidad Fiscal Extranjero">Identidad Fiscal Extranjero</option>
+                        <option value="Nit">Nit</option>
+                        <option value="Nit de Personas Naturales">Nit de Personas Naturales</option>
+                        <option value="Nuip">Nuip</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="Pasaporte ONU">Pasaporte ONU</option>
+                    </select>
+                </div>
+                
+                <!-- Número de Identificación -->
+                <div class="col-md-6">
+                    <label for="representante_numero_id" class="form-label">29. Número de Identificación <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="representante_numero_id" name="representante_numero_id" required pattern="[0-9]+" title="El valor debe ser un número">
+                </div>
+                
+                <!-- Tipo de representante legal -->
+                <div class="col-md-6">
+                    <label for="representante_tipo" class="form-label">30. Tipo de representante legal <span class="text-danger">*</span></label>
+                    <select class="form-select" id="representante_tipo" name="representante_tipo" required onchange="toggleOtroRepresentante()">
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="Representante Legal Principal">Representante Legal Principal</option>
+                        <option value="Representante Suplente">Representante Suplente</option>
+                        <option value="Apoderado Legal">Apoderado Legal</option>
+                        <option value="Gerente General">Gerente General</option>
+                        <option value="Otras">Otras</option>
+                    </select>
+                </div>
+                
+                <!-- Campo "Otras" tipo de representante (condicional) -->
+                <div class="col-md-6" id="grupo_otro_representante" style="display: none;">
+                    <label for="otro_tipo_representante" class="form-label">Especifique otro tipo de representante <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="otro_tipo_representante" name="otro_tipo_representante">
+                </div>
+                
+                <!-- Maneja Recursos públicos -->
+                <div class="col-md-6">
+                    <label for="maneja_recursos_publicos" class="form-label">31. ¿Maneja Recursos públicos? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="maneja_recursos_publicos" name="maneja_recursos_publicos" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
+                
+                <!-- Goza de reconocimiento publico -->
+                <div class="col-md-6">
+                    <label for="reconocimiento_publico" class="form-label">32. ¿Goza de reconocimiento público? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="reconocimiento_publico" name="reconocimiento_publico" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
+                
+                <!-- Ostenta algún grado de poder publico -->
+                <div class="col-md-6">
+                    <label for="poder_publico" class="form-label">33. ¿Ostenta algún grado de poder público? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="poder_publico" name="poder_publico" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
+                
+                <!-- Es servidor publico -->
+                <div class="col-md-6">
+                    <label for="servidor_publico" class="form-label">34. ¿Es servidor público? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="servidor_publico" name="servidor_publico" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
+                
+                <!-- Vinculo con persona políticamente expuesta -->
+                <div class="col-md-6">
+                    <label for="vinculo_ppe" class="form-label">35. ¿Existe algún vínculo entre usted y una persona políticamente expuesta? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="vinculo_ppe" name="vinculo_ppe" required>
+                        <option value="" selected disabled>Seleccione...</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                </div>
+                
+                <!-- Nacionalidad -->
+                <div class="col-md-6">
+                    <label for="representante_nacionalidad" class="form-label">36. Nacionalidad <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="representante_nacionalidad" name="representante_nacionalidad" required>
+                </div>
+                
+                <!-- País domicilio principal -->
+                <div class="col-md-6">
+                    <label for="representante_pais_domicilio" class="form-label">37. País domicilio principal <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="representante_pais_domicilio" name="representante_pais_domicilio" required>
+                </div>
+                
+                <!-- Email -->
+                <div class="col-md-6">
+                    <label for="representante_email" class="form-label">38. Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="representante_email" name="representante_email" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botones de navegación -->
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+    </div>
+</div>
+                <!-- Las demás secciones (7-15) irían aquí -->
             </div>
         </form>
     </div>
@@ -669,6 +811,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
+
+        let seccionAnterior = 1;
+        let totalSecciones = 15;
         // Función para ir a la sección 1 desde cualquier sección
         function irASeccion1() {
             // Ocultar todas las pestañas de documentación
@@ -689,49 +834,73 @@
 
         // Función para validar la sección 1 y avanzar a la sección correspondiente
         function validarSeccion1() {
-            const inputsRequeridos = document.querySelectorAll('#pills-seccion1 [required]');
-            let valido = true;
-            
-            inputsRequeridos.forEach(input => {
-                if (!input.value) {
-                    input.classList.add('is-invalid');
-                    valido = false;
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-            });
-            
-            if (valido) {
-                const tipoProveedor = document.getElementById('tipo_proveedor').value;
-                let siguienteSeccionNumero = 2; // Por defecto para Proveedor Crítico
-                
-                if (tipoProveedor === 'Proveedor No Crítico') {
-                    siguienteSeccionNumero = 3;
-                } else if (tipoProveedor === 'Proveedor Natural Especial') {
-                    siguienteSeccionNumero = 4;
-                }
-                
-                // Ocultar todas las pestañas de documentación
-                document.querySelectorAll('#pills-tab li.nav-item:not(:first-child)').forEach(item => {
-                    item.style.display = 'none';
-                });
-                
-                // Mostrar solo la pestaña correspondiente
-                document.getElementById(`pills-seccion${siguienteSeccionNumero}-tab`).style.display = 'block';
-                
-                // Actualizar barra de progreso
-                document.querySelector('.progress-bar').style.width = '50%';
-                document.querySelector('.progress-bar').textContent = '2/4';
-                document.querySelector('.progress-bar').setAttribute('aria-valuenow', 50);
-                
-                // Cambiar a la pestaña correspondiente
-                const siguienteTab = document.querySelector(`#pills-seccion${siguienteSeccionNumero}-tab`);
-                const tabInstance = new bootstrap.Tab(siguienteTab);
-                tabInstance.show();
-            } else {
-                alert('Por favor complete todos los campos requeridos.');
-            }
+    const inputsRequeridos = document.querySelectorAll('#pills-seccion1 [required]');
+    let valido = true;
+    
+    inputsRequeridos.forEach(input => {
+        if (!input.value) {
+            input.classList.add('is-invalid');
+            valido = false;
+        } else {
+            input.classList.remove('is-invalid');
         }
+    });
+    
+    if (valido) {
+        const tipoProveedor = document.getElementById('tipo_proveedor').value;
+        let siguienteSeccionNumero = 2; // Por defecto para Proveedor Crítico
+        
+        if (tipoProveedor === 'Proveedor No Crítico') {
+            siguienteSeccionNumero = 3;
+        } else if (tipoProveedor === 'Proveedor Natural Especial') {
+            siguienteSeccionNumero = 4;
+        }
+        
+        // Guardar la sección anterior
+        seccionAnterior = siguienteSeccionNumero;
+        
+        // Ocultar todas las pestañas de documentación
+        document.querySelectorAll('#pills-tab li.nav-item:not(:first-child)').forEach(item => {
+            item.style.display = 'none';
+        });
+        
+        // Mostrar solo la pestaña correspondiente
+        document.getElementById(`pills-seccion${siguienteSeccionNumero}-tab`).style.display = 'block';
+        
+        // Actualizar barra de progreso
+        const porcentaje = (siguienteSeccionNumero / totalSecciones) * 100;
+        document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
+        document.querySelector('.progress-bar').textContent = `${siguienteSeccionNumero}/${totalSecciones}`;
+        document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
+        
+        // Cambiar a la pestaña correspondiente
+        const siguienteTab = document.querySelector(`#pills-seccion${siguienteSeccionNumero}-tab`);
+        const tabInstance = new bootstrap.Tab(siguienteTab);
+        tabInstance.show();
+    } else {
+        alert('Por favor complete todos los campos requeridos.');
+    }
+}
+        // Función para ir directamente a la sección 5
+        function irASeccion5() {
+    // Guardar la sección actual como anterior
+    const seccionActual = document.querySelector('.tab-pane.active').id.replace('pills-seccion', '');
+    seccionAnterior = parseInt(seccionActual);
+    
+    // Mostrar la pestaña 5 si estaba oculta
+    document.getElementById('pills-seccion5-tab').style.display = 'block';
+    
+    // Actualizar barra de progreso
+    const porcentaje = (5 / totalSecciones) * 100;
+    document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
+    document.querySelector('.progress-bar').textContent = `5/${totalSecciones}`;
+    document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
+    
+    // Cambiar a la pestaña 5
+    const seccion5Tab = document.querySelector('#pills-seccion5-tab');
+    const tabInstance = new bootstrap.Tab(seccion5Tab);
+    tabInstance.show();
+}
         
         // Función para avanzar a la siguiente sección (genérica)
         function validarYAvanzar() {
@@ -790,24 +959,50 @@
         }
         // Función para avanzar a la siguiente sección
         function siguienteSeccion() {
-            const seccionActual = document.querySelector('.tab-pane.active');
-            const seccionActualId = seccionActual.id;
-            const seccionNumero = parseInt(seccionActualId.replace('pills-seccion', ''));
-            const siguienteSeccionNumero = seccionNumero + 1;
-            
-            // Actualizar barra de progreso
-            const porcentaje = (siguienteSeccionNumero / 4) * 100;
-            document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
-            document.querySelector('.progress-bar').textContent = `${siguienteSeccionNumero}/4`;
-            document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
-            
-            // Cambiar a la siguiente pestaña
-            const siguienteTab = document.querySelector(`#pills-seccion${siguienteSeccionNumero}-tab`);
-            if (siguienteTab) {
-                const tabInstance = new bootstrap.Tab(siguienteTab);
-                tabInstance.show();
-            }
-        }
+    const seccionActual = document.querySelector('.tab-pane.active');
+    const seccionActualId = seccionActual.id;
+    const seccionNumero = parseInt(seccionActualId.replace('pills-seccion', ''));
+    const siguienteSeccionNumero = seccionNumero + 1;
+    
+    // Guardar la sección anterior
+    seccionAnterior = seccionNumero;
+    
+    // Mostrar la siguiente pestaña si estaba oculta
+    if (document.getElementById(`pills-seccion${siguienteSeccionNumero}-tab`)) {
+        document.getElementById(`pills-seccion${siguienteSeccionNumero}-tab`).style.display = 'block';
+    }
+    
+    // Actualizar barra de progreso
+    const porcentaje = (siguienteSeccionNumero / totalSecciones) * 100;
+    document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
+    document.querySelector('.progress-bar').textContent = `${siguienteSeccionNumero}/${totalSecciones}`;
+    document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
+    
+    // Cambiar a la siguiente pestaña
+    const siguienteTab = document.querySelector(`#pills-seccion${siguienteSeccionNumero}-tab`);
+    if (siguienteTab) {
+        const tabInstance = new bootstrap.Tab(siguienteTab);
+        tabInstance.show();
+    }
+}
+
+        function regresarASeccionAnterior() {
+    // Mostrar la pestaña correspondiente
+    document.getElementById(`pills-seccion${seccionAnterior}-tab`).style.display = 'block';
+    
+    // Actualizar barra de progreso
+    const porcentaje = (seccionAnterior / totalSecciones) * 100;
+    document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
+    document.querySelector('.progress-bar').textContent = `${seccionAnterior}/${totalSecciones}`;
+    document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
+    
+    // Cambiar a la pestaña anterior
+    const anteriorTab = document.querySelector(`#pills-seccion${seccionAnterior}-tab`);
+    const tabInstance = new bootstrap.Tab(anteriorTab);
+    tabInstance.show();
+}
+
+        
 
         
 

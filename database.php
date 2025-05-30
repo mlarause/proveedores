@@ -1,98 +1,162 @@
 <?php
-$host = 'localhost';
-$dbname = 'proveedores';
-$username = 'root';
-$password = '';
+// database.php
 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    
-    // Crear tabla con número de identificación como clave primaria
-    $sql = "CREATE TABLE IF NOT EXISTS proveedores (
-        numero_identificacion VARCHAR(50) PRIMARY KEY,
-        razon_social VARCHAR(255) NOT NULL,
-        tipo_identificacion VARCHAR(50) NOT NULL,
-        tipo_proveedor VARCHAR(50) NOT NULL,
-        numero_celular VARCHAR(20) NOT NULL,
-        correo_electronico VARCHAR(100) NOT NULL,
-        
-        -- Campos para proveedores críticos
-        rut_vigente_path VARCHAR(255),
-        rut_vigente_estado VARCHAR(20),
-        certificado_existencia_path VARCHAR(255),
-        certificado_existencia_estado VARCHAR(20),
-        estados_financieros_path VARCHAR(255),
-        estados_financieros_estado VARCHAR(20),
-        declaracion_renta_path VARCHAR(255),
-        declaracion_renta_estado VARCHAR(20),
-        certificacion_bancaria_path VARCHAR(255),
-        certificacion_bancaria_estado VARCHAR(20),
-        referencia_comercial_path VARCHAR(255),
-        referencia_comercial_estado VARCHAR(20),
-        certificados_seguridad_path VARCHAR(255),
-        certificados_seguridad_estado VARCHAR(20),
-        resolucion_habilitacion_path VARCHAR(255),
-        resolucion_habilitacion_estado VARCHAR(20),
-        plan_contingencia_path VARCHAR(255),
-        plan_contingencia_estado VARCHAR(20),
-        fachada_nomenclatura_path VARCHAR(255),
-        fachada_nomenclatura_estado VARCHAR(20),
-        
-        -- Campos para proveedores no críticos
-        rut_vigente_nc_path VARCHAR(255),
-        rut_vigente_nc_estado VARCHAR(20),
-        certificado_existencia_nc_path VARCHAR(255),
-        certificado_existencia_nc_estado VARCHAR(20),
-        certificacion_bancaria_nc_path VARCHAR(255),
-        certificacion_bancaria_nc_estado VARCHAR(20),
-        referencia_comercial_nc_path VARCHAR(255),
-        referencia_comercial_nc_estado VARCHAR(20),
-        certificados_seguridad_nc_path VARCHAR(255),
-        certificados_seguridad_nc_estado VARCHAR(20),
-        resolucion_habilitacion_nc_path VARCHAR(255),
-        resolucion_habilitacion_nc_estado VARCHAR(20),
-        plan_contingencia_nc_path VARCHAR(255),
-        plan_contingencia_nc_estado VARCHAR(20),
-        
-        -- Campos para proveedores naturales
-        cedula_ciudadania_path VARCHAR(255),
-        cedula_ciudadania_estado VARCHAR(20),
-        rut_natural_path VARCHAR(255),
-        rut_natural_estado VARCHAR(20),
-        certificacion_bancaria_natural_path VARCHAR(255),
-        certificacion_bancaria_natural_estado VARCHAR(20),
-        
-        fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        ultima_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-        estado VARCHAR(20) DEFAULT 'Pendiente'
+$servername = "localhost";
+$username = "tu_usuario";
+$password = "tu_contraseña";
+$dbname = "proveedores";
 
-          -- Campos de la sección 5
-        direccion_domicilio VARCHAR(255) NOT NULL,
-        pais VARCHAR(50) NOT NULL DEFAULT 'Colombia',
-        departamento VARCHAR(50) NOT NULL,
-        ciudad VARCHAR(50) NOT NULL,
-        telefono VARCHAR(20) NOT NULL,
-        email_contacto VARCHAR(100) NOT NULL,
-        codigo_postal VARCHAR(20),
-        anios_experiencia INT NOT NULL,
-        autoretenedor ENUM('SI','NO') NOT NULL,
-        gran_contribuyente ENUM('SI','NO') NOT NULL,
-        numero_resolucion VARCHAR(50),
-        fecha_resolucion DATE,
-        tipo_empresa ENUM('Privada','Publica','Mixta') NOT NULL,
-        tipo_sociedad VARCHAR(50) NOT NULL,
-        fecha_constitucion DATE NOT NULL,
-        productos_ofrecidos VARCHAR(100) NOT NULL,
-        otros_productos VARCHAR(255),
-        zona_franca ENUM('SI','NO') NOT NULL,
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-
-    )";
-    
-    $conn->exec($sql);
-    
-} catch(PDOException $e) {
-    die("Error de conexión: " . $e->getMessage());
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// Tabla para información básica (Sección 1)
+$sql = "CREATE TABLE IF NOT EXISTS proveedores (
+    numero_identificacion VARCHAR(50) PRIMARY KEY,
+    razon_social VARCHAR(255) NOT NULL,
+    tipo_identificacion VARCHAR(50) NOT NULL,
+    tipo_proveedor ENUM('Proveedor Crítico', 'Proveedor No Crítico', 'Proveedor Natural Especial') NOT NULL,
+    numero_celular VARCHAR(20) NOT NULL,
+    correo_electronico VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla proveedores: " . $conn->error;
+}
+
+// Tabla para documentación crítica (Sección 2)
+$sql = "CREATE TABLE IF NOT EXISTS documentacion_critica (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id INT NOT NULL,
+    rut_vigente VARCHAR(255),
+    rut_vigente_estado ENUM('Completo', 'No Completado'),
+    certificado_existencia VARCHAR(255),
+    certificado_existencia_estado ENUM('Completo', 'No Completado'),
+    estados_financieros VARCHAR(255),
+    estados_financieros_estado ENUM('Completo', 'No Completado'),
+    declaracion_renta VARCHAR(255),
+    declaracion_renta_estado ENUM('Completo', 'No Completado'),
+    certificacion_bancaria VARCHAR(255),
+    certificacion_bancaria_estado ENUM('Completo', 'No Completado'),
+    referencia_comercial VARCHAR(255),
+    referencia_comercial_estado ENUM('Completo', 'No Completado'),
+    certificados_seguridad VARCHAR(255),
+    certificados_seguridad_estado ENUM('Completo', 'No Completado', 'No Aplica'),
+    resolucion_habilitacion VARCHAR(255),
+    resolucion_habilitacion_estado ENUM('Completo', 'No Completado', 'No Aplica'),
+    plan_contingencia VARCHAR(255),
+    plan_contingencia_estado ENUM('Completo', 'No Completado'),
+    fachada_nomenclatura VARCHAR(255),
+    fachada_nomenclatura_estado ENUM('Completo', 'No Completado'),
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla documentacion_critica: " . $conn->error;
+}
+
+// Tabla para documentación no crítica (Sección 3)
+$sql = "CREATE TABLE IF NOT EXISTS documentacion_no_critica (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id INT NOT NULL,
+    rut_vigente_nc VARCHAR(255),
+    rut_vigente_nc_estado ENUM('Completo', 'No Completado'),
+    certificado_existencia_nc VARCHAR(255),
+    certificado_existencia_nc_estado ENUM('Completo', 'No Completado'),
+    certificacion_bancaria_nc VARCHAR(255),
+    certificacion_bancaria_nc_estado ENUM('Completo', 'No Completado'),
+    referencia_comercial_nc VARCHAR(255),
+    referencia_comercial_nc_estado ENUM('Completo', 'No Completado'),
+    certificados_seguridad_nc VARCHAR(255),
+    certificados_seguridad_nc_estado ENUM('Completo', 'No Completado', 'No Aplica'),
+    resolucion_habilitacion_nc VARCHAR(255),
+    resolucion_habilitacion_nc_estado ENUM('Completo', 'No Completado', 'No Aplica'),
+    plan_contingencia_nc VARCHAR(255),
+    plan_contingencia_nc_estado ENUM('Completo', 'No Completado'),
+   FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla documentacion_no_critica: " . $conn->error;
+}
+
+// Tabla para documentación natural (Sección 4)
+$sql = "CREATE TABLE IF NOT EXISTS documentacion_natural (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id INT NOT NULL,
+    cedula_ciudadania VARCHAR(255),
+    cedula_ciudadania_estado ENUM('Completo', 'No Completado'),
+    rut_natural VARCHAR(255),
+    rut_natural_estado ENUM('Completo', 'No Completado'),
+    certificacion_bancaria_natural VARCHAR(255),
+    certificacion_bancaria_natural_estado ENUM('Completo', 'No Completado'),
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla documentacion_natural: " . $conn->error;
+}
+
+// Tabla para información de contacto y empresa (Sección 5)
+$sql = "CREATE TABLE IF NOT EXISTS informacion_contacto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id INT NOT NULL,
+    direccion_domicilio VARCHAR(255) NOT NULL,
+    pais VARCHAR(100) NOT NULL DEFAULT 'Colombia',
+    departamento VARCHAR(100) NOT NULL,
+    ciudad VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    email_contacto VARCHAR(255) NOT NULL,
+    codigo_postal VARCHAR(20),
+    anios_experiencia INT NOT NULL,
+    autoretenedor ENUM('SI', 'NO') NOT NULL,
+    gran_contribuyente ENUM('SI', 'NO') NOT NULL,
+    numero_resolucion VARCHAR(100),
+    fecha_resolucion DATE,
+    tipo_empresa ENUM('Privada', 'Publica', 'Mixta') NOT NULL,
+    tipo_sociedad VARCHAR(100) NOT NULL,
+    fecha_constitucion DATE NOT NULL,
+    productos_ofrecidos VARCHAR(255) NOT NULL,
+    otros_productos VARCHAR(255),
+    zona_franca ENUM('SI', 'NO') NOT NULL,
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla informacion_contacto: " . $conn->error;
+}
+
+// Tabla para representante legal (Sección 6)
+$sql = "CREATE TABLE IF NOT EXISTS representantes_legales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id INT NOT NULL,
+    nombres_apellidos VARCHAR(255) NOT NULL,
+    tipo_identificacion VARCHAR(50) NOT NULL,
+    numero_identificacion VARCHAR(50) NOT NULL,
+    tipo_representante VARCHAR(50) NOT NULL,
+    otro_tipo_representante VARCHAR(255),
+    maneja_recursos_publicos ENUM('SI', 'NO') NOT NULL,
+    reconocimiento_publico ENUM('SI', 'NO') NOT NULL,
+    poder_publico ENUM('SI', 'NO') NOT NULL,
+    servidor_publico ENUM('SI', 'NO') NOT NULL,
+    vinculo_ppe ENUM('SI', 'NO') NOT NULL,
+    nacionalidad VARCHAR(100) NOT NULL,
+    pais_domicilio VARCHAR(100) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+   FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla representantes_legales: " . $conn->error;
+}
+
+// ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)
+
+echo "Tablas creadas o verificadas correctamente";
 ?>
