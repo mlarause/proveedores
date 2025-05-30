@@ -864,8 +864,7 @@
                 <div class="tab-pane fade" id="pills-seccion8" role="tabpanel" aria-labelledby="pills-seccion8-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h5 class="card-title mb-0">CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)</h5>
-        </div>
+            <h5 class="card-title mb-0" id="titulo-seccion-8">CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)</h5>
         </div>
                         <div class="card-body">
                             <div class="alert alert-info mb-4">
@@ -990,11 +989,10 @@
                     </div>
                     
                     <!-- Botones de navegación -->
-                     <div class="d-flex justify-content-between mt-4">
-        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
-        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
-    </div>
-</div>
+                    <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+                        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
+                    </div>
+                </div>
 
 
 
@@ -1002,7 +1000,7 @@
 <div class="tab-pane fade" id="pills-seccion9" role="tabpanel" aria-labelledby="pills-seccion9-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h5 class="card-title mb-0">CONOCIMIENTO DE BENEFICIARIOS FINALES</h5>
+            <h5 class="card-title mb-0" id="titulo-seccion-9">CONOCIMIENTO DE BENEFICIARIOS FINALES</h5>
         </div>
         <div class="card-body">
             <div class="alert alert-info mb-4">
@@ -1040,8 +1038,8 @@
     </div>
     
     <!-- Botones de navegación -->
-     <div class="d-flex justify-content-between mt-4">
-        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
         <button type="button" class="btn btn-primary" onclick="validarSeccion9()">Siguiente</button>
     </div>
 </div>
@@ -1482,55 +1480,41 @@ function validarSeccion9() {
     if (titulo9) titulo9.textContent = "CONOCIMIENTO DE BENEFICIARIOS FINALES";
 }*/
 
-// Función para validar sección 8 (igual que validarSeccion7)
-function validarSeccion8() {
-    // Validar campos requeridos
-    const valido = validarCamposRequeridos('pills-seccion8');
+// Solución definitiva para títulos (solo secciones 8 y 9)
+function corregirTitulosSeguro() {
+    // Solo se ejecutará en las secciones 8 y 9
+    if (window.location.href.includes('section=8')) {
+        const titulo8 = document.getElementById('titulo-seccion-8');
+        if (titulo8) titulo8.textContent = "CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)";
+    }
     
-    if (valido) {
-        // Navegación idéntica a sesión 7
-        document.getElementById('pills-seccion9-tab').style.display = 'block';
-        actualizarProgreso(9);
-        const tab = new bootstrap.Tab(document.getElementById('pills-seccion9-tab'));
-        tab.show();
+    if (window.location.href.includes('section=9')) {
+        const titulo9 = document.getElementById('titulo-seccion-9');
+        if (titulo9) titulo9.textContent = "CONOCIMIENTO DE BENEFICIARIOS FINALES";
     }
 }
 
-// Función para validar sección 9 (igual que validarSeccion7)
-function validarSeccion9() {
-    // Validar campos requeridos
-    const valido = validarCamposRequeridos('pills-seccion9');
-    
-    if (valido) {
-        // Navegación idéntica a sesión 7
-        document.getElementById('pills-seccion10-tab').style.display = 'block';
-        actualizarProgreso(10);
-        const tab = new bootstrap.Tab(document.getElementById('pills-seccion10-tab'));
-        tab.show();
-    }
-}
+// Ejecutar cuando:
+// 1. La página carga
+document.addEventListener('DOMContentLoaded', corregirTitulosSeguro);
 
-// Función auxiliar (usada en sesión 7)
-function validarCamposRequeridos(seccionId) {
-    let valido = true;
-    document.querySelectorAll(`#${seccionId} [required]`).forEach(input => {
-        if (!input.value) {
-            input.classList.add('is-invalid');
-            valido = false;
-        } else {
-            input.classList.remove('is-invalid');
-        }
-    });
-    return valido;
-}
+// 2. Después de cada navegación (sin afectar otros eventos)
+let oldPushState = history.pushState;
+history.pushState = function() {
+    oldPushState.apply(this, arguments);
+    setTimeout(corregirTitulosSeguro, 100);
+};
 
-// Función auxiliar (usada en sesión 7)
-function actualizarProgreso(seccion) {
-    const porcentaje = (seccion / 15) * 100;
-    const barra = document.querySelector('.progress-bar');
-    barra.style.width = `${porcentaje}%`;
-    barra.textContent = `${seccion}/15`;
-}
+let oldReplaceState = history.replaceState;
+history.replaceState = function() {
+    oldReplaceState.apply(this, arguments);
+    setTimeout(corregirTitulosSeguro, 100);
+};
+
+// Ejecutar al cargar y al cambiar de sección
+document.addEventListener('DOMContentLoaded', corregirTitulos);
+document.querySelector('#pills-tab').addEventListener('click', corregirTitulos);
+
 
 
                 
