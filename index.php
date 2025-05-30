@@ -39,6 +39,11 @@
                  <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-seccion5-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion5" type="button" role="tab" aria-controls="pills-seccion5" aria-selected="false">Información de Contacto</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-seccion6-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion6" type="button" role="tab" aria-controls="pills-seccion6" aria-selected="false" style="display:none;">Representante Legal</button>
+                </li>
+
+
             </ul>
             
             <!-- Contenido de las secciones -->
@@ -1000,6 +1005,22 @@
     const anteriorTab = document.querySelector(`#pills-seccion${seccionAnterior}-tab`);
     const tabInstance = new bootstrap.Tab(anteriorTab);
     tabInstance.show();
+}
+
+// Función para mostrar/ocultar campo "Otro tipo de representante"
+function toggleOtroRepresentante() {
+    const tipoRepresentante = document.getElementById('representante_tipo').value;
+    const grupoOtro = document.getElementById('grupo_otro_representante');
+    const campoOtro = document.getElementById('otro_tipo_representante');
+    
+    if (tipoRepresentante === 'Otras') {
+        grupoOtro.style.display = 'block';
+        campoOtro.required = true;
+    } else {
+        grupoOtro.style.display = 'none';
+        campoOtro.required = false;
+        campoOtro.value = '';
+    }
 }
 
         
