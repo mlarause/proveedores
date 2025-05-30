@@ -42,6 +42,15 @@
                 <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-seccion6-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion6" type="button" role="tab" aria-controls="pills-seccion6" aria-selected="false" style="display:none;">Representante Legal</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-seccion7-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion7" type="button" role="tab" aria-controls="pills-seccion7" aria-selected="false" style="display:none;">Personas Contacto</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                 <button class="nav-link" id="pills-seccion8-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion8" type="button" role="tab" aria-controls="pills-seccion8" aria-selected="false" style="display:none;">Información PEP</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-seccion9-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion9" type="button" role="tab" aria-controls="pills-seccion9" aria-selected="false" style="display:none;">Beneficiarios Finales</button>
+                </li>
 
 
             </ul>
@@ -666,132 +675,363 @@
             
                 
                 <!-- Sección 6: Información del Representante Legal Principal -->
-<div class="tab-pane fade" id="pills-seccion6" role="tabpanel" aria-labelledby="pills-seccion6-tab">
+                <div class="tab-pane fade" id="pills-seccion6" role="tabpanel" aria-labelledby="pills-seccion6-tab">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">INFORMACIÓN DEL REPRESENTANTE LEGAL PRINCIPAL</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-circle"></i> Nota: Esta pregunta es obligatoria, por lo tanto se debe responder al menos una fila completa, de lo contrario el sistema no dejará continuar.
+                            </div>
+                            
+                            <div class="row g-3">
+                                <!-- Nombres y Apellidos -->
+                                <div class="col-md-12">
+                                    <label for="representante_nombres" class="form-label">27. Nombres y Apellidos <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="representante_nombres" name="representante_nombres" required>
+                                </div>
+                                
+                                <!-- Tipo de Identificación -->
+                                <div class="col-md-6">
+                                    <label for="representante_tipo_id" class="form-label">28. Tipo de Identificación <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="representante_tipo_id" name="representante_tipo_id" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="Cedula">Cédula</option>
+                                        <option value="Cedula de Extranjería">Cédula de Extranjería</option>
+                                        <option value="Diplomático">Diplomático</option>
+                                        <option value="Documento de identidad Extranjeros">Documento de identidad Extranjeros</option>
+                                        <option value="Identidad Fiscal Extranjero">Identidad Fiscal Extranjero</option>
+                                        <option value="Nit">Nit</option>
+                                        <option value="Nit de Personas Naturales">Nit de Personas Naturales</option>
+                                        <option value="Nuip">Nuip</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                        <option value="Pasaporte ONU">Pasaporte ONU</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Número de Identificación -->
+                                <div class="col-md-6">
+                                    <label for="representante_numero_id" class="form-label">29. Número de Identificación <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="representante_numero_id" name="representante_numero_id" required pattern="[0-9]+" title="El valor debe ser un número">
+                                </div>
+                                
+                                <!-- Tipo de representante legal -->
+                                <div class="col-md-6">
+                                    <label for="representante_tipo" class="form-label">30. Tipo de representante legal <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="representante_tipo" name="representante_tipo" required onchange="toggleOtroRepresentante()">
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="Representante Legal Principal">Representante Legal Principal</option>
+                                        <option value="Representante Suplente">Representante Suplente</option>
+                                        <option value="Apoderado Legal">Apoderado Legal</option>
+                                        <option value="Gerente General">Gerente General</option>
+                                        <option value="Otras">Otras</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Campo "Otras" tipo de representante (condicional) -->
+                                <div class="col-md-6" id="grupo_otro_representante" style="display: none;">
+                                    <label for="otro_tipo_representante" class="form-label">Especifique otro tipo de representante <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="otro_tipo_representante" name="otro_tipo_representante">
+                                </div>
+                                
+                                <!-- Maneja Recursos públicos -->
+                                <div class="col-md-6">
+                                    <label for="maneja_recursos_publicos" class="form-label">31. ¿Maneja Recursos públicos? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="maneja_recursos_publicos" name="maneja_recursos_publicos" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Goza de reconocimiento publico -->
+                                <div class="col-md-6">
+                                    <label for="reconocimiento_publico" class="form-label">32. ¿Goza de reconocimiento público? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="reconocimiento_publico" name="reconocimiento_publico" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Ostenta algún grado de poder publico -->
+                                <div class="col-md-6">
+                                    <label for="poder_publico" class="form-label">33. ¿Ostenta algún grado de poder público? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="poder_publico" name="poder_publico" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Es servidor publico -->
+                                <div class="col-md-6">
+                                    <label for="servidor_publico" class="form-label">34. ¿Es servidor público? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="servidor_publico" name="servidor_publico" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Vinculo con persona políticamente expuesta -->
+                                <div class="col-md-6">
+                                    <label for="vinculo_ppe" class="form-label">35. ¿Existe algún vínculo entre usted y una persona políticamente expuesta? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="vinculo_ppe" name="vinculo_ppe" required>
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Nacionalidad -->
+                                <div class="col-md-6">
+                                    <label for="representante_nacionalidad" class="form-label">36. Nacionalidad <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="representante_nacionalidad" name="representante_nacionalidad" required>
+                                </div>
+                                
+                                <!-- País domicilio principal -->
+                                <div class="col-md-6">
+                                    <label for="representante_pais_domicilio" class="form-label">37. País domicilio principal <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="representante_pais_domicilio" name="representante_pais_domicilio" required>
+                                </div>
+                                
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="representante_email" class="form-label">38. Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="representante_email" name="representante_email" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones de navegación -->
+                    <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+                        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- Sección 7: Personas de Contacto -->
+                <div class="tab-pane fade" id="pills-seccion7" role="tabpanel" aria-labelledby="pills-seccion7-tab">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">PERSONAS DE CONTACTO</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-circle"></i> Nota: Esta pregunta es obligatoria, por lo tanto se debe responder al menos una fila completa, de lo contrario el sistema no dejará continuar.
+                            </div>
+                            
+                            <div id="contactos-container">
+                                <!-- Contenedor dinámico para múltiples contactos -->
+                                <div class="contacto-form row g-3 mb-4 border-bottom pb-3">
+                                    <div class="col-md-12">
+                                        <label class="form-label">39. Nombres y Apellidos <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="contacto_nombres[]" required>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label">40. Cargo <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="contacto_cargo[]" required>
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label class="form-label">41. Teléfono/Celular <span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" name="contacto_telefono[]" required>
+                                    </div>
+                                    
+                                    <div class="col-md-12">
+                                        <label class="form-label">42. E-mail <span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" name="contacto_email[]" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="button" class="btn btn-secondary mt-3" onclick="agregarContacto()">
+                                <i class="fas fa-plus"></i> Agregar otra persona de contacto
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones de navegación -->
+                    <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+                        <button type="button" class="btn btn-primary" onclick="validarSeccion7()">Siguiente</button>
+                    </div>
+                </div>
+
+                <!-- Sección 8: Conocimiento Mejorado de PEP -->
+                <div class="tab-pane fade" id="pills-seccion8" role="tabpanel" aria-labelledby="pills-seccion8-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h5 class="card-title mb-0">INFORMACIÓN DEL REPRESENTANTE LEGAL PRINCIPAL</h5>
+            <h5 class="card-title mb-0">CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)</h5>
+        </div>
+                        <div class="card-body">
+                            <div class="alert alert-info mb-4">
+                                <p><strong>DEFINICIÓN:</strong> PERSONA EXPUESTA POLITICAMENTE (PEP): son servidores públicos de cualquier sistema de nomenclatura y clasificación de empleos de la administración pública nacional y territorial, cuando en los cargos que ocupen, tengan en las funciones del área a la que pertenecen o en las de ficha del empleo que ocupan, bajo su responsabilidad directa o por delegación, la dirección general, de formulación de políticas institucionales y de adopción de planes, programas y proyectos, y el manejo directo de bienes, dineros o valores del estado.</p>
+                                <p class="mb-0">Estos pueden ser a través de ordenación de gasto, contratación pública, gerencia de proyectos de inversión, pagos, liquidaciones, administración de bienes muebles e inmuebles. Incluye también a las PEP Extranjeras y las PEP de organizaciones Internacionales. Estos terceros ostentaran esa calidad (activo) durante el ejercicio de su cargo y por dos (2) años más a su dejación. Ver Decreto 1081 de 2015 (Modificado por Decreto 1674 de 2016) y Decreto 830 del 2021</p>
+                            </div>
+                            
+                            <div class="alert alert-warning">
+                                <i class="fas fa-exclamation-circle"></i> Nota: Esta pregunta es obligatoria, por lo tanto se debe responder al menos una fila completa, de lo contrario el sistema no dejará continuar.
+                            </div>
+                            
+                            <div class="row g-3">
+                                <!-- Pregunta 43 -->
+                                <div class="col-md-12">
+                                    <label for="pep_recursos_publicos" class="form-label">43. ¿Usted o alguno de los Representantes Legales, miembros de la Junta Directiva, Revisor Fiscal, Accionista/Socio; manejan o han manejado recursos públicos en los últimos 2 años? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="pep_recursos_publicos" name="pep_recursos_publicos" required onchange="toggleCamposPEP()">
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Pregunta 44 -->
+                                <div class="col-md-12">
+                                    <label for="pep_cargo_publico" class="form-label">44. ¿Usted o alguno de los Representantes Legales, miembros de la Junta Directiva, Revisor Fiscal, Accionista/Socio; tiene o ha desempeñado un cargo público en los últimos dos años? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="pep_cargo_publico" name="pep_cargo_publico" required onchange="toggleCamposPEP()">
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Pregunta 45 -->
+                                <div class="col-md-12">
+                                    <label for="pep_relacion" class="form-label">45. ¿Usted o alguno de los Representantes Legales, miembros de la Junta Directiva, Revisor Fiscal, Accionista/Socio; es familiar, asesor o cercano a una persona que cumpla con las características descritas en la definición de PEP y en las preguntas 1 y 2? <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="pep_relacion" name="pep_relacion" required onchange="toggleCamposPEP()">
+                                        <option value="" selected disabled>Seleccione...</option>
+                                        <option value="SI">SI</option>
+                                        <option value="NO">NO</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- Campos condicionales (se muestran si alguna respuesta es SI) -->
+                                <div id="campos_pep_detalle" style="display: none;">
+                                    <h5 class="mt-4 mb-3">Información de la PEP</h5>
+                                    
+                                    <!-- Pregunta 46 -->
+                                    <div class="col-md-12">
+                                        <label for="pep_nombres" class="form-label">46. Nombres y apellidos de la PEP <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="pep_nombres" name="pep_nombres">
+                                    </div>
+                                    
+                                    <!-- Pregunta 47 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_tipo_identificacion" class="form-label">47. Tipo de identificación <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="pep_tipo_identificacion" name="pep_tipo_identificacion" onchange="toggleOtroTipoPEP()">
+                                            <option value="" selected disabled>Seleccione...</option>
+                                            <option value="Cedula">Cédula</option>
+                                            <option value="Cedula de Extranjería">Cédula de Extranjería</option>
+                                            <option value="Diplomático">Diplomático</option>
+                                            <option value="Documento de identidad de extranjero">Documento de identidad de extranjero</option>
+                                            <option value="Identidad Fiscal de Extranjero">Identidad Fiscal de Extranjero</option>
+                                            <option value="Nit">Nit</option>
+                                            <option value="Nit de Personas Naturales">Nit de Personas Naturales</option>
+                                            <option value="Pasaporte">Pasaporte</option>
+                                            <option value="Otras">Otras</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Campo para otro tipo de identificación PEP -->
+                                    <div class="col-md-6" id="grupo_otro_tipo_pep" style="display: none;">
+                                        <label for="pep_otro_tipo_identificacion" class="form-label">Especifique otro tipo <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="pep_otro_tipo_identificacion" name="pep_otro_tipo_identificacion">
+                                    </div>
+                                    
+                                    <!-- Pregunta 48 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_numero_identificacion" class="form-label">48. Número de identificación <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="pep_numero_identificacion" name="pep_numero_identificacion">
+                                    </div>
+                                    
+                                    <!-- Pregunta 49 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_pais_domicilio" class="form-label">49. País domicilio <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="pep_pais_domicilio" name="pep_pais_domicilio">
+                                    </div>
+                                    
+                                    <!-- Pregunta 50 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_cargo" class="form-label">50. Cargo <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="pep_cargo" name="pep_cargo">
+                                    </div>
+                                    
+                                    <!-- Pregunta 51 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_entidad_publica" class="form-label">51. Nombre de entidad pública <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="pep_entidad_publica" name="pep_entidad_publica">
+                                    </div>
+                                    
+                                    <!-- Pregunta 52 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_activo" class="form-label">52. Activo <span class="text-danger">*</span></label>
+                                        <select class="form-select" id="pep_activo" name="pep_activo">
+                                            <option value="" selected disabled>Seleccione...</option>
+                                            <option value="SI">SI</option>
+                                            <option value="NO">NO</option>
+                                            <option value="N/A">N/A</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <!-- Pregunta 53 -->
+                                    <div class="col-md-6">
+                                        <label for="pep_fecha_desvinculacion" class="form-label">53. Fecha desvinculación <span class="text-danger">*</span></label>
+                                        <input type="date" class="form-control" id="pep_fecha_desvinculacion" name="pep_fecha_desvinculacion">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones de navegación -->
+                    <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+                        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
+                    </div>
+                </div>
+
+
+                
+       <!-- Sección 9: Conocimiento de Beneficiarios Finales -->
+<div class="tab-pane fade" id="pills-seccion9" role="tabpanel" aria-labelledby="pills-seccion9-tab">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">CONOCIMIENTO DE BENEFICIARIOS FINALES</h5>
         </div>
         <div class="card-body">
+            <div class="alert alert-info mb-4">
+                <p><strong>DEFINICIÓN:</strong> BENEFICIARIO FINAL: Es la(s) persona(s) natural(es) que finalmente posee(n) o controla(n) a un cliente o a la persona natural en cuyo nombre se realiza una transacción. Incluye también a la(s) persona(s) que ejerzan el control efectivo y/o final, directa o indirectamente, sobre una persona jurídica.</p>
+            </div>
+            
             <div class="alert alert-warning">
                 <i class="fas fa-exclamation-circle"></i> Nota: Esta pregunta es obligatoria, por lo tanto se debe responder al menos una fila completa, de lo contrario el sistema no dejará continuar.
             </div>
             
             <div class="row g-3">
-                <!-- Nombres y Apellidos -->
+                <!-- Pregunta 54 -->
                 <div class="col-md-12">
-                    <label for="representante_nombres" class="form-label">27. Nombres y Apellidos <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="representante_nombres" name="representante_nombres" required>
-                </div>
-                
-                <!-- Tipo de Identificación -->
-                <div class="col-md-6">
-                    <label for="representante_tipo_id" class="form-label">28. Tipo de Identificación <span class="text-danger">*</span></label>
-                    <select class="form-select" id="representante_tipo_id" name="representante_tipo_id" required>
-                        <option value="" selected disabled>Seleccione...</option>
-                        <option value="Cedula">Cédula</option>
-                        <option value="Cedula de Extranjería">Cédula de Extranjería</option>
-                        <option value="Diplomático">Diplomático</option>
-                        <option value="Documento de identidad Extranjeros">Documento de identidad Extranjeros</option>
-                        <option value="Identidad Fiscal Extranjero">Identidad Fiscal Extranjero</option>
-                        <option value="Nit">Nit</option>
-                        <option value="Nit de Personas Naturales">Nit de Personas Naturales</option>
-                        <option value="Nuip">Nuip</option>
-                        <option value="Pasaporte">Pasaporte</option>
-                        <option value="Pasaporte ONU">Pasaporte ONU</option>
-                    </select>
-                </div>
-                
-                <!-- Número de Identificación -->
-                <div class="col-md-6">
-                    <label for="representante_numero_id" class="form-label">29. Número de Identificación <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="representante_numero_id" name="representante_numero_id" required pattern="[0-9]+" title="El valor debe ser un número">
-                </div>
-                
-                <!-- Tipo de representante legal -->
-                <div class="col-md-6">
-                    <label for="representante_tipo" class="form-label">30. Tipo de representante legal <span class="text-danger">*</span></label>
-                    <select class="form-select" id="representante_tipo" name="representante_tipo" required onchange="toggleOtroRepresentante()">
-                        <option value="" selected disabled>Seleccione...</option>
-                        <option value="Representante Legal Principal">Representante Legal Principal</option>
-                        <option value="Representante Suplente">Representante Suplente</option>
-                        <option value="Apoderado Legal">Apoderado Legal</option>
-                        <option value="Gerente General">Gerente General</option>
-                        <option value="Otras">Otras</option>
-                    </select>
-                </div>
-                
-                <!-- Campo "Otras" tipo de representante (condicional) -->
-                <div class="col-md-6" id="grupo_otro_representante" style="display: none;">
-                    <label for="otro_tipo_representante" class="form-label">Especifique otro tipo de representante <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="otro_tipo_representante" name="otro_tipo_representante">
-                </div>
-                
-                <!-- Maneja Recursos públicos -->
-                <div class="col-md-6">
-                    <label for="maneja_recursos_publicos" class="form-label">31. ¿Maneja Recursos públicos? <span class="text-danger">*</span></label>
-                    <select class="form-select" id="maneja_recursos_publicos" name="maneja_recursos_publicos" required>
+                    <label for="sistema_conocimiento_terceros" class="form-label">54. ¿Cuenta con un sistema/metodología para el conocimiento de sus terceros/contrapartes/asociados de negocio y entre ellos a sus socios y/o accionistas? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="sistema_conocimiento_terceros" name="sistema_conocimiento_terceros" required>
                         <option value="" selected disabled>Seleccione...</option>
                         <option value="SI">SI</option>
                         <option value="NO">NO</option>
+                        <option value="N/A">N/A</option>
                     </select>
                 </div>
                 
-                <!-- Goza de reconocimiento publico -->
-                <div class="col-md-6">
-                    <label for="reconocimiento_publico" class="form-label">32. ¿Goza de reconocimiento público? <span class="text-danger">*</span></label>
-                    <select class="form-select" id="reconocimiento_publico" name="reconocimiento_publico" required>
+                <!-- Pregunta 55 -->
+                <div class="col-md-12">
+                    <label for="politicas_identificacion" class="form-label">55. ¿Cuenta con políticas establecidas para la identificación de beneficiarios finales? <span class="text-danger">*</span></label>
+                    <select class="form-select" id="politicas_identificacion" name="politicas_identificacion" required>
                         <option value="" selected disabled>Seleccione...</option>
                         <option value="SI">SI</option>
                         <option value="NO">NO</option>
+                        <option value="N/A">N/A</option>
                     </select>
-                </div>
-                
-                <!-- Ostenta algún grado de poder publico -->
-                <div class="col-md-6">
-                    <label for="poder_publico" class="form-label">33. ¿Ostenta algún grado de poder público? <span class="text-danger">*</span></label>
-                    <select class="form-select" id="poder_publico" name="poder_publico" required>
-                        <option value="" selected disabled>Seleccione...</option>
-                        <option value="SI">SI</option>
-                        <option value="NO">NO</option>
-                    </select>
-                </div>
-                
-                <!-- Es servidor publico -->
-                <div class="col-md-6">
-                    <label for="servidor_publico" class="form-label">34. ¿Es servidor público? <span class="text-danger">*</span></label>
-                    <select class="form-select" id="servidor_publico" name="servidor_publico" required>
-                        <option value="" selected disabled>Seleccione...</option>
-                        <option value="SI">SI</option>
-                        <option value="NO">NO</option>
-                    </select>
-                </div>
-                
-                <!-- Vinculo con persona políticamente expuesta -->
-                <div class="col-md-6">
-                    <label for="vinculo_ppe" class="form-label">35. ¿Existe algún vínculo entre usted y una persona políticamente expuesta? <span class="text-danger">*</span></label>
-                    <select class="form-select" id="vinculo_ppe" name="vinculo_ppe" required>
-                        <option value="" selected disabled>Seleccione...</option>
-                        <option value="SI">SI</option>
-                        <option value="NO">NO</option>
-                    </select>
-                </div>
-                
-                <!-- Nacionalidad -->
-                <div class="col-md-6">
-                    <label for="representante_nacionalidad" class="form-label">36. Nacionalidad <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="representante_nacionalidad" name="representante_nacionalidad" required>
-                </div>
-                
-                <!-- País domicilio principal -->
-                <div class="col-md-6">
-                    <label for="representante_pais_domicilio" class="form-label">37. País domicilio principal <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="representante_pais_domicilio" name="representante_pais_domicilio" required>
-                </div>
-                
-                <!-- Email -->
-                <div class="col-md-6">
-                    <label for="representante_email" class="form-label">38. Email <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="representante_email" name="representante_email" required>
                 </div>
             </div>
         </div>
@@ -799,11 +1039,13 @@
     
     <!-- Botones de navegación -->
     <div class="d-flex justify-content-between mt-4">
-        <button type="button" class="btn btn-secondary" onclick="anteriorSeccion()">Anterior</button>
-        <button type="button" class="btn btn-primary" onclick="validarYAvanzar()">Siguiente</button>
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarSeccion9()">Siguiente</button>
     </div>
 </div>
-                <!-- Las demás secciones (7-15) irían aquí -->
+
+                
+                <!-- Las demás secciones (10-15) irían aquí -->
             </div>
         </form>
     </div>
@@ -1023,9 +1265,213 @@ function toggleOtroRepresentante() {
     }
 }
 
+// Función para agregar nuevo formulario de contacto
+function agregarContacto() {
+    const container = document.getElementById('contactos-container');
+    const newContact = document.createElement('div');
+    newContact.className = 'contacto-form row g-3 mb-4 border-bottom pb-3';
+    newContact.innerHTML = `
+        <div class="col-md-12">
+            <label class="form-label">39. Nombres y Apellidos <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="contacto_nombres[]" required>
+        </div>
         
+        <div class="col-md-6">
+            <label class="form-label">40. Cargo <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="contacto_cargo[]" required>
+        </div>
+        
+        <div class="col-md-6">
+            <label class="form-label">41. Teléfono/Celular <span class="text-danger">*</span></label>
+            <input type="tel" class="form-control" name="contacto_telefono[]" required>
+        </div>
+        
+        <div class="col-md-12">
+            <label class="form-label">42. E-mail <span class="text-danger">*</span></label>
+            <input type="email" class="form-control" name="contacto_email[]" required>
+        </div>
+        
+        <div class="col-12 text-end">
+            <button type="button" class="btn btn-danger btn-sm" onclick="eliminarContacto(this)">
+                <i class="fas fa-trash"></i> Eliminar
+            </button>
+        </div>
+    `;
+    container.appendChild(newContact);
+}
 
+// Función para eliminar un formulario de contacto
+function eliminarContacto(btn) {
+    if (document.querySelectorAll('.contacto-form').length > 1) {
+        btn.closest('.contacto-form').remove();
+    } else {
+        alert('Debe mantener al menos una persona de contacto');
+    }
+}
+
+// Función para validar la sección 7
+function validarSeccion7() {
+    let valido = true;
+    
+    // Validar cada campo requerido
+    document.querySelectorAll('#pills-seccion7 [required]').forEach(input => {
+        if (!input.value) {
+            input.classList.add('is-invalid');
+            valido = false;
+        } else {
+            input.classList.remove('is-invalid');
+        }
+    });
+    
+    // Validar al menos un contacto completo
+    const contactos = document.querySelectorAll('.contacto-form');
+    let contactosCompletos = 0;
+    
+    contactos.forEach(contacto => {
+        const campos = contacto.querySelectorAll('[required]');
+        const completo = Array.from(campos).every(campo => campo.value);
+        if (completo) contactosCompletos++;
+    });
+    
+    if (valido && contactosCompletos > 0) {
+        siguienteSeccion();
+    } else {
+        alert('Por favor complete al menos una fila completa de información de contacto y todos los campos requeridos.');
+    }
+}
+
+// Función para mostrar/ocultar campos detalle PEP
+function toggleCamposPEP() {
+    const recursosPublicos = document.getElementById('pep_recursos_publicos').value;
+    const cargoPublico = document.getElementById('pep_cargo_publico').value;
+    const relacionPEP = document.getElementById('pep_relacion').value;
+    const camposDetalle = document.getElementById('campos_pep_detalle');
+    
+    // Mostrar campos si alguna respuesta es "SI"
+    if (recursosPublicos === 'SI' || cargoPublico === 'SI' || relacionPEP === 'SI') {
+        camposDetalle.style.display = 'block';
         
+        // Hacer requeridos los campos de detalle
+        document.querySelectorAll('#campos_pep_detalle [required]').forEach(campo => {
+            campo.required = true;
+        });
+    } else {
+        camposDetalle.style.display = 'none';
+        
+        // Quitar requerido y limpiar campos
+        document.querySelectorAll('#campos_pep_detalle [required]').forEach(campo => {
+            campo.required = false;
+            if (campo.type !== 'select-one') campo.value = '';
+        });
+    }
+}
+
+// Función para mostrar campo "otro tipo" de identificación PEP
+function toggleOtroTipoPEP() {
+    const tipoIdentificacion = document.getElementById('pep_tipo_identificacion').value;
+    const grupoOtro = document.getElementById('grupo_otro_tipo_pep');
+    
+    if (tipoIdentificacion === 'Otras') {
+        grupoOtro.style.display = 'block';
+        document.getElementById('pep_otro_tipo_identificacion').required = true;
+    } else {
+        grupoOtro.style.display = 'none';
+        document.getElementById('pep_otro_tipo_identificacion').required = false;
+        document.getElementById('pep_otro_tipo_identificacion').value = '';
+    }
+}
+
+// Función para validar la sección 8
+function validarSeccion8() {
+    let valido = true;
+    
+    // Validar campos principales
+    const camposPrincipales = [
+        'pep_recursos_publicos',
+        'pep_cargo_publico',
+        'pep_relacion'
+    ];
+    
+    camposPrincipales.forEach(id => {
+        const campo = document.getElementById(id);
+        if (!campo.value) {
+            campo.classList.add('is-invalid');
+            valido = false;
+        } else {
+            campo.classList.remove('is-invalid');
+        }
+    });
+    
+    // Validar campos detalle si aplica
+    if (document.getElementById('campos_pep_detalle').style.display === 'block') {
+        document.querySelectorAll('#campos_pep_detalle [required]').forEach(campo => {
+            if (!campo.value) {
+                campo.classList.add('is-invalid');
+                valido = false;
+            } else {
+                campo.classList.remove('is-invalid');
+            }
+        });
+    }
+    
+    if (valido) {
+        siguienteSeccion();
+    } else {
+        alert('Por favor complete todos los campos requeridos.');
+    }
+}
+
+
+// Función única para manejar el "Anterior" en secciones 6-15
+function anteriorSeccionEspecial() {
+    const seccionActual = document.querySelector('.tab-pane.active').id.replace('pills-seccion', '');
+    const seccionNumero = parseInt(seccionActual);
+    
+    // Solo para secciones 6-15
+    if (seccionNumero >= 6 && seccionNumero <= 15) {
+        const seccionAnterior = seccionNumero - 1;
+        
+        // Mostrar pestaña anterior si estaba oculta
+        document.getElementById(`pills-seccion${seccionAnterior}-tab`).style.display = 'block';
+        
+        // Actualizar barra de progreso
+        const porcentaje = (seccionAnterior / totalSecciones) * 100;
+        document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
+        document.querySelector('.progress-bar').textContent = `${seccionAnterior}/${totalSecciones}`;
+        
+        // Cambiar a pestaña anterior
+        const tabInstance = new bootstrap.Tab(document.querySelector(`#pills-seccion${seccionAnterior}-tab`));
+        tabInstance.show();
+    }
+}
+
+// Función para validar la sección 9
+function validarSeccion9() {
+    const inputsRequeridos = [
+        'sistema_conocimiento_terceros',
+        'politicas_identificacion'
+    ];
+    
+    let valido = true;
+    
+    inputsRequeridos.forEach(id => {
+        const campo = document.getElementById(id);
+        if (!campo.value) {
+            campo.classList.add('is-invalid');
+            valido = false;
+        } else {
+            campo.classList.remove('is-invalid');
+        }
+    });
+    
+    if (valido) {
+        siguienteSeccion();
+    } else {
+        alert('Por favor responda todas las preguntas requeridas.');
+    }
+}
+
+                
 
         // Validación en tiempo real para el número de identificación
         document.getElementById('numero_identificacion').addEventListener('input', function(e) {

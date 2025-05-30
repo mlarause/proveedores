@@ -156,6 +156,60 @@ if ($conn->query($sql) === FALSE) {
     echo "Error creando tabla representantes_legales: " . $conn->error;
 }
 
+// Tabla para personas de contacto (Sección 7)
+$sql = "CREATE TABLE IF NOT EXISTS personas_contacto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id VARCHAR(50) NOT NULL,
+    nombres_apellidos VARCHAR(255) NOT NULL,
+    cargo VARCHAR(100) NOT NULL,
+    telefono_celular VARCHAR(20) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla personas_contacto: " . $conn->error;
+}
+
+
+// Tabla para información PEP (Sección 8)
+$sql = "CREATE TABLE IF NOT EXISTS informacion_pep (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id VARCHAR(50) NOT NULL,
+    maneja_recursos_publicos ENUM('SI', 'NO', 'N/A') NOT NULL,
+    desempenado_cargo_publico ENUM('SI', 'NO', 'N/A') NOT NULL,
+    relacion_con_pep ENUM('SI', 'NO', 'N/A') NOT NULL,
+    pep_nombres VARCHAR(255),
+    pep_tipo_identificacion VARCHAR(50),
+    pep_otro_tipo_identificacion VARCHAR(50),
+    pep_numero_identificacion VARCHAR(50),
+    pep_pais_domicilio VARCHAR(100),
+    pep_cargo VARCHAR(100),
+    pep_entidad_publica VARCHAR(255),
+    pep_activo VARCHAR(50),
+    pep_fecha_desvinculacion DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla informacion_pep: " . $conn->error;
+}
+
+// Tabla para información de Beneficiarios Finales (Sección 9)
+$sql = "CREATE TABLE IF NOT EXISTS beneficiarios_finales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id VARCHAR(50) NOT NULL,
+    sistema_conocimiento_terceros ENUM('SI', 'NO', 'N/A') NOT NULL,
+    politicas_identificacion ENUM('SI', 'NO', 'N/A') NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla beneficiarios_finales: " . $conn->error;
+}
 // ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)
 
 echo "Tablas creadas o verificadas correctamente";
