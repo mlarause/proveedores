@@ -861,13 +861,13 @@
                 </div>
 
                 <!-- Sección 8: Conocimiento Mejorado de PEP -->
-                <div class="tab-pane fade" id="pills-seccion8" role="tabpanel" aria-labelledby="pills-seccion8-tab">
+               <div class="tab-pane fade" id="pills-seccion8" role="tabpanel" aria-labelledby="pills-seccion8-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h5 class="card-title mb-0" id="titulo-seccion-8">CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)</h5>
+            <h5 class="card-title mb-0">CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)</h5>
         </div>
                         <div class="card-body">
-                            <div class="alert alert-info mb-4">
+                            <div class="alert alert-info">
                                 <p><strong>DEFINICIÓN:</strong> PERSONA EXPUESTA POLITICAMENTE (PEP): son servidores públicos de cualquier sistema de nomenclatura y clasificación de empleos de la administración pública nacional y territorial, cuando en los cargos que ocupen, tengan en las funciones del área a la que pertenecen o en las de ficha del empleo que ocupan, bajo su responsabilidad directa o por delegación, la dirección general, de formulación de políticas institucionales y de adopción de planes, programas y proyectos, y el manejo directo de bienes, dineros o valores del estado.</p>
                                 <p class="mb-0">Estos pueden ser a través de ordenación de gasto, contratación pública, gerencia de proyectos de inversión, pagos, liquidaciones, administración de bienes muebles e inmuebles. Incluye también a las PEP Extranjeras y las PEP de organizaciones Internacionales. Estos terceros ostentaran esa calidad (activo) durante el ejercicio de su cargo y por dos (2) años más a su dejación. Ver Decreto 1081 de 2015 (Modificado por Decreto 1674 de 2016) y Decreto 830 del 2021</p>
                             </div>
@@ -988,11 +988,12 @@
                         </div>
                     </div>
                     
-                    <!-- Botones de navegación -->
-                    <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
-                        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
-                    </div>
-                </div>
+                     <!-- Botones (igual que sección 7) -->
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarSeccion8()">Siguiente</button>
+    </div>
+</div>
 
 
 
@@ -1000,7 +1001,7 @@
 <div class="tab-pane fade" id="pills-seccion9" role="tabpanel" aria-labelledby="pills-seccion9-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h5 class="card-title mb-0" id="titulo-seccion-9">CONOCIMIENTO DE BENEFICIARIOS FINALES</h5>
+            <h5 class="card-title mb-0">CONOCIMIENTO DE BENEFICIARIOS FINALES</h5>
         </div>
         <div class="card-body">
             <div class="alert alert-info mb-4">
@@ -1037,7 +1038,7 @@
         </div>
     </div>
     
-    <!-- Botones de navegación -->
+     <!-- Botones (igual que sección 7) -->
     <div class="d-flex justify-content-between mt-4">
         <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
         <button type="button" class="btn btn-primary" onclick="validarSeccion9()">Siguiente</button>
@@ -1481,16 +1482,72 @@ function validarSeccion9() {
 }*/
 
 // Solución definitiva para títulos (solo secciones 8 y 9)
-function corregirTitulosSeguro() {
-    // Solo se ejecutará en las secciones 8 y 9
-    if (window.location.href.includes('section=8')) {
-        const titulo8 = document.getElementById('titulo-seccion-8');
-        if (titulo8) titulo8.textContent = "CONOCIMIENTO MEJORADO DE PERSONA EXPUESTA POLÍTICAMENTE (PEP)";
-    }
+// Función específica para validar sección 8
+/*function validarSeccion8() {
+    // Validar campos requeridos (mismo patrón que sección 7)
+    const camposRequeridos = [
+        'pep_recursos_publicos',
+        'pep_cargo_publico',
+        'pep_relacion'
+    ];
     
-    if (window.location.href.includes('section=9')) {
-        const titulo9 = document.getElementById('titulo-seccion-9');
-        if (titulo9) titulo9.textContent = "CONOCIMIENTO DE BENEFICIARIOS FINALES";
+    let valido = true;
+    
+    camposRequeridos.forEach(id => {
+        const campo = document.getElementById(id);
+        if (!campo.value) {
+            campo.classList.add('is-invalid');
+            valido = false;
+        } else {
+            campo.classList.remove('is-invalid');
+        }
+    });
+    
+    if (valido) {
+        // Navegación idéntica a sección 7
+        document.getElementById('pills-seccion9-tab').style.display = 'block';
+        actualizarProgreso(9);
+        const tab = new bootstrap.Tab(document.getElementById('pills-seccion9-tab'));
+        tab.show();
+    }
+}
+
+// Función específica para validar sección 9
+function validarSeccion9() {
+    // Validar campos requeridos (mismo patrón que sección 7)
+    const camposRequeridos = [
+        'sistema_conocimiento_terceros',
+        'politicas_identificacion'
+    ];
+    
+    let valido = true;
+    
+    camposRequeridos.forEach(id => {
+        const campo = document.getElementById(id);
+        if (!campo.value) {
+            campo.classList.add('is-invalid');
+            valido = false;
+        } else {
+            campo.classList.remove('is-invalid');
+        }
+    });
+    
+    if (valido) {
+        // Navegación idéntica a sección 7
+        document.getElementById('pills-seccion10-tab').style.display = 'block';
+        actualizarProgreso(10);
+        const tab = new bootstrap.Tab(document.getElementById('pills-seccion10-tab'));
+        tab.show();
+    }
+}*/
+
+// Función auxiliar para actualizar progreso (compatible con todo)
+function actualizarProgreso(seccion) {
+    const porcentaje = (seccion / totalSecciones) * 100;
+    const barra = document.querySelector('.progress-bar');
+    if (barra) {
+        barra.style.width = `${porcentaje}%`;
+        barra.textContent = `${seccion}/${totalSecciones}`;
     }
 }
 
