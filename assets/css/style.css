@@ -156,3 +156,18 @@ body {
     }
 }
 
+/* Estilos específicos para sección PEP */
+#pills-seccion8 .card-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1rem;
+}
+
+#pills-seccion8 .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#campos_pep_detalle {
+    transition: all 0.3s ease;
+}
