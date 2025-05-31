@@ -323,3 +323,28 @@ body {
     border-radius: 4px;
     margin-bottom: 5px;
 }
+
+
+/* Estilos para el área de firma */
+#firmaCanvas {
+    cursor: crosshair;
+    background-color: white;
+}
+
+/* Botones de control */
+#btnLimpiarFirma, #btnGuardarFirma {
+    padding: 5px 15px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Vista previa */
+#vistaPreviaFirma {
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+#imagenFirma {
+    max-width: 100%;
+    height: auto;
+}

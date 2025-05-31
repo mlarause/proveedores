@@ -1616,40 +1616,39 @@
                 <p><strong>NOTA:</strong> En este formato solo es admisible la firma del Representante Legal - (huella opcional). En constancia de haber leído, entendido y aceptado lo anterior, firmo el presente documento en la fecha <span id="fecha-actual"><?php echo date('d/m/Y H:i'); ?></span></p>
             </div>
             
-            <!-- Área de firma -->
-            <div class="border p-4 mb-4 text-center">
-                <h6>Firma de representante legal y/o Apoderado</h6>
-                <div class="signature-pad-container mb-3" style="border: 1px dashed #ccc; height: 200px; position: relative;">
-                    <canvas id="signature-canvas" style="width: 100%; height: 100%; touch-action: none;"></canvas>
-                    <button type="button" class="btn btn-sm btn-outline-danger" id="clear-signature" style="position: absolute; top: 5px; right: 5px;">
-                        <i class="fas fa-trash"></i> Limpiar
-                    </button>
-                </div>
-                <input type="hidden" id="signature-data" name="signature_data">
-                
-                <!-- Vista previa de firma -->
-                <div id="signature-preview" class="mb-3" style="display: none;">
-                    <p class="text-muted">Firma guardada:</p>
-                    <img id="signature-image" src="" class="img-fluid border" style="max-height: 100px;">
-                </div>
-                
-                <!-- Datos del firmante -->
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="nombre-firmante" class="form-label">Nombre completo:</label>
-                        <input type="text" class="form-control" id="nombre-firmante" name="nombre_firmante" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="identificacion-firmante" class="form-label">Identificación:</label>
-                        <input type="text" class="form-control" id="identificacion-firmante" name="identificacion_firmante" required>
-                    </div>
-                </div>
-                
-                <div class="mb-3">
-                    <label class="form-label">Fecha: <span id="fecha-firma"><?php echo date('d/m/Y H:i'); ?></span></label>
-                </div>
-            </div>
-            
+           <!-- Área de Firma Digital -->
+<div class="border p-4 mb-4 text-center">
+    <h5>Firma del Representante Legal</h5>
+    
+    <!-- Canvas para firmar - Asegúrate de tener estas dimensiones -->
+    <div style="border: 1px solid #ddd; background-color: #f8f9fa; margin: 0 auto; width: 100%; max-width: 500px; height: 200px;">
+        <canvas id="firmaCanvas" style="width: 100%; height: 100%; display: block; touch-action: none;"></canvas>
+    </div>
+    
+    <!-- Botones de control -->
+    <div class="mt-3 mb-3">
+        <button type="button" id="btnLimpiarFirma" class="btn btn-sm btn-danger me-2">
+            <i class="fas fa-eraser"></i> Limpiar
+        </button>
+        <button type="button" id="btnGuardarFirma" class="btn btn-sm btn-success">
+            <i class="fas fa-save"></i> Guardar Firma
+        </button>
+    </div>
+    
+    <!-- Vista previa de la firma (esto mostrará tu firma guardada) -->
+    <div id="vistaPreviaFirma" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+        <p class="text-muted mb-1">Tu firma guardada:</p>
+        <img id="imagenFirma" src="" style="max-height: 80px; border: 1px solid #ddd;">
+    </div>
+    
+    <!-- Fecha y hora automáticas -->
+    <div class="text-muted small mt-3">
+        Fecha y hora: <span id="fechaHoraFirma"><?php echo date('d/m/Y H:i:s'); ?></span>
+    </div>
+    
+    <!-- Campo oculto que guardará tu firma para enviarla -->
+    <input type="hidden" id="firmaDigitalData" name="firma_digital">
+</div>
             <!-- Subida de documentos -->
             <div class="border p-4">
                 <h5 class="mb-3">Subir documentos requeridos</h5>
@@ -2700,6 +2699,259 @@ function obtenerSeccionActual() {
     return parseInt(seccionActiva.replace('pills-seccion', ''));
 }
 
+
+
+// Inicialización del Signature Pad
+document.addEventListener('DOMContentLoaded', function() {
+    // Configurar el canvas
+    const canvas = document.getElementById('firmaCanvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    
+    // Ajustar tamaño del canvas
+    function resizeCanvas() {
+        const ratio = window.devicePixelRatio || 1;
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.style.width = canvas.offsetWidth + 'px';
+        canvas.style.height = canvas.offsetHeight + 'px';
+        ctx.scale(ratio, ratio);
+        ctx.lineWidth = 2;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = '#000000';
+    }
+    
+    // Eventos para dibujar con mouse
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+    
+    // Eventos para dispositivos táctiles
+    canvas.addEventListener('touchstart', handleTouchStart);
+    canvas.addEventListener('touchmove', handleTouchMove);
+    canvas.addEventListener('touchend', stopDrawing);
+    
+    // Inicializar
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Botón Limpiar
+    document.getElementById('btnLimpiarFirma').addEventListener('click', function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        document.getElementById('vistaPreviaFirma').style.display = 'none';
+    });
+    
+    // Botón Guardar
+    document.getElementById('btnGuardarFirma').addEventListener('click', function() {
+        guardarFirma();
+    });
+    
+    // Función para guardar la firma
+    window.guardarFirma = function() {
+        if (isCanvasBlank(canvas)) {
+            alert('Por favor, realice su firma primero.');
+            return false;
+        }
+        
+        const firmaData = canvas.toDataURL('image/png');
+        document.getElementById('firmaDigitalData').value = firmaData;
+        document.getElementById('imagenFirma').src = firmaData;
+        document.getElementById('vistaPreviaFirma').style.display = 'block';
+        
+        alert('Firma guardada correctamente.');
+        return true;
+    };
+    
+    // Funciones para dibujar
+    function startDrawing(e) {
+        isDrawing = true;
+        [lastX, lastY] = getPosition(e);
+    }
+    
+    function draw(e) {
+        if (!isDrawing) return;
+        
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        [lastX, lastY] = getPosition(e);
+        ctx.lineTo(lastX, lastY);
+        ctx.stroke();
+    }
+    
+    function stopDrawing() {
+        isDrawing = false;
+    }
+    
+    function getPosition(e) {
+        let x, y;
+        if (e.type.includes('touch')) {
+            const rect = canvas.getBoundingClientRect();
+            x = e.touches[0].clientX - rect.left;
+            y = e.touches[0].clientY - rect.top;
+        } else {
+            x = e.offsetX;
+            y = e.offsetY;
+        }
+        return [x, y];
+    }
+    
+    function handleTouchStart(e) {
+        e.preventDefault();
+        startDrawing(e.touches[0]);
+    }
+    
+    function handleTouchMove(e) {
+        e.preventDefault();
+        draw(e.touches[0]);
+    }
+    
+    function isCanvasBlank(canvas) {
+        const blank = document.createElement('canvas');
+        blank.width = canvas.width;
+        blank.height = canvas.height;
+        return canvas.toDataURL() === blank.toDataURL();
+    }
+});
+
+// Modificar validación de la sesión 15
+function validarSeccion15() {
+    // Validar firma
+    if (!guardarFirma()) {
+        return false;
+    }
+    
+    // Validar datos del firmante
+    const nombre = document.getElementById('nombreFirmante').value.trim();
+    const identificacion = document.getElementById('identificacionFirmante').value.trim();
+    
+    if (!nombre || !identificacion) {
+        alert('Debe completar todos los datos del firmante.');
+        return false;
+    }
+    
+    return true;
+}
+
+
+
+// Inicialización cuando la página carga
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('firmaCanvas');
+    const ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    
+    // Ajustar el canvas para alta resolución
+    function resizeCanvas() {
+        const ratio = window.devicePixelRatio || 1;
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.style.width = canvas.offsetWidth + 'px';
+        canvas.style.height = canvas.offsetHeight + 'px';
+        ctx.scale(ratio, ratio);
+        
+        // Configuración del trazo
+        ctx.lineWidth = 2;
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = '#000000';
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    // Eventos del mouse
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+    
+    // Inicializar
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Botón Limpiar
+    document.getElementById('btnLimpiarFirma').addEventListener('click', function() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        document.getElementById('vistaPreviaFirma').style.display = 'none';
+        document.getElementById('firmaDigitalData').value = '';
+    });
+    
+    // Botón Guardar
+    document.getElementById('btnGuardarFirma').addEventListener('click', guardarFirma);
+    
+    // Función para guardar la firma
+    function guardarFirma() {
+        if (isCanvasBlank(canvas)) {
+            alert('Por favor, realiza tu firma primero.');
+            return false;
+        }
+        
+        const firmaData = canvas.toDataURL('image/png');
+        document.getElementById('firmaDigitalData').value = firmaData;
+        document.getElementById('imagenFirma').src = firmaData;
+        document.getElementById('vistaPreviaFirma').style.display = 'block';
+        
+        alert('Firma guardada correctamente. Ya puedes enviar el formulario.');
+        return true;
+    }
+    
+    // Funciones para dibujar
+    function startDrawing(e) {
+        isDrawing = true;
+        [lastX, lastY] = getPosition(e);
+    }
+    
+    function draw(e) {
+        if (!isDrawing) return;
+        
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        [lastX, lastY] = getPosition(e);
+        ctx.lineTo(lastX, lastY);
+        ctx.stroke();
+    }
+    
+    function stopDrawing() {
+        isDrawing = false;
+    }
+    
+    function getPosition(e) {
+        const rect = canvas.getBoundingClientRect();
+        return [
+            e.clientX - rect.left,
+            e.clientY - rect.top
+        ];
+    }
+    
+    function isCanvasBlank(canvas) {
+        const blank = document.createElement('canvas');
+        blank.width = canvas.width;
+        blank.height = canvas.height;
+        return canvas.toDataURL() === blank.toDataURL();
+    }
+});
+
+// Modificar la validación del formulario
+function validarSeccion15() {
+    // Verificar si la firma está guardada
+    if (!document.getElementById('firmaDigitalData').value) {
+        alert('Debes guardar tu firma antes de enviar.');
+        return false;
+    }
+    
+    // Verificar datos del firmante
+    if (!document.getElementById('nombreFirmante').value.trim() || 
+        !document.getElementById('identificacionFirmante').value.trim()) {
+        alert('Completa todos los datos del firmante.');
+        return false;
+    }
+    
+    return true;
+}
 // =============================================
 // INICIALIZACIÓN (al cargar el documento)
 // =============================================
