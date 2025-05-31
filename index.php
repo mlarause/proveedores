@@ -1316,36 +1316,45 @@
 
 <!-- Contenido de la sesión 12 -->
 <div class="tab-pane fade" id="pills-seccion12" role="tabpanel" aria-labelledby="pills-seccion12-tab">
-    <div class="card shadow-sm">
-        <div class="card-header bg-primary text-white py-2">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
             <h5 class="card-title mb-0">12. REFERENCIA COMERCIAL</h5>
         </div>
         <div class="card-body">
-            <div class="alert alert-warning py-2">
-                <i class="fas fa-exclamation-triangle me-2"></i>Debe completar al menos una referencia comercial completa.
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-circle"></i> Nota: Debe completar al menos una referencia comercial completa.
             </div>
             
-            <div class="table-responsive">
-                <table class="table table-sm table-bordered mb-3">
-                    <thead class="table-light">
-                        <tr>
-                            <th class="py-1">78. Nombre o razón social</th>
-                            <th class="py-1">79. Ciudad Domicilio</th>
-                            <th class="py-1">80. Nombre Contacto</th>
-                            <th class="py-1">81. Cargo</th>
-                            <th class="py-1">82. Teléfono/Celular</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="text" class="form-control form-control-sm" name="referencias[nombre][]" required></td>
-                            <td><input type="text" class="form-control form-control-sm" name="referencias[ciudad][]" required></td>
-                            <td><input type="text" class="form-control form-control-sm" name="referencias[contacto][]" required></td>
-                            <td><input type="text" class="form-control form-control-sm" name="referencias[cargo][]" required></td>
-                            <td><input type="text" class="form-control form-control-sm" name="referencias[telefono][]" required></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="row g-3">
+                <!-- Pregunta 78 -->
+                <div class="col-md-12">
+                    <label for="nombre_razon_social" class="form-label">78. Nombre o razón social <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombre_razon_social" name="referencias[nombre_razon_social]" required>
+                </div>
+                
+                <!-- Pregunta 79 -->
+                <div class="col-md-12">
+                    <label for="ciudad_domicilio" class="form-label">79. Ciudad Domicilio Principal <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="ciudad_domicilio" name="referencias[ciudad_domicilio]" required>
+                </div>
+                
+                <!-- Pregunta 80 -->
+                <div class="col-md-12">
+                    <label for="nombre_contacto" class="form-label">80. Nombre y Apellido del Contacto <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nombre_contacto" name="referencias[nombre_contacto]" required>
+                </div>
+                
+                <!-- Pregunta 81 -->
+                <div class="col-md-12">
+                    <label for="cargo_contacto" class="form-label">81. Cargo <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="cargo_contacto" name="referencias[cargo_contacto]" required>
+                </div>
+                
+                <!-- Pregunta 82 -->
+                <div class="col-md-12">
+                    <label for="telefono_contacto" class="form-label">82. Teléfono / Celular de Contacto <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="telefono_contacto" name="referencias[telefono_contacto]" required>
+                </div>
             </div>
         </div>
     </div>
