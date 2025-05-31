@@ -71,6 +71,18 @@
                     Certificaciones
                 </button>
                 </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-seccion14-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion14" type="button" role="tab" aria-controls="pills-seccion14" aria-selected="false" style="display:none;">
+                    Declaraciones y Autorizaciones
+                </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-seccion15-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion15" type="button" role="tab" aria-controls="pills-seccion15" aria-selected="false" style="display:none;">
+                    Documentos Requeridos
+                </button>
+                </li>
+
+
 
 
             </ul>
@@ -1516,8 +1528,142 @@
 </div>
                 
 
+<!-- Contenido de la sesión 14 -->
+<div class="tab-pane fade" id="pills-seccion14" role="tabpanel" aria-labelledby="pills-seccion14-tab">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">14. DECLARACIONES Y AUTORIZACIONES</h5>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning">
+                <i class="fas fa-exclamation-circle"></i> Nota: Sin marcar "Acepto" no podrá continuar con el proceso
+            </div>
+            
+            <div class="mb-4">
+                <h6>TRATAMIENTO DE DATOS PERSONALES:</h6>
+                <div class="border p-3 mb-3 bg-light" style="max-height: 200px; overflow-y: auto;">
+                    <p>El firmante del presente formulario, en nombre propio y/o en nombre de la entidad que representa, autoriza a intramar shipping ("intramar shipping") y a los terceros que utilice como encargados del tratamiento de bases de datos de todos los representantes legales, directivos, socios o accionistas, revisores fiscales y contadores de la compañía, lo cual incluye; recolectarlos, almacenarlos, administrarlos, utilizarlos, destruirlos, así como transferirlos o transmitirlos a sus matrices, filiales y/o subsidiarias extranjeras en la forma en que es permitido por la ley, así como en cumplimiento de su obligación legal de prevenir y controlar el lavado de activos y la financiación del terrorismo, el soborno transnacional, la corrupción y demás delitos fuentes. Esta información será utilizada por intramar shipping con el propósito de que pueda cumplir con las obligaciones contractuales y legales a su cargo ,conforme a la relación comercial entre nosotros existente.</p>
+                    <p>Manifiesto que conozco las políticas de intramar shipping sobre protección y administración de datos personales y que he leído el Manual de Protección y Uso de Bases de Datos Personales que se encuentra disponible en la página web <a href="https://www.intramar.com.co/" target="_blank">https://www.intramar.com.co/</a></p>
+                </div>
+                
+                <h6>AVISO DE PRIVACIDAD:</h6>
+                <div class="border p-3 mb-3 bg-light" style="max-height: 200px; overflow-y: auto;">
+                    <p>De conformidad con lo dispuesto en la Ley 1581 de 2012 y demás normas aplicables, le informamos que los datos personales que usted nos ha entregado, así como fotos y videos que se realicen al interior de nuestras instalaciones, son confidenciales y serán usados únicamente para la Compañía intramar shipping de Colombia S.A., de acuerdo a lo establecido en el "Manual de Protección y Uso de Bases de Datos Personales", que contiene las políticas establecidas por nuestra Compañía para el tratamiento de datos. Dicho manual puede ser consultado en la página web: <a href="https://www.intramar.com.co/" target="_blank">https://www.intramar.com.co/</a></p>
+                    <p>NOTA: Usted podrá actualizar, rectificar, corregir o solicitar la supresión de sus datos enviando un correo electrónico a -------------------</p>
+                </div>
+                
+                <h6>ORIGEN DE FONDOS Y ADMINISTRACIÓN DE RIESGO DE LAVADO DE ACTIVOS:</h6>
+                <div class="border p-3 mb-3 bg-light" style="max-height: 200px; overflow-y: auto;">
+                    <p>Conforme a la información ingresada, actuando en nombre propio y/o como representante legal de la persona jurídica que pretende vincularse a intramar shipping ("intramar shipping") dando certeza de que lo aquí consignado es información veraz y verificable, declaro que: (i) los recursos, dineros o activos empleados para el suministro de bienes y/o servicios a intramar shipping tienen una procedencia lícita y no están vinculados con el lavado de activos ni sus delitos fuente, ni serán utilizados para efectos de financiar actividad este terroristas o cualquier otra conducta delictiva, según la normatividad penal aplicable, (ii) que los socios o administradores de la Sociedad no han sido incluidos en listas de control de riesgo de lavado de activos y financiación del terrorismo nacionales o internacionales vinculantes para Colombia entre las que se encuentran la lista de la Oficina de Control de Activos en el Exterior – OFAC y la lista de sanciones del Consejo de Seguridad de la Organización de las Naciones Unidas, entre otras; (iii) no incurriremos en actividades relacionadas con fraude, soborno y/o corrupción u otras acciones contrarias a la normatividad penal aplicable;(iv) no usarán a intramar shipping o la relación comercial con ésta para cometer actos ilícitos; (v) no permitiremos que terceros efectúen transacciones a nuestro nombre con fondos provenientes de actividades ilícitas contempladas en la normatividad penal vigente, ni efectuaremos transacciones destinadas a tales actividades a favor de personas relacionadas con las mismas; (vi) autorizo expresamente a intramar shipping para consultar toda la documentación presentada.</p>
+                </div>
+                
+                <h6>93. OTRAS DECLARACIONES:</h6>
+                <div class="border p-3 mb-3 bg-light" style="max-height: 200px; overflow-y: auto;">
+                    <p>En nombre propio y/o en nombre de la persona jurídica que represento, declaro que: (i) la empresa que represento cumple con los requisitos mínimos de seguridad de la cadena de suministro y en su operación realiza practicas que permiten mitigar el riesgo de actividades ilícitas o incidentes de contaminación; (ii) en el desarrollo de nuestras actividades cumplimos con los lineamentos de la organización internacional del trabajo (OIT), respetamos los derechos laborales de cada uno de los empleados y en ningún caso incurrimos en conductas de abuso o explotación laboral; (iii) cumplimos con la legislación ambiental vigente y desarrollamos buenas prácticas ambientales; (iv) en la actualidad los representantes, socios o sus miembros de junta directiva, no tienen ningún parentesco o conflicto de intereses con la persona responsable de negociar el bien o servicio y si en el futuro se llegara a presentar esta situación me comprometo a reportar a intramar shipping en su canal de denuncia habilitado.</p>
+                    <p>Con mi firma declaro que cuento con las autorizaciones y facultades necesarias para entregar a intramar shipping la información y datos personales aquí suministrados. Declaro que esta información es correcta y me comprometo a mantenerla actualizada, autorizando intramar shipping también que se compruebe la veracidad de la misma.</p>
+                    <p>NOTA: El diligenciamiento de este formato no compromete a METECNO DE COLOMBIA S.A para iniciar el vínculo contractual, comercial o cualquier otro vínculo.</p>
+                </div>
+                
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="acepta_declaraciones" id="acepta_si" value="SI" required>
+                    <label class="form-check-label" for="acepta_si">Acepto</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="acepta_declaraciones" id="acepta_no" value="NO">
+                    <label class="form-check-label" for="acepta_no">No Acepto</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botones de navegación (IGUALES a sesión 11) -->
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarSeccion14()">Siguiente</button>
+    </div>
+</div>
 
 
+<!-- Contenido de la sesión 15 -->
+<div class="tab-pane fade" id="pills-seccion15" role="tabpanel" aria-labelledby="pills-seccion15-tab">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">15. DOCUMENTOS REQUERIDOS</h5>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle"></i> ESTIMADO PROVEEDOR: Para que el proceso de registro y/o actualización se dé por concluido, después de dar click en la opción GUARDAR Y ENVIAR ARCHIVO, por favor no cerrar la ventana y a continuación se habilitará la opción para firmar formulario y adjuntar los siguientes documentos:
+            </div>
+            
+            <ol class="list-group list-group-numbered mb-4">
+                <li class="list-group-item">Certificado de Existencia y Representación Legal no mayor a 30 días.</li>
+                <li class="list-group-item">Certificación composición Accionaria firmada por representante, contador y/o revisor fiscal (Detallada hasta última persona natural)</li>
+                <li class="list-group-item">Registro único tributario (RUT) Actualizado</li>
+                <li class="list-group-item">Fotocopia de cédula o pasaporte representante legal al 150%</li>
+                <li class="list-group-item">Certificaciones Bancarias de cuentas nacionales, con fecha de expedición no mayor a 30 días</li>
+                <li class="list-group-item">Certificaciones de seguridad de calidad, de licencias y/o permisos ambientales (si aplica)</li>
+                <li class="list-group-item">Copia de la resolución a operador económico autorizado (OEA) (Si aplica)</li>
+                <li class="list-group-item">Manifestación suscrita de cumplimiento requisitos mínimos de seguridad, en caso de no ser OEA</li>
+                <li class="list-group-item">Auto-evaluación de estándares mínimos de seguridad según la legislación vigente de MINTRABAJO</li>
+            </ol>
+            
+            <div class="alert alert-light border mb-4">
+                <p>En Intramar estamos comprometidos con mantener un ambiente íntegro y transparente, por lo cual ponemos a su disposición nuestra línea de transparencia habilitada en la página web: <a href="https://www.intramar.com.co/" target="_blank">https://www.intramar.com.co/</a> de transparencia para informar situaciones o preocupaciones que generen inquietud referente a prácticas comerciales indebidas, incumplimiento de políticas y procedimientos o cualquier otra actividad que afecte el entorno laboral o vaya en contra de nuestro código de conducta y de nuestras políticas de administración de riesgo de lavado de activos y la de prevención ante la corrupción y soborno transaccional.</p>
+            </div>
+            
+            <div class="alert alert-warning mb-4">
+                <p><strong>NOTA:</strong> En este formato solo es admisible la firma del Representante Legal - (huella opcional). En constancia de haber leído, entendido y aceptado lo anterior, firmo el presente documento en la fecha <span id="fecha-actual"></span></p>
+            </div>
+            
+            <!-- Área de firma -->
+            <div class="border p-4 mb-4 text-center">
+                <h6>Firma de representante legal y/o Apoderado</h6>
+                <div class="signature-pad mb-3" style="border: 1px dashed #ccc; height: 150px; position: relative;">
+                    <canvas id="signature-canvas" style="width: 100%; height: 100%;"></canvas>
+                    <button type="button" class="btn btn-sm btn-outline-danger" id="clear-signature" style="position: absolute; top: 5px; right: 5px;">
+                        <i class="fas fa-trash"></i> Limpiar
+                    </button>
+                </div>
+                <input type="hidden" id="signature-data" name="signature_data">
+                
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre-firmante" class="form-label">Nombre completo:</label>
+                        <input type="text" class="form-control" id="nombre-firmante" name="nombre_firmante" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="identificacion-firmante" class="form-label">Identificación:</label>
+                        <input type="text" class="form-control" id="identificacion-firmante" name="identificacion_firmante" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Fecha: <span id="fecha-firma"></span></label>
+                </div>
+            </div>
+            
+            <!-- Subida de documentos -->
+            <div class="border p-4">
+                <h5 class="mb-3">Subir documentos requeridos</h5>
+                <div class="alert alert-light">
+                    <p class="mb-2"><small>Límite de tamaño del archivo individual: 100MB</small></p>
+                    <p class="mb-0"><small>Tipos de archivo permitidos: Word, Excel, PPT, PDF, Imagen, Vídeo, Audio</small></p>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="documentos" class="form-label">Cargar archivo:</label>
+                    <input class="form-control" type="file" id="documentos" name="documentos[]" multiple accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.jpg,.jpeg,.png,.gif,.mp4,.avi,.mov,.mp3,.wav" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botones de navegación (IGUALES a sesión 11) -->
+    <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+        <button type="button" class="btn btn-success" onclick="validarSeccion15()">Guardar y Enviar</button>
+    </div>
+</div>
                 
                 <!-- Las demás secciones (11-15) irían aquí -->
             </div>
@@ -2144,6 +2290,117 @@ function guardarSeccion13() {
     // Lógica para guardar los datos
     mostrarSeccion(14);
 }
+
+
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = document.querySelector('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta || acepta.value === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.value === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+});
+
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
+
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+
+
 // Validación en tiempo real para campos numéricos
 document.getElementById('total_activos').addEventListener('input', function(e) {
     this.value = this.value.replace(/[^0-9]/g, '');

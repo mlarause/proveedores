@@ -303,6 +303,44 @@ if ($conn->query($sql) === FALSE) {
     echo "Error creando tabla  certificaciones " . $conn->error;
 }
 
+// Agregar esto con las otras tablas
+$sql = "CREATE TABLE IF NOT EXISTS declaraciones_autorizaciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_proveedor INT NOT NULL,
+    acepta_declaraciones ENUM('SI', 'NO') NOT NULL,
+    fecha_aceptacion DATETIME NOT NULL,
+    ip_aceptacion VARCHAR(45) NOT NULL,
+    FOREIGN KEY (id_proveedor) REFERENCES proveedores(id) ON DELETE CASCADE
+)";
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla  declaraciones_autorizaciones " . $conn->error;
+}
+
+
+
+// Agregar esto con las otras tablas
+$sql = "CREATE TABLE IF NOT EXISTS documentos_proveedor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_proveedor INT NOT NULL,
+    firma_imagen TEXT NOT NULL,
+    nombre_firmante VARCHAR(100) NOT NULL,
+    identificacion_firmante VARCHAR(50) NOT NULL,
+    fecha_firma DATETIME NOT NULL,
+    FOREIGN KEY (id_proveedor) REFERENCES proveedores(id) ON DELETE CASCADE
+)";
+
+$sql_docs = "CREATE TABLE IF NOT EXISTS archivos_proveedor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_proveedor INT NOT NULL,
+    nombre_archivo VARCHAR(255) NOT NULL,
+    tipo_archivo VARCHAR(50) NOT NULL,
+    tamaño_archivo INT NOT NULL,
+    ruta_archivo VARCHAR(255) NOT NULL,
+    fecha_subida DATETIME NOT NULL,
+    FOREIGN KEY (id_proveedor) REFERENCES proveedores(id) ON DELETE CASCADE
+)";
+$conn->exec($sql);
+$conn->exec($sql_docs);
 
 $conn->exec($sql);
 // ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)

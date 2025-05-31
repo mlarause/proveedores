@@ -211,3 +211,22 @@ body {
     padding-top: 1rem;
     margin-top: 1rem;
 }
+
+
+/* Estilo para el área de firma */
+.signature-pad {
+    background-color: #fff;
+    cursor: crosshair;
+}
+
+/* Estilo para los documentos subidos */
+.uploaded-files {
+    margin-top: 15px;
+}
+
+.uploaded-file {
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
