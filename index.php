@@ -1314,7 +1314,48 @@
 </div>
 
 
-
+<!-- Contenido de la sesión 12 -->
+<div class="tab-pane fade" id="pills-seccion12" role="tabpanel" aria-labelledby="pills-seccion12-tab">
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white py-2">
+            <h5 class="card-title mb-0">12. REFERENCIA COMERCIAL</h5>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-warning py-2">
+                <i class="fas fa-exclamation-triangle me-2"></i>Debe completar al menos una referencia comercial completa.
+            </div>
+            
+            <div class="table-responsive">
+                <table class="table table-sm table-bordered mb-3">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="py-1">78. Nombre o razón social</th>
+                            <th class="py-1">79. Ciudad Domicilio</th>
+                            <th class="py-1">80. Nombre Contacto</th>
+                            <th class="py-1">81. Cargo</th>
+                            <th class="py-1">82. Teléfono/Celular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control form-control-sm" name="referencias[nombre][]" required></td>
+                            <td><input type="text" class="form-control form-control-sm" name="referencias[ciudad][]" required></td>
+                            <td><input type="text" class="form-control form-control-sm" name="referencias[contacto][]" required></td>
+                            <td><input type="text" class="form-control form-control-sm" name="referencias[cargo][]" required></td>
+                            <td><input type="text" class="form-control form-control-sm" name="referencias[telefono][]" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botones de navegación (idénticos a otras sesiones) -->
+     <div class="d-flex justify-content-between mt-4">
+        <button type="button" class="btn btn-secondary" onclick="anteriorSeccionEspecial()">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarSeccion12()">Siguiente</button>
+    </div>
+</div>
                 
 
 
@@ -1881,6 +1922,26 @@ function mostrarPestanaSeccion(numeroSeccion) {
     actualizarProgreso(numeroSeccion);
 }
 
+
+function validarSeccion12() {
+    // Validar que al menos una fila esté completa
+    let valido = true;
+    const inputs = document.querySelectorAll('#pills-seccion12 input[required]');
+    
+    inputs.forEach(input => {
+        if (input.value.trim() === '') {
+            valido = false;
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si es válido, continuar a la siguiente sección
+    mostrarSeccion(13);
+}
 // Validación en tiempo real para campos numéricos
 document.getElementById('total_activos').addEventListener('input', function(e) {
     this.value = this.value.replace(/[^0-9]/g, '');
