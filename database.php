@@ -234,6 +234,32 @@ $sql = "CREATE TABLE IF NOT EXISTS informacion_financiera (
 if ($conn->query($sql) === FALSE) {
     echo "Error creando tabla informacion_financiera: " . $conn->error;
 }
+
+// Tabla para operaciones internacionales (Sección 11)
+$sql = "CREATE TABLE IF NOT EXISTS operaciones_internacionales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id VARCHAR(50) NOT NULL,
+    realiza_operaciones ENUM('SI', 'NO', 'N/A') NOT NULL,
+    importaciones ENUM('SI', 'NO', 'N/A'),
+    exportaciones ENUM('SI', 'NO', 'N/A'),
+    inversiones ENUM('SI', 'NO', 'N/A'),
+    pago_servicios ENUM('SI', 'NO', 'N/A'),
+    otra_operacion VARCHAR(255),
+    tipo_mercancia TEXT,
+    obligaciones_tributarias ENUM('SI', 'NO', 'N/A'),
+    beneficiario_nombre VARCHAR(255),
+    beneficiario_tipo_id VARCHAR(50),
+    beneficiario_otro_tipo VARCHAR(50),
+    beneficiario_numero_id VARCHAR(50),
+    beneficiario_pais VARCHAR(100),
+    beneficiario_direccion TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla operaciones_internacionales: " . $conn->error;
+}
 // ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)
 
 echo "Tablas creadas o verificadas correctamente";

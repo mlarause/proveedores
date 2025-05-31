@@ -191,3 +191,23 @@ body {
 #pills-seccion10 .alert-warning {
     border-left: 4px solid #ffc107;
 }
+
+
+/* Estilos específicos para sección de operaciones internacionales */
+#pills-seccion11 .card-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 1rem;
+}
+
+#pills-seccion11 .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#detalle_operaciones_internacionales {
+    transition: all 0.3s ease;
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
