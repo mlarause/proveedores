@@ -260,6 +260,21 @@ $sql = "CREATE TABLE IF NOT EXISTS operaciones_internacionales (
 if ($conn->query($sql) === FALSE) {
     echo "Error creando tabla operaciones_internacionales: " . $conn->error;
 }
+
+// Agregar esto con las otras tablas
+$sql = "CREATE TABLE IF NOT EXISTS referencias_comerc (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_prov INT NOT NULL,
+    nom_razon_social VARCHAR(100) NOT NULL,
+    ciudad_dom VARCHAR(100) NOT NULL,
+    nom_contacto VARCHAR(100) NOT NULL,
+    cargo_contacto VARCHAR(100) NOT NULL,
+    tel_contacto VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_prov) REFERENCES proveedores(id) ON DELETE CASCADE
+)";
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla referencias_comerc: " . $conn->error;
+}
 // ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)
 
 echo "Tablas creadas o verificadas correctamente";

@@ -61,6 +61,11 @@
                     Operaciones Internacionales
                 </button>
                 </li>
+                <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-seccion12-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion12" type="button" role="tab" aria-controls="pills-seccion12" aria-selected="false" style="display:none;">
+                    Referencia Comercial
+                </button>
+                </li>
 
 
             </ul>
@@ -1307,6 +1312,7 @@
         <button type="button" class="btn btn-primary" onclick="validarSeccion11()">Siguiente</button>
     </div>
 </div>
+
 
 
                 
