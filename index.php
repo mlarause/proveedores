@@ -1616,31 +1616,46 @@
             </div>
             
             <!-- Área de firma -->
-            <div class="border p-4 mb-4 text-center">
-                <h6>Firma de representante legal y/o Apoderado</h6>
-                <div class="signature-pad mb-3" style="border: 1px dashed #ccc; height: 150px; position: relative;">
-                    <canvas id="signature-canvas" style="width: 100%; height: 100%;"></canvas>
-                    <button type="button" class="btn btn-sm btn-outline-danger" id="clear-signature" style="position: absolute; top: 5px; right: 5px;">
-                        <i class="fas fa-trash"></i> Limpiar
-                    </button>
-                </div>
-                <input type="hidden" id="signature-data" name="signature_data">
-                
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="nombre-firmante" class="form-label">Nombre completo:</label>
-                        <input type="text" class="form-control" id="nombre-firmante" name="nombre_firmante" required>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="identificacion-firmante" class="form-label">Identificación:</label>
-                        <input type="text" class="form-control" id="identificacion-firmante" name="identificacion_firmante" required>
-                    </div>
-                </div>
-                
-                <div class="mb-3">
-                    <label class="form-label">Fecha: <span id="fecha-firma"></span></label>
-                </div>
-            </div>
+           <div class="border p-4 mb-4 text-center">
+    <h6>Firma de representante legal y/o Apoderado</h6>
+    
+    <!-- Canvas para firma -->
+    <div class="signature-pad-container mb-3">
+        <canvas id="signature-pad" class="signature-pad" width="500" height="200"></canvas>
+    </div>
+    
+    <!-- Botones para firma -->
+    <div class="mb-3">
+        <button type="button" id="clear-signature" class="btn btn-sm btn-danger">
+            <i class="fas fa-trash"></i> Limpiar Firma
+        </button>
+        <button type="button" id="save-signature" class="btn btn-sm btn-success">
+            <i class="fas fa-save"></i> Guardar Firma
+        </button>
+    </div>
+    
+    <!-- Vista previa de firma guardada -->
+    <div id="signature-preview" class="mb-3" style="display:none;">
+        <p class="text-muted">Firma guardada:</p>
+        <img id="signature-image" src="" class="img-fluid border" style="max-height: 100px;">
+    </div>
+    
+    <!-- Campos requeridos -->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="nombre-firmante" class="form-label">Nombre completo:</label>
+            <input type="text" class="form-control" id="nombre-firmante" name="nombre_firmante" required>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="identificacion-firmante" class="form-label">Identificación:</label>
+            <input type="text" class="form-control" id="identificacion-firmante" name="identificacion_firmante" required>
+        </div>
+    </div>
+    
+    <div class="mb-3">
+        <label class="form-label">Fecha: <span id="fecha-firma"><?php echo date('d/m/Y H:i'); ?></span></label>
+    </div>
+</div>
             
             <!-- Subida de documentos -->
             <div class="border p-4">
@@ -2398,6 +2413,220 @@ function guardarSeccion15() {
     alert('Formulario completado exitosamente. Gracias.');
     // Aquí iría el código para enviar los datos al servidor
 }
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    mostrarSeccion(14);
+}
+
+// Inicialización del pad de firma
+document.addEventListener('DOMContentLoaded', function() {
+    const canvas = document.getElementById('signature-pad');
+    const signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(255, 255, 255)',
+        penColor: 'rgb(0, 0, 0)'
+    });
+
+    // Ajustar canvas al tamaño del contenedor
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear();
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Botón Limpiar
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+        document.getElementById('signature-preview').style.display = 'none';
+    });
+
+    // Botón Guardar
+    document.getElementById('save-signature').addEventListener('click', function() {
+        if (signaturePad.isEmpty()) {
+            alert('Por favor, proporcione su firma primero.');
+            return;
+        }
+        
+        const dataURL = signaturePad.toDataURL('image/png');
+        document.getElementById('signature-image').src = dataURL;
+        document.getElementById('signature-preview').style.display = 'block';
+        
+        // Guardar en input hidden para envío al servidor
+        const inputHidden = document.createElement('input');
+        inputHidden.type = 'hidden';
+        inputHidden.name = 'firma_digital';
+        inputHidden.value = dataURL;
+        document.getElementById('pills-seccion15').appendChild(inputHidden);
+        
+        alert('Firma guardada correctamente.');
+    });
+});
+
+// Validación de la sesión 15
+function validarSeccion15() {
+    // Verificar si se guardó la firma
+    if (!document.getElementById('signature-image').src) {
+        alert('Debe guardar su firma antes de continuar.');
+        return false;
+    }
+    
+    // Validar campos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return false;
+    }
+    
+    // Validar documentos adjuntos
+    const archivos = document.querySelector('input[name="documentos[]"]').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento requerido.');
+        return false;
+    }
+    
+    return true;
+}
+
+// Función para mostrar/ocultar campos "OTRAS"
+function toggleOtroCampo(selectElement, idCampoOtro) {
+    const campoOtro = $(`#${idCampoOtro}`);
+    if ($(selectElement).val() === 'OTRAS') {
+        campoOtro.show();
+    } else {
+        campoOtro.hide().find('input').val('');
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 14 - DECLARACIONES
+// =============================================
+
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    mostrarSeccion(15);
+}
+
+// =============================================
+// FUNCIONES AUXILIARES
+// =============================================
+
+function obtenerSeccionActual() {
+    // Obtener el número de la sección activa
+    const seccionActiva = $('.tab-pane.active').attr('id');
+    return parseInt(seccionActiva.replace('pills-seccion', ''));
+}
+
+// =============================================
+// INICIALIZACIÓN (al cargar el documento)
+// =============================================
+
+$(document).ready(function() {
+    // Configurar eventos para campos "OTRAS"
+    $('select[onchange*="toggleOtroCampo"]').each(function() {
+        const idCampoOtro = $(this).attr('onchange').match(/toggleOtroCampo\(.*,\s*'(.*)'\)/)[1];
+        toggleOtroCampo(this, idCampoOtro);
+    });
+    
+    // Configurar fecha actual para sesión 14
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    $('#fecha-actual, #fecha-firma').text(ahora.toLocaleDateString('es-ES', opciones));
+});
 
 
 

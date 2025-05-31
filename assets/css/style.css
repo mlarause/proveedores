@@ -230,3 +230,24 @@ body {
     border-radius: 4px;
     margin-bottom: 5px;
 }
+
+/* Estilos para el área de firma */
+.signature-pad-container {
+    position: relative;
+    margin: 0 auto;
+    border: 1px dashed #ccc;
+    background-color: #f8f9fa;
+}
+
+.signature-pad {
+    width: 100%;
+    height: 200px;
+    cursor: crosshair;
+}
+
+#signature-preview {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
