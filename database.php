@@ -194,7 +194,7 @@ $sql = "CREATE TABLE IF NOT EXISTS informacion_pep (
 )";
 
 if ($conn->query($sql) === FALSE) {
-    echo "Error creando tabla informacion_pep: " . $conn->error;
+    echo "Error creando tabla informacion_pep " . $conn->error;
 }
 
 
@@ -210,7 +210,7 @@ $sql = "CREATE TABLE IF NOT EXISTS beneficiarios_finales (
 )";
 
 if ($conn->query($sql) === FALSE) {
-    echo "Error creando tabla beneficiarios_finales: " . $conn->error;
+    echo "Error creando tabla beneficiarios_finales " . $conn->error;
 }
 
 
@@ -232,7 +232,7 @@ $sql = "CREATE TABLE IF NOT EXISTS informacion_financiera (
 )";
 
 if ($conn->query($sql) === FALSE) {
-    echo "Error creando tabla informacion_financiera: " . $conn->error;
+    echo "Error creando tabla informacion_financiera " . $conn->error;
 }
 
 // Tabla para operaciones internacionales (Sección 11)
@@ -258,7 +258,7 @@ $sql = "CREATE TABLE IF NOT EXISTS operaciones_internacionales (
 )";
 
 if ($conn->query($sql) === FALSE) {
-    echo "Error creando tabla operaciones_internacionales: " . $conn->error;
+    echo "Error creando tabla operaciones_internacionales " . $conn->error;
 }
 
 // Agregar esto con las otras tablas
@@ -273,8 +273,38 @@ $sql = "CREATE TABLE IF NOT EXISTS referencias_comerc (
     FOREIGN KEY (id_prov) REFERENCES proveedores(id) ON DELETE CASCADE
 )";
 if ($conn->query($sql) === FALSE) {
-    echo "Error creando tabla referencias_comerc: " . $conn->error;
+    echo "Error creando tabla referencias_comerc " . $conn->error;
 }
+
+
+// Agregar esto con las otras tablas
+$sql = "CREATE TABLE IF NOT EXISTS certificaciones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_proveedor INT NOT NULL,
+    gestion_calidad VARCHAR(10) NOT NULL,
+    otro_gestion_calidad VARCHAR(100),
+    seguridad_suministro VARCHAR(10) NOT NULL,
+    otro_seguridad_suministro VARCHAR(100),
+    operador_economico VARCHAR(10) NOT NULL,
+    resolucion_vigencia VARCHAR(100) NOT NULL,
+    sistema_sarlaft VARCHAR(10) NOT NULL,
+    otro_sistema_sarlaft VARCHAR(100),
+    licencias_ambientales VARCHAR(10) NOT NULL,
+    otro_licencias_ambientales VARCHAR(100),
+    seguridad_salud VARCHAR(10) NOT NULL,
+    otro_seguridad_salud VARCHAR(100),
+    avance_ss VARCHAR(50) NOT NULL,
+    calidad_laboratorios VARCHAR(10) NOT NULL,
+    otro_calidad_laboratorios VARCHAR(100),
+    detalle_certificaciones TEXT NOT NULL,
+    FOREIGN KEY (id_proveedor) REFERENCES proveedores(id) ON DELETE CASCADE
+)";
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla  certificaciones " . $conn->error;
+}
+
+
+$conn->exec($sql);
 // ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)
 
 echo "Tablas creadas o verificadas correctamente";
