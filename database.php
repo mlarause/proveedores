@@ -2,8 +2,8 @@
 // database.php
 
 $servername = "localhost";
-$username = "tu_usuario";
-$password = "tu_contraseña";
+$username = "root";
+$password = " ";
 $dbname = "proveedores";
 
 // Crear conexión
@@ -197,6 +197,8 @@ if ($conn->query($sql) === FALSE) {
     echo "Error creando tabla informacion_pep: " . $conn->error;
 }
 
+
+
 // Tabla para información de Beneficiarios Finales (Sección 9)
 $sql = "CREATE TABLE IF NOT EXISTS beneficiarios_finales (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -209,6 +211,28 @@ $sql = "CREATE TABLE IF NOT EXISTS beneficiarios_finales (
 
 if ($conn->query($sql) === FALSE) {
     echo "Error creando tabla beneficiarios_finales: " . $conn->error;
+}
+
+
+// Tabla para información financiera (Sección 10)
+$sql = "CREATE TABLE IF NOT EXISTS informacion_financiera (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id VARCHAR(50) NOT NULL,
+    actividad_economica TEXT NOT NULL,
+    sector_economico VARCHAR(100) NOT NULL,
+    divisa_reporte ENUM('USD', 'EUR', 'COP') NOT NULL,
+    otros_ingresos DECIMAL(15,2) NOT NULL,
+    costos_gastos DECIMAL(15,2) NOT NULL,
+    total_activos DECIMAL(15,2) NOT NULL,
+    total_pasivos DECIMAL(15,2) NOT NULL,
+    total_patrimonio DECIMAL(15,2) NOT NULL,
+    total_ingresos DECIMAL(15,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (proveedor_id) REFERENCES proveedores(numero_identificacion) ON DELETE CASCADE
+)";
+
+if ($conn->query($sql) === FALSE) {
+    echo "Error creando tabla informacion_financiera: " . $conn->error;
 }
 // ... (aquí puedes agregar las tablas para las siguientes secciones cuando las desarrolles)
 
