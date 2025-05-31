@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
 </head>
 <body>
     <div class="container mt-4 mb-5">
@@ -1612,50 +1613,42 @@
             </div>
             
             <div class="alert alert-warning mb-4">
-                <p><strong>NOTA:</strong> En este formato solo es admisible la firma del Representante Legal - (huella opcional). En constancia de haber leído, entendido y aceptado lo anterior, firmo el presente documento en la fecha <span id="fecha-actual"></span></p>
+                <p><strong>NOTA:</strong> En este formato solo es admisible la firma del Representante Legal - (huella opcional). En constancia de haber leído, entendido y aceptado lo anterior, firmo el presente documento en la fecha <span id="fecha-actual"><?php echo date('d/m/Y H:i'); ?></span></p>
             </div>
             
             <!-- Área de firma -->
-           <div class="border p-4 mb-4 text-center">
-    <h6>Firma de representante legal y/o Apoderado</h6>
-    
-    <!-- Canvas para firma -->
-    <div class="signature-pad-container mb-3">
-        <canvas id="signature-pad" class="signature-pad" width="500" height="200"></canvas>
-    </div>
-    
-    <!-- Botones para firma -->
-    <div class="mb-3">
-        <button type="button" id="clear-signature" class="btn btn-sm btn-danger">
-            <i class="fas fa-trash"></i> Limpiar Firma
-        </button>
-        <button type="button" id="save-signature" class="btn btn-sm btn-success">
-            <i class="fas fa-save"></i> Guardar Firma
-        </button>
-    </div>
-    
-    <!-- Vista previa de firma guardada -->
-    <div id="signature-preview" class="mb-3" style="display:none;">
-        <p class="text-muted">Firma guardada:</p>
-        <img id="signature-image" src="" class="img-fluid border" style="max-height: 100px;">
-    </div>
-    
-    <!-- Campos requeridos -->
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <label for="nombre-firmante" class="form-label">Nombre completo:</label>
-            <input type="text" class="form-control" id="nombre-firmante" name="nombre_firmante" required>
-        </div>
-        <div class="col-md-6 mb-3">
-            <label for="identificacion-firmante" class="form-label">Identificación:</label>
-            <input type="text" class="form-control" id="identificacion-firmante" name="identificacion_firmante" required>
-        </div>
-    </div>
-    
-    <div class="mb-3">
-        <label class="form-label">Fecha: <span id="fecha-firma"><?php echo date('d/m/Y H:i'); ?></span></label>
-    </div>
-</div>
+            <div class="border p-4 mb-4 text-center">
+                <h6>Firma de representante legal y/o Apoderado</h6>
+                <div class="signature-pad-container mb-3" style="border: 1px dashed #ccc; height: 200px; position: relative;">
+                    <canvas id="signature-canvas" style="width: 100%; height: 100%; touch-action: none;"></canvas>
+                    <button type="button" class="btn btn-sm btn-outline-danger" id="clear-signature" style="position: absolute; top: 5px; right: 5px;">
+                        <i class="fas fa-trash"></i> Limpiar
+                    </button>
+                </div>
+                <input type="hidden" id="signature-data" name="signature_data">
+                
+                <!-- Vista previa de firma -->
+                <div id="signature-preview" class="mb-3" style="display: none;">
+                    <p class="text-muted">Firma guardada:</p>
+                    <img id="signature-image" src="" class="img-fluid border" style="max-height: 100px;">
+                </div>
+                
+                <!-- Datos del firmante -->
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="nombre-firmante" class="form-label">Nombre completo:</label>
+                        <input type="text" class="form-control" id="nombre-firmante" name="nombre_firmante" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="identificacion-firmante" class="form-label">Identificación:</label>
+                        <input type="text" class="form-control" id="identificacion-firmante" name="identificacion_firmante" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Fecha: <span id="fecha-firma"><?php echo date('d/m/Y H:i'); ?></span></label>
+                </div>
+            </div>
             
             <!-- Subida de documentos -->
             <div class="border p-4">
@@ -1667,7 +1660,8 @@
                 
                 <div class="mb-3">
                     <label for="documentos" class="form-label">Cargar archivo:</label>
-                    <input class="form-control" type="file" id="documentos" name="documentos[]" multiple accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.jpg,.jpeg,.png,.gif,.mp4,.avi,.mov,.mp3,.wav" required>
+                    <input class="form-control" type="file" id="documentos" name="documentos[]" multiple required
+                           accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.jpg,.jpeg,.png,.gif,.mp4,.avi,.mov,.mp3,.wav">
                 </div>
             </div>
         </div>
@@ -2569,6 +2563,107 @@ function validarSeccion15() {
     
     return true;
 }
+
+
+// Función para inicializar el pad de firma
+function inicializarFirma() {
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(255, 255, 255)',
+        penColor: 'rgb(0, 0, 0)',
+        minWidth: 1,
+        maxWidth: 3
+    });
+
+    // Ajustar canvas al tamaño correcto
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear();
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Botón Limpiar
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+        document.getElementById('signature-preview').style.display = 'none';
+    });
+
+    // Guardar firma automáticamente al enviar
+    window.guardarFirma = function() {
+        if (signaturePad.isEmpty()) {
+            alert('Por favor, proporcione su firma primero.');
+            return false;
+        }
+        
+        const dataURL = signaturePad.toDataURL('image/png');
+        document.getElementById('signature-data').value = dataURL;
+        document.getElementById('signature-image').src = dataURL;
+        document.getElementById('signature-preview').style.display = 'block';
+        return true;
+    }
+}
+
+// Validación de la sesión 15
+function validarSeccion15() {
+    // Validar firma
+    if (!guardarFirma()) {
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos adjuntos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento requerido.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Si todo está correcto, enviar formulario
+    document.getElementById('form-proveedor').submit();
+}
+
+// Inicializar cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    inicializarFirma();
+    
+    // Configurar fecha actual
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+});
 
 // Función para mostrar/ocultar campos "OTRAS"
 function toggleOtroCampo(selectElement, idCampoOtro) {

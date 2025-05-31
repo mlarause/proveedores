@@ -339,6 +339,11 @@ $sql_docs = "CREATE TABLE IF NOT EXISTS archivos_proveedor (
     fecha_subida DATETIME NOT NULL,
     FOREIGN KEY (id_proveedor) REFERENCES proveedores(id) ON DELETE CASCADE
 )";
+
+
+
+
+
 $conn->exec($sql);
 $conn->exec($sql_docs);
 
