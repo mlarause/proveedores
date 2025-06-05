@@ -125,15 +125,16 @@
                                 </div>
                                 
                                 <!-- Tipo de Proveedor -->
-                                <div class="col-md-12">
-                                    <label for="tipo_proveedor" class="form-label">Tipo de Proveedor <span class="text-danger">*</span></label>
-                                    <select class="form-select" id="tipo_proveedor" name="tipo_proveedor" required>
-                                        <option value="" selected disabled>Seleccione...</option>
-                                        <option value="Proveedor Crítico">Proveedor Crítico</option>
-                                        <option value="Proveedor No Crítico">Proveedor No Crítico</option>
-                                        <option value="Proveedor Natural Especial">Proveedor Natural Especial</option>
-                                    </select>
-                                </div>
+                               <div class="col-md-12">
+                                <label for="tipo_proveedor" class="form-label">Tipo de Proveedor <span class="text-danger">*</span></label>
+                                <select class="form-select" id="tipo_proveedor" name="tipo_proveedor" required>
+                                    <option value="" selected disabled>Seleccione...</option>
+                                    <option value="Proveedor no gran contribuyente (crítico)">Proveedor no gran contribuyente (crítico)</option>
+                                    <option value="Proveedor gran contribuyente">Proveedor gran contribuyente</option>
+                                    <option value="Persona natural">Persona natural</option>
+                                    <option value="Mandatorio">Mandatorio</option>
+                                </select>
+                            </div>
                                 
                                 <!-- Número de Celular -->
                                 <div class="col-md-6">
@@ -144,7 +145,10 @@
                                 <!-- Correo Electrónico -->
                                 <div class="col-md-6">
                                     <label for="correo_electronico" class="form-label">Correo Electrónico <span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="correo_electronico" name="correo_electronico" required>
+                                    <input type="email" class="form-control" id="correo_electronico" name="correo_electronico" 
+                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                        title="Por favor ingrese un correo electrónico válido"
+                                        required>
                                 </div>
                             </div>
                         </div>
