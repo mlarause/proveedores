@@ -391,3 +391,12 @@ body {
 .card-body, .form-label, .form-control, .form-select {
     text-align: left !important; /* Fuerza alineación izquierda */
 }
+
+
+.section-title h4 {
+    color: #9d0371; /* Color morado para coincidir con tu tema */
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #9d0371;
+    display: inline-block;
+}

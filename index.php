@@ -26,7 +26,7 @@
         <form id="formProveedor" action="procesar.php" method="post" enctype="multipart/form-data">
             <!-- Barra de progreso -->
             <div class="progress mb-4">
-                <div class="progress-bar" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">1/15</div>
+                <div class="progress-bar" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100">1/16</div>
             </div>
             
             <!-- Indicador de secciones -->
@@ -96,6 +96,8 @@
             
             <!-- Contenido de las secciones -->
             <div class="tab-content" id="pills-tabContent">
+
+
                 <!-- Sección 1: Información Básica -->
                 <div class="tab-pane fade show active" id="pills-seccion1" role="tabpanel" aria-labelledby="pills-seccion1-tab">
                     <div class="card">
@@ -752,7 +754,7 @@
                     </div>
                     
         </form>
-    </div>
+                 </div>
                     
                     
                       <!-- Sección 5: Información de Contacto y Empresa -->
@@ -1918,7 +1920,7 @@
     </div>
 </div>
                 
-                <!-- Las demás secciones (11-15) irían aquí -->
+                <!-- Las demás secciones (15-16) irían aquí -->
             </div>
         </form>
     </div>
