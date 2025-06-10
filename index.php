@@ -324,7 +324,7 @@
                                 </div>
                                 
                                 <!-- Registro fotográfico -->
-                                <div class="col-md-12">
+                               <div class="col-md-12">
                                     <label for="fachada_nomenclatura" class="form-label">Registro fotográfico de la fachada donde se evidencie la nomenclatura registrada en el RUT <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="file" class="form-control" id="fachada_nomenclatura" name="fachada_nomenclatura" accept=".jpg,.png" required>
@@ -339,6 +339,7 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- descargar archivos -->
 
                    <div class="col-md-12 mt-3">
@@ -378,10 +379,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
                    <!-- Formularios a subir -->
-                    <div class="col-md-12">
+                   <div class="col-md-12">
                         <label for="formularios" class="form-label">Formularios <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <input type="file" class="form-control" id="formularios" name="formularios[]" accept=".docx,.xlsx" multiple required>
@@ -393,6 +394,7 @@
                         </div>
                         <div class="file-info">Formatos aceptados: DOCX, XLSX (múltiples archivos permitidos)</div>
                     </div>
+                    
 
                     
                     <!-- Botones de navegación -->
@@ -531,7 +533,7 @@
                                 </div>
 
                                  <!-- Registro fotográfico -->
-                                <div class="col-md-12">
+                               <div class="col-md-12">
                                     <label for="fachada_nomenclatura_nc" class="form-label">Registro fotográfico de la fachada donde se evidencie la nomenclatura registrada en el RUT <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="file" class="form-control" id="fachada_nomenclatura_nc" name="fachada_nomenclatura_nc" accept=".jpg,.png" required>
@@ -589,7 +591,7 @@
                     </div>
 
                    <!-- Formularios a subir -->
-                    <div class="col-md-12">
+                   <div class="col-md-12">
                         <label for="formularios_nc" class="form-label">Formularios <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <input type="file" class="form-control" id="formularios_nc" name="formularios_nc[]" accept=".docx,.xlsx" multiple required>
@@ -600,7 +602,7 @@
                             </select>
                         </div>
                         <div class="file-info">Formatos aceptados: DOCX, XLSX (múltiples archivos permitidos)</div>
-                    </div>                               
+                    </div>                             
 
                            
                     
@@ -611,9 +613,7 @@
                     </div>
                 </div>
 
-                 </div>
-                        
-            
+                 
                 
                 <!-- Sección 4: Documentación Proveedor Natural Especial -->
                 <div class="tab-pane fade" id="pills-seccion4" role="tabpanel" aria-labelledby="pills-seccion4-tab">
@@ -672,7 +672,7 @@
 
 
                                 <!-- Registro fotográfico -->
-                                <div class="col-md-12">
+                              <div class="col-md-12">
                                     <label for="fachada_nomenclatura_natural" class="form-label">Registro fotográfico de la fachada donde se evidencie la nomenclatura registrada en el RUT <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="file" class="form-control" id="fachada_nomenclatura_natural" name="fachada_nomenclatura_natural" accept=".jpg,.png" required>
@@ -690,7 +690,7 @@
 
                     <!-- descargar archivos -->
 
-                   <div class="col-md-12 mt-3">
+                  <div class="col-md-12 mt-3">
                         <div class="card border-primary">
                             <div class="card-header bg-primary text-white">
                                 <h6 class="mb-0">Formularios disponibles para descargar</h6>
@@ -730,7 +730,7 @@
                     </div>
 
                    <!-- Formularios a subir -->
-                    <div class="col-md-12">
+                  <div class="col-md-12">
                         <label for="formularios_natural" class="form-label">Formularios <span class="text-danger">*</span></label>
                         <div class="input-group">
                             <input type="file" class="form-control" id="formularios_natural" name="formularios_natural[]" accept=".docx,.xlsx" multiple required>
@@ -741,7 +741,7 @@
                             </select>
                         </div>
                         <div class="file-info">Formatos aceptados: DOCX, XLSX (múltiples archivos permitidos)</div>
-                    </div>                          
+                    </div>                         
 
                           
 
@@ -750,9 +750,7 @@
                         <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
                        <button type="button" onclick="irASeccion5()" class="btn btn-primary">Avanzar</button>
                     </div>
-                     </div>
-                
-        
+                    
         </form>
     </div>
                     
