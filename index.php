@@ -269,7 +269,7 @@
                                 
                                 <!-- Referencia comercial -->
                                 <div class="col-md-12">
-                                    <label for="referencia_comercial" class="form-label">Referencia comercial vigente <span class="text-danger">*</span></label>
+                                    <label for="referencia_comercial" class="form-label">Referencia comercial vigente Adjuto minimo 2<span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="file" class="form-control" id="referencia_comercial" name="referencia_comercial" accept=".pdf,.jpg,.png" required>
                                         <select class="form-select" style="max-width: 150px;" name="referencia_comercial_estado" required>
@@ -324,6 +324,21 @@
                                     </div>
                                     <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
                                 </div>
+
+                                 <!-- Autoevaluación de estándares mínimos de seguridad según la legislación vigente de mini trabajo -->
+                                <div class="col-md-12">
+                                    <label for="Autoevaluación" class="form-label">Autoevaluación de estándares mínimos de seguridad según la legislación vigente de mini trabajo <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="Autoevaluación" name="Autoevaluación" accept=".pdf,.jpg,.png" required>
+                                        <select class="form-select" style="max-width: 150px;" name="Autoevaluación" required>
+                                            <option value="" selected disabled>Estado</option>
+                                            <option value="Completo">Completo</option>
+                                            <option value="No Completado">No Completado</option>
+                                        </select>
+                                    </div>
+                                    <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
+                                </div>
+                                
                                 
                                 <!-- Registro fotográfico -->
                                <div class="col-md-12">
@@ -478,7 +493,7 @@
                                 
                                 <!-- Referencia comercial -->
                                 <div class="col-md-12">
-                                    <label for="referencia_comercial_nc" class="form-label">Referencia comercial vigente <span class="text-danger">*</span></label>
+                                    <label for="referencia_comercial_nc" class="form-label">Referencia comercial vigente Adjunto minimo 2 <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <input type="file" class="form-control" id="referencia_comercial_nc" name="referencia_comercial_nc" accept=".pdf,.jpg,.png" required>
                                         <select class="form-select" style="max-width: 150px;" name="referencia_comercial_nc_estado" required>
@@ -533,6 +548,22 @@
                                     </div>
                                     <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
                                 </div>
+
+
+                                <!-- Autoevaluación de estándares mínimos de seguridad según la legislación vigente de mini trabajo -->
+                                <div class="col-md-12">
+                                    <label for="Autoevaluación" class="form-label">Autoevaluación de estándares mínimos de seguridad según la legislación vigente de mini trabajo <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="file" class="form-control" id="Autoevaluación" name="Autoevaluación" accept=".pdf,.jpg,.png" required>
+                                        <select class="form-select" style="max-width: 150px;" name="Autoevaluación" required>
+                                            <option value="" selected disabled>Estado</option>
+                                            <option value="Completo">Completo</option>
+                                            <option value="No Completado">No Completado</option>
+                                        </select>
+                                    </div>
+                                    <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
+                                </div>
+
 
                                  <!-- Registro fotográfico -->
                                <div class="col-md-12">
@@ -1844,15 +1875,6 @@
             </div>
             
             <ol class="list-group list-group-numbered mb-4">
-                <li class="list-group-item">Certificado de Existencia y Representación Legal no mayor a 30 días.</li>
-                <li class="list-group-item">Certificación composición Accionaria firmada por representante, contador y/o revisor fiscal (Detallada hasta última persona natural)</li>
-                <li class="list-group-item">Registro único tributario (RUT) Actualizado</li>
-                <li class="list-group-item">Fotocopia de cédula o pasaporte representante legal al 150%</li>
-                <li class="list-group-item">Certificaciones Bancarias de cuentas nacionales, con fecha de expedición no mayor a 30 días</li>
-                <li class="list-group-item">Certificaciones de seguridad de calidad, de licencias y/o permisos ambientales (si aplica)</li>
-                <li class="list-group-item">Copia de la resolución a operador económico autorizado (OEA) (Si aplica)</li>
-                <li class="list-group-item">Manifestación suscrita de cumplimiento requisitos mínimos de seguridad, en caso de no ser OEA</li>
-                <li class="list-group-item">Auto-evaluación de estándares mínimos de seguridad según la legislación vigente de MINTRABAJO</li>
             </ol>
             
             <div class="alert alert-light border mb-4">
