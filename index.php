@@ -43,48 +43,54 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="pills-seccion4-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion4" type="button" role="tab" aria-controls="pills-seccion4" aria-selected="false" style="display:none;">Documentación Natural</button>
                 </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-seccion5-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion5" type="button" role="tab" aria-controls="pills-seccion5" aria-selected="false" style="display:none;">
+                        Doc. Mandatorios
+                    </button>
+                </li>
+                
                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-seccion5-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion5" type="button" role="tab" aria-controls="pills-seccion5" aria-selected="false">Información de Contacto</button>
+                    <button class="nav-link" id="pills-seccion6-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion6" type="button" role="tab" aria-controls="pills-seccion6" aria-selected="false">Información de Contacto</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion6-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion6" type="button" role="tab" aria-controls="pills-seccion6" aria-selected="false" style="display:none;">Representante Legal</button>
+                <button class="nav-link" id="pills-seccion7-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion7" type="button" role="tab" aria-controls="pills-seccion7" aria-selected="false" style="display:none;">Representante Legal</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion7-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion7" type="button" role="tab" aria-controls="pills-seccion7" aria-selected="false" style="display:none;">Personas Contacto</button>
+                <button class="nav-link" id="pills-seccion8-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion8" type="button" role="tab" aria-controls="pills-seccion8" aria-selected="false" style="display:none;">Personas Contacto</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                 <button class="nav-link" id="pills-seccion8-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion8" type="button" role="tab" aria-controls="pills-seccion8" aria-selected="false" style="display:none;">Información PEP</button>
+                 <button class="nav-link" id="pills-seccion9-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion9" type="button" role="tab" aria-controls="pills-seccion9" aria-selected="false" style="display:none;">Información PEP</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion9-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion9" type="button" role="tab" aria-controls="pills-seccion9" aria-selected="false" style="display:none;">Beneficiarios Finales</button>
+                <button class="nav-link" id="pills-seccion10-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion10" type="button" role="tab" aria-controls="pills-seccion10" aria-selected="false" style="display:none;">Beneficiarios Finales</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion10-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion10" type="button" role="tab" aria-controls="pills-seccion10" aria-selected="false" style="display:none;">
+                <button class="nav-link" id="pills-seccion11-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion11" type="button" role="tab" aria-controls="pills-seccion11" aria-selected="false" style="display:none;">
                     Información Financiera
                 </button>
                  </li>
                  <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion11-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion11" type="button" role="tab" aria-controls="pills-seccion11" aria-selected="false" style="display:none;">
+                <button class="nav-link" id="pills-seccion12-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion12" type="button" role="tab" aria-controls="pills-seccion12" aria-selected="false" style="display:none;">
                     Operaciones Internacionales
                 </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion12-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion12" type="button" role="tab" aria-controls="pills-seccion12" aria-selected="false" style="display:none;">
+                <button class="nav-link" id="pills-seccion13-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion13" type="button" role="tab" aria-controls="pills-seccion13" aria-selected="false" style="display:none;">
                     Referencia Comercial
                 </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion13-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion13" type="button" role="tab" aria-controls="pills-seccion13" aria-selected="false" style="display:none;">
+                <button class="nav-link" id="pills-seccion14-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion14" type="button" role="tab" aria-controls="pills-seccion14" aria-selected="false" style="display:none;">
                     Certificaciones
                 </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion14-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion14" type="button" role="tab" aria-controls="pills-seccion14" aria-selected="false" style="display:none;">
+                <button class="nav-link" id="pills-seccion15-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion15" type="button" role="tab" aria-controls="pills-seccion15" aria-selected="false" style="display:none;">
                     Declaraciones y Autorizaciones
                 </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-seccion15-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion15" type="button" role="tab" aria-controls="pills-seccion15" aria-selected="false" style="display:none;">
+                <button class="nav-link" id="pills-seccion16-tab" data-bs-toggle="pill" data-bs-target="#pills-seccion16" type="button" role="tab" aria-controls="pills-seccion16" aria-selected="false" style="display:none;">
                     Documentos Requeridos
                 </button>
                 </li>
@@ -563,9 +569,9 @@
                                     </div>
                                     <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
                                 </div>
-
-
-                                 <!-- Registro fotográfico -->
+                                
+                                
+                                <!-- Registro fotográfico -->
                                <div class="col-md-12">
                                     <label for="fachada_nomenclatura_nc" class="form-label">Registro fotográfico de la fachada donde se evidencie la nomenclatura registrada en el RUT <span class="text-danger">*</span></label>
                                     <div class="input-group">
@@ -783,13 +789,74 @@
                         <button type="button" class="btn btn-secondary" onclick="irASeccion1()">Anterior</button>
                        <button type="button" onclick="irASeccion5()" class="btn btn-primary">Avanzar</button>
                     </div>
+                </div>
+
+                 <!-- Nueva Sesión 5 - REQUISITOS Y FORMATOS -->
+<div class="tab-pane fade" id="pills-seccion5" role="tabpanel" aria-labelledby="pills-seccion5-tab">
+    <div class="card border-primary">
+        <div class="card-header bg-primary text-white">
+            <h5 class="mb-0">REQUISITOS Y FORMATOS (Documentación y Formatos – Mandatorio)</h5>
+        </div>
+        <div class="card-body">
+            <div class="alert alert-info">
+                <strong>Asegúrese de subir todos los documentos requeridos en los formatos aceptados (.PDF, .JPG, .PNG)</strong>
+            </div>
+            
+            <h6 class="mt-4 mb-3">CARGA DE ARCHIVO (Formulario, adjunta la siguiente documentación)</h6>
+            
+            <!-- RUT -->
+            <div class="mb-4">
+                <label class="form-label">RUT completo vigente (menor a 60 días) <span class="text-danger">*</span></label>
+                <input type="file" class="form-control" name="rut_vigente" accept=".pdf,.jpg,.png" required>
+            </div>
+            
+            <!-- Certificación Bancaria -->
+            <div class="mb-4">
+                <label class="form-label">Certificación bancaria vigente <span class="text-danger">*</span></label>
+                <input type="file" class="form-control" name="certificacion_bancaria" accept=".pdf,.jpg,.png" required>
+            </div>
+            
+            <!-- Cámara de Comercio -->
+            <div class="mb-4">
+                <label class="form-label">Cámara y comercio <span class="text-danger">*</span></label>
+                <input type="file" class="form-control" name="camara_comercio" accept=".pdf,.jpg,.png" required>
+            </div>
+            
+            <!-- Cédula representante legal -->
+            <div class="mb-4">
+                <label class="form-label">Cédula del representante legal <span class="text-danger">*</span></label>
+                <input type="file" class="form-control" name="cedula_representante" accept=".pdf,.jpg,.png" required>
+            </div>
+            
+            <!-- Pregunta SI/NO -->
+            <div class="mb-4">
+                <label class="form-label">¿Desea usted diligenciar el presente formulario? <span class="text-danger">*</span></label>
+                <select class="form-control" id="desea_diligenciar" name="desea_diligenciar" required>
+                    <option value="" selected disabled>Seleccione...</option>
+                    <option value="SI">SI</option>
+                    <option value="NO">NO</option>
+                </select>
+            </div>
+            
+            <!-- Campo motivo (solo visible cuando NO) -->
+            <div class="mb-4" id="motivo_container" style="display: none;">
+                <label class="form-label">Indique brevemente el motivo de su decisión <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="motivo_no" name="motivo_no" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Botones de navegación -->
+    <div class="text-end mt-3">
+        <button type="button" class="btn btn-secondary" onclick="navTab('pills-seccion4-tab')">Anterior</button>
+        <button type="button" class="btn btn-primary" onclick="validarSesion5()">Siguiente</button>
+    </div>
+</div>
+ooo
                     
-        </form>
-                 </div>
                     
-                    
-                      <!-- Sección 5: Información de Contacto y Empresa -->
-                <div class="tab-pane fade" id="pills-seccion5" role="tabpanel" aria-labelledby="pills-seccion5-tab">
+                      <!-- Sección 6 : Información de Contacto y Empresa -->
+                <div class="tab-pane fade" id="pills-seccion6" role="tabpanel" aria-labelledby="pills-seccion6-tab">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
                             <h5 class="card-title mb-0">Información de Contacto y Empresa</h5>
@@ -985,7 +1052,7 @@
                 </div>
             
                 
-                <!-- Sección 6: Información del Representante Legal Principal -->
+                <!-- Sección 7: Información del Representante Legal Principal -->
                 <div class="tab-pane fade" id="pills-seccion6" role="tabpanel" aria-labelledby="pills-seccion6-tab">
                     <div class="card">
                         <div class="card-header bg-primary text-white">
@@ -1124,7 +1191,7 @@
                     </div>
                 </div>
 
-               <!-- Sección 7: Personas de Contacto -->
+               <!-- Sección 8: Personas de Contacto -->
 <div class="tab-pane fade" id="pills-seccion7" role="tabpanel" aria-labelledby="pills-seccion7-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1175,7 +1242,7 @@
 
             
 
-            <!-- Sección 8: Conocimiento Mejorado de PEP -->
+            <!-- Sección 9: Conocimiento Mejorado de PEP -->
 <div class="tab-pane fade" id="pills-seccion8" role="tabpanel" aria-labelledby="pills-seccion8-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1311,7 +1378,7 @@
 </div>
 
 
-<!-- Sección 9: Conocimiento de Beneficiarios Finales -->
+<!-- Sección 10: Conocimiento de Beneficiarios Finales -->
 <div class="tab-pane fade" id="pills-seccion9" role="tabpanel" aria-labelledby="pills-seccion9-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1360,7 +1427,7 @@
 </div>
 
 
-<!-- Sección 10: Información Financiera -->
+<!-- Sección 11: Información Financiera -->
 <div class="tab-pane fade" id="pills-seccion10" role="tabpanel" aria-labelledby="pills-seccion10-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1446,8 +1513,7 @@
 </div>
 
 
-
-<!-- Sección 11: Operaciones Internacionales -->
+<!-- Sección 12: Operaciones Internacionales -->
 <div class="tab-pane fade" id="pills-seccion11" role="tabpanel" aria-labelledby="pills-seccion11-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1610,7 +1676,7 @@
 </div>
 
 
-<!-- Contenido de la sesión 12 -->
+<!-- Contenido de la sesión 13 -->
 <div class="tab-pane fade" id="pills-seccion12" role="tabpanel" aria-labelledby="pills-seccion12-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1665,7 +1731,7 @@
 
                 
 
-<!-- Contenido de la sesión 13 -->
+<!-- Contenido de la sesión 14 -->
 <div class="tab-pane fade" id="pills-seccion13" role="tabpanel" aria-labelledby="pills-seccion13-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1807,7 +1873,7 @@
 </div>
                 
 
-<!-- Contenido de la sesión 14 -->
+<!-- Contenido de la sesión 15 -->
 <div class="tab-pane fade" id="pills-seccion14" role="tabpanel" aria-labelledby="pills-seccion14-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1863,7 +1929,7 @@
 </div>
 
 
-<!-- Contenido de la sesión 15 -->
+<!-- Contenido de la sesión 16 -->
 <div class="tab-pane fade" id="pills-seccion15" role="tabpanel" aria-labelledby="pills-seccion15-tab">
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -1886,54 +1952,29 @@
             </div>
             
            <!-- Área de Firma Digital -->
-<div class="border p-4 mb-4 text-center">
-    <h5>Firma del Representante Legal</h5>
-    
-    <!-- Canvas para firmar - Asegúrate de tener estas dimensiones -->
-    <div style="border: 1px solid #ddd; background-color: #f8f9fa; margin: 0 auto; width: 100%; max-width: 500px; height: 200px;">
-        <canvas id="firmaCanvas" style="width: 100%; height: 100%; display: block; touch-action: none;"></canvas>
-    </div>
-    
-    <!-- Botones de control -->
-    <div class="mt-3 mb-3">
-        <button type="button" id="btnLimpiarFirma" class="btn btn-sm btn-danger me-2">
-            <i class="fas fa-eraser"></i> Limpiar
-        </button>
-        <button type="button" id="btnGuardarFirma" class="btn btn-sm btn-success">
-            <i class="fas fa-save"></i> Guardar Firma
-        </button>
-    </div>
-    
-    <!-- Vista previa de la firma (esto mostrará tu firma guardada) -->
-    <div id="vistaPreviaFirma" style="display: none; margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
-        <p class="text-muted mb-1">Tu firma guardada:</p>
-        <img id="imagenFirma" src="" style="max-height: 80px; border: 1px solid #ddd;">
-    </div>
-    
-    <!-- Fecha y hora automáticas -->
-    <div class="text-muted small mt-3">
-        Fecha y hora: <span id="fechaHoraFirma"><?php echo date('d/m/Y H:i:s'); ?></span>
-    </div>
-    
-    <!-- Campo oculto que guardará tu firma para enviarla -->
-    <input type="hidden" id="firmaDigitalData" name="firma_digital">
-</div>
-            <!-- Subida de documentos -->
-            <div class="border p-4">
-                <h5 class="mb-3">Subir documentos requeridos</h5>
-                <div class="alert alert-light">
-                    <p class="mb-2"><small>Límite de tamaño del archivo individual: 100MB</small></p>
-                    <p class="mb-0"><small>Tipos de archivo permitidos: Word, Excel, PPT, PDF, Imagen, Vídeo, Audio</small></p>
+<div class="col-md-12">
+    <div class="form-group">
+        <label class="form-label">Firma Digital <span class="text-danger">*</span></label>
+        <div class="card">
+            <div class="card-body">
+                <!-- Campo para subir archivo -->
+                <div class="mb-3">
+                    <input type="file" class="form-control" id="firmaUpload" name="firma_imagen" accept="image/png, image/jpeg" required>
+                    <small class="text-muted">Formatos aceptados: PNG, JPG (Máx. 2MB)</small>
                 </div>
                 
-                <div class="mb-3">
-                    <label for="documentos" class="form-label">Cargar archivo:</label>
-                    <input class="form-control" type="file" id="documentos" name="documentos[]" multiple required
-                           accept=".doc,.docx,.xls,.xlsx,.ppt,.pptx,.pdf,.jpg,.jpeg,.png,.gif,.mp4,.avi,.mov,.mp3,.wav">
+                <!-- Vista previa -->
+                <div id="firmaPreviewContainer" style="display: none;">
+                    <p>Vista previa de la firma:</p>
+                    <img id="firmaPreview" src="#" alt="Vista previa de firma" class="img-fluid" style="max-height: 150px; border: 1px solid #ddd; padding: 5px;">
+                    <button type="button" id="removeFirma" class="btn btn-danger btn-sm mt-2">
+                        <i class="fas fa-trash-alt me-1"></i> Eliminar Firma
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+</div>
     
     <!-- Botones de navegación (IGUALES a sesión 11) -->
     <div class="d-flex justify-content-between mt-4">
@@ -1980,7 +2021,7 @@
         function validarSeccion1() {
     const inputsRequeridos = document.querySelectorAll('#pills-seccion1 [required]');
     let valido = true;
-    
+
     inputsRequeridos.forEach(input => {
         if (!input.value) {
             input.classList.add('is-invalid');
@@ -1989,34 +2030,32 @@
             input.classList.remove('is-invalid');
         }
     });
-    
+
     if (valido) {
         const tipoProveedor = document.getElementById('tipo_proveedor').value;
-        let siguienteSeccionNumero = 2; // Por defecto para  Proveedor no Gran Contribuyente)
-        
-        if (tipoProveedor === 'Proveedor gran contribuyente') {
+        let siguienteSeccionNumero = 2; // Por defecto
+
+        if (tipoProveedor === 'Proveedor no gran contribuyente (crítico)') {
+            siguienteSeccionNumero = 2;
+        } else if (tipoProveedor === 'Proveedor gran contribuyente') {
             siguienteSeccionNumero = 3;
         } else if (tipoProveedor === 'Persona natural') {
             siguienteSeccionNumero = 4;
+        } else if (tipoProveedor === 'Mandatorio') {
+            siguienteSeccionNumero = 5;
         }
-        
-        // Guardar la sección anterior
+
         seccionAnterior = siguienteSeccionNumero;
-        
-        // Ocultar todas las pestañas de documentación
-        document.querySelectorAll('#pills-tab li.nav-item:not(:first-child)').forEach(item => {
-            item.style.display = 'none';
-        });
-        
-        // Mostrar solo la pestaña correspondiente
+
+        // Mostrar la pestaña correspondiente si está oculta
         document.getElementById(`pills-seccion${siguienteSeccionNumero}-tab`).style.display = 'block';
-        
+
         // Actualizar barra de progreso
         const porcentaje = (siguienteSeccionNumero / totalSecciones) * 100;
         document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
         document.querySelector('.progress-bar').textContent = `${siguienteSeccionNumero}/${totalSecciones}`;
         document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
-        
+
         // Cambiar a la pestaña correspondiente
         const siguienteTab = document.querySelector(`#pills-seccion${siguienteSeccionNumero}-tab`);
         const tabInstance = new bootstrap.Tab(siguienteTab);
@@ -2535,27 +2574,28 @@ function validarSeccion13() {
     let valido = true;
     
     // Validar selects
-    document.querySelectorAll('#pills-seccion13 select[required]').forEach(select => {
-        if (!select.value) {
-            select.classList.add('is-invalid');
+   
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
             valido = false;
         } else {
-            select.classList.remove('is-invalid');
+            $(this).removeClass('is-invalid');
         }
     });
     
     // Validar inputs
-    document.querySelectorAll('#pills-seccion13 input[required]').forEach(input => {
-        if (!input.value.trim()) {
-            input.classList.add('is-invalid');
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
             valido = false;
         } else {
-            input.classList.remove('is-invalid');
+            $(this).removeClass('is-invalid');
         }
     });
     
     if (!valido) {
-        alert('Debe completar todos los campos obligatorios de la sección de Certificaciones.');
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
         return;
     }
     
@@ -2572,14 +2612,14 @@ function guardarSeccion13() {
 
 // Validación de la sección 14
 function validarSeccion14() {
-    const acepta = document.querySelector('input[name="acepta_declaraciones"]:checked');
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
     
-    if (!acepta || acepta.value === 'NO') {
+    if (!acepta.length || acepta.val() === 'NO') {
         alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
         return;
     }
     
-    if (acepta.value === 'SI') {
+    if (acepta.val() === 'SI') {
         guardarSeccion14();
     }
 }
@@ -2756,130 +2796,78 @@ function validarSeccion13() {
         return;
     }
     
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
     mostrarSeccion(14);
 }
 
-// Inicialización del pad de firma
-document.addEventListener('DOMContentLoaded', function() {
-    const canvas = document.getElementById('signature-pad');
-    const signaturePad = new SignaturePad(canvas, {
-        backgroundColor: 'rgb(255, 255, 255)',
-        penColor: 'rgb(0, 0, 0)'
-    });
 
-    // Ajustar canvas al tamaño del contenedor
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
     function resizeCanvas() {
         const ratio = Math.max(window.devicePixelRatio || 1, 1);
         canvas.width = canvas.offsetWidth * ratio;
         canvas.height = canvas.offsetHeight * ratio;
         canvas.getContext("2d").scale(ratio, ratio);
-        signaturePad.clear();
+        signaturePad.clear(); // Limpiar al redimensionar
     }
     
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
-
-    // Botón Limpiar
-    document.getElementById('clear-signature').addEventListener('click', function() {
-        signaturePad.clear();
-        document.getElementById('signature-preview').style.display = 'none';
-    });
-
-    // Botón Guardar
-    document.getElementById('save-signature').addEventListener('click', function() {
-        if (signaturePad.isEmpty()) {
-            alert('Por favor, proporcione su firma primero.');
-            return;
-        }
-        
-        const dataURL = signaturePad.toDataURL('image/png');
-        document.getElementById('signature-image').src = dataURL;
-        document.getElementById('signature-preview').style.display = 'block';
-        
-        // Guardar en input hidden para envío al servidor
-        const inputHidden = document.createElement('input');
-        inputHidden.type = 'hidden';
-        inputHidden.name = 'firma_digital';
-        inputHidden.value = dataURL;
-        document.getElementById('pills-seccion15').appendChild(inputHidden);
-        
-        alert('Firma guardada correctamente.');
-    });
 });
 
-// Validación de la sesión 15
-function validarSeccion15() {
-    // Verificar si se guardó la firma
-    if (!document.getElementById('signature-image').src) {
-        alert('Debe guardar su firma antes de continuar.');
-        return false;
-    }
-    
-    // Validar campos del firmante
-    if (!document.getElementById('nombre-firmante').value.trim() || 
-        !document.getElementById('identificacion-firmante').value.trim()) {
-        alert('Debe completar todos los datos del firmante.');
-        return false;
-    }
-    
-    // Validar documentos adjuntos
-    const archivos = document.querySelector('input[name="documentos[]"]').files;
-    if (archivos.length === 0) {
-        alert('Debe adjuntar al menos un documento requerido.');
-        return false;
-    }
-    
-    return true;
-}
-
-
-// Función para inicializar el pad de firma
-function inicializarFirma() {
-    const canvas = document.getElementById('signature-canvas');
-    const signaturePad = new SignaturePad(canvas, {
-        backgroundColor: 'rgb(255, 255, 255)',
-        penColor: 'rgb(0, 0, 0)',
-        minWidth: 1,
-        maxWidth: 3
-    });
-
-    // Ajustar canvas al tamaño correcto
-    function resizeCanvas() {
-        const ratio = Math.max(window.devicePixelRatio || 1, 1);
-        canvas.width = canvas.offsetWidth * ratio;
-        canvas.height = canvas.offsetHeight * ratio;
-        canvas.getContext("2d").scale(ratio, ratio);
-        signaturePad.clear();
-    }
-    
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
-
-    // Botón Limpiar
-    document.getElementById('clear-signature').addEventListener('click', function() {
-        signaturePad.clear();
-        document.getElementById('signature-preview').style.display = 'none';
-    });
-
-    // Guardar firma automáticamente al enviar
-    window.guardarFirma = function() {
-        if (signaturePad.isEmpty()) {
-            alert('Por favor, proporcione su firma primero.');
-            return false;
-        }
-        
-        const dataURL = signaturePad.toDataURL('image/png');
-        document.getElementById('signature-data').value = dataURL;
-        document.getElementById('signature-image').src = dataURL;
-        document.getElementById('signature-preview').style.display = 'block';
-        return true;
-    }
-}
-
-// Validación de la sesión 15
+// Validación de la sección 15
 function validarSeccion15() {
     // Validar firma
-    if (!guardarFirma()) {
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
         return;
     }
     
@@ -2890,10 +2878,10 @@ function validarSeccion15() {
         return;
     }
     
-    // Validar documentos adjuntos
+    // Validar documentos
     const archivos = document.getElementById('documentos').files;
     if (archivos.length === 0) {
-        alert('Debe adjuntar al menos un documento requerido.');
+        alert('Debe adjuntar al menos un documento.');
         return;
     }
     
@@ -2912,15 +2900,132 @@ function validarSeccion15() {
         }
     }
     
-    // Si todo está correcto, enviar formulario
-    document.getElementById('form-proveedor').submit();
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
 }
 
-// Inicializar cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', function() {
-    inicializarFirma();
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
     
-    // Configurar fecha actual
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
+    mostrarSeccion(14);
+}
+
+
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
     const ahora = new Date();
     const opciones = { 
         year: 'numeric', 
@@ -2931,22 +3036,172 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
     document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
 });
 
-// Función para mostrar/ocultar campos "OTRAS"
-function toggleOtroCampo(selectElement, idCampoOtro) {
-    const campoOtro = $(`#${idCampoOtro}`);
-    if ($(selectElement).val() === 'OTRAS') {
-        campoOtro.show();
-    } else {
-        campoOtro.hide().find('input').val('');
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
+
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
     }
 }
 
 // =============================================
-// FUNCIONES PARA SESIÓN 14 - DECLARACIONES
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
 // =============================================
 
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
+    mostrarSeccion(14);
+}
+
+
+
+// Validación de la sección 14
 function validarSeccion14() {
     const acepta = $('input[name="acepta_declaraciones"]:checked');
     
@@ -2955,284 +3210,19 @@ function validarSeccion14() {
         return;
     }
     
-    mostrarSeccion(15);
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
 }
 
-// =============================================
-// FUNCIONES AUXILIARES
-// =============================================
-
-function obtenerSeccionActual() {
-    // Obtener el número de la sección activa
-    const seccionActiva = $('.tab-pane.active').attr('id');
-    return parseInt(seccionActiva.replace('pills-seccion', ''));
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
 }
 
 
-
-// Inicialización del Signature Pad
+// Mostrar fecha actual
 document.addEventListener('DOMContentLoaded', function() {
-    // Configurar el canvas
-    const canvas = document.getElementById('firmaCanvas');
-    const ctx = canvas.getContext('2d');
-    let isDrawing = false;
-    let lastX = 0;
-    let lastY = 0;
-    
-    // Ajustar tamaño del canvas
-    function resizeCanvas() {
-        const ratio = window.devicePixelRatio || 1;
-        canvas.width = canvas.offsetWidth * ratio;
-        canvas.height = canvas.offsetHeight * ratio;
-        canvas.style.width = canvas.offsetWidth + 'px';
-        canvas.style.height = canvas.offsetHeight + 'px';
-        ctx.scale(ratio, ratio);
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = '#000000';
-    }
-    
-    // Eventos para dibujar con mouse
-    canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('mouseup', stopDrawing);
-    canvas.addEventListener('mouseout', stopDrawing);
-    
-    // Eventos para dispositivos táctiles
-    canvas.addEventListener('touchstart', handleTouchStart);
-    canvas.addEventListener('touchmove', handleTouchMove);
-    canvas.addEventListener('touchend', stopDrawing);
-    
-    // Inicializar
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    
-    // Botón Limpiar
-    document.getElementById('btnLimpiarFirma').addEventListener('click', function() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        document.getElementById('vistaPreviaFirma').style.display = 'none';
-    });
-    
-    // Botón Guardar
-    document.getElementById('btnGuardarFirma').addEventListener('click', function() {
-        guardarFirma();
-    });
-    
-    // Función para guardar la firma
-    window.guardarFirma = function() {
-        if (isCanvasBlank(canvas)) {
-            alert('Por favor, realice su firma primero.');
-            return false;
-        }
-        
-        const firmaData = canvas.toDataURL('image/png');
-        document.getElementById('firmaDigitalData').value = firmaData;
-        document.getElementById('imagenFirma').src = firmaData;
-        document.getElementById('vistaPreviaFirma').style.display = 'block';
-        
-        alert('Firma guardada correctamente.');
-        return true;
-    };
-    
-    // Funciones para dibujar
-    function startDrawing(e) {
-        isDrawing = true;
-        [lastX, lastY] = getPosition(e);
-    }
-    
-    function draw(e) {
-        if (!isDrawing) return;
-        
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        [lastX, lastY] = getPosition(e);
-        ctx.lineTo(lastX, lastY);
-        ctx.stroke();
-    }
-    
-    function stopDrawing() {
-        isDrawing = false;
-    }
-    
-    function getPosition(e) {
-        let x, y;
-        if (e.type.includes('touch')) {
-            const rect = canvas.getBoundingClientRect();
-            x = e.touches[0].clientX - rect.left;
-            y = e.touches[0].clientY - rect.top;
-        } else {
-            x = e.offsetX;
-            y = e.offsetY;
-        }
-        return [x, y];
-    }
-    
-    function handleTouchStart(e) {
-        e.preventDefault();
-        startDrawing(e.touches[0]);
-    }
-    
-    function handleTouchMove(e) {
-        e.preventDefault();
-        draw(e.touches[0]);
-    }
-    
-    function isCanvasBlank(canvas) {
-        const blank = document.createElement('canvas');
-        blank.width = canvas.width;
-        blank.height = canvas.height;
-        return canvas.toDataURL() === blank.toDataURL();
-    }
-});
-
-// Modificar validación de la sesión 15
-function validarSeccion15() {
-    // Validar firma
-    if (!guardarFirma()) {
-        return false;
-    }
-    
-    // Validar datos del firmante
-    const nombre = document.getElementById('nombreFirmante').value.trim();
-    const identificacion = document.getElementById('identificacionFirmante').value.trim();
-    
-    if (!nombre || !identificacion) {
-        alert('Debe completar todos los datos del firmante.');
-        return false;
-    }
-    
-    return true;
-}
-
-
-
-// Inicialización cuando la página carga
-document.addEventListener('DOMContentLoaded', function() {
-    const canvas = document.getElementById('firmaCanvas');
-    const ctx = canvas.getContext('2d');
-    let isDrawing = false;
-    let lastX = 0;
-    let lastY = 0;
-    
-    // Ajustar el canvas para alta resolución
-    function resizeCanvas() {
-        const ratio = window.devicePixelRatio || 1;
-        canvas.width = canvas.offsetWidth * ratio;
-        canvas.height = canvas.offsetHeight * ratio;
-        canvas.style.width = canvas.offsetWidth + 'px';
-        canvas.style.height = canvas.offsetHeight + 'px';
-        ctx.scale(ratio, ratio);
-        
-        // Configuración del trazo
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        ctx.strokeStyle = '#000000';
-        ctx.fillStyle = '#FFFFFF';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
-    
-    // Eventos del mouse
-    canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('mouseup', stopDrawing);
-    canvas.addEventListener('mouseout', stopDrawing);
-    
-    // Inicializar
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    
-    // Botón Limpiar
-    document.getElementById('btnLimpiarFirma').addEventListener('click', function() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        document.getElementById('vistaPreviaFirma').style.display = 'none';
-        document.getElementById('firmaDigitalData').value = '';
-    });
-    
-    // Botón Guardar
-    document.getElementById('btnGuardarFirma').addEventListener('click', guardarFirma);
-    
-    // Función para guardar la firma
-    function guardarFirma() {
-        if (isCanvasBlank(canvas)) {
-            alert('Por favor, realiza tu firma primero.');
-            return false;
-        }
-        
-        const firmaData = canvas.toDataURL('image/png');
-        document.getElementById('firmaDigitalData').value = firmaData;
-        document.getElementById('imagenFirma').src = firmaData;
-        document.getElementById('vistaPreviaFirma').style.display = 'block';
-        
-        alert('Firma guardada correctamente. Ya puedes enviar el formulario.');
-        return true;
-    }
-    
-    // Funciones para dibujar
-    function startDrawing(e) {
-        isDrawing = true;
-        [lastX, lastY] = getPosition(e);
-    }
-    
-    function draw(e) {
-        if (!isDrawing) return;
-        
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        [lastX, lastY] = getPosition(e);
-        ctx.lineTo(lastX, lastY);
-        ctx.stroke();
-    }
-    
-    function stopDrawing() {
-        isDrawing = false;
-    }
-    
-    function getPosition(e) {
-        const rect = canvas.getBoundingClientRect();
-        return [
-            e.clientX - rect.left,
-            e.clientY - rect.top
-        ];
-    }
-    
-    function isCanvasBlank(canvas) {
-        const blank = document.createElement('canvas');
-        blank.width = canvas.width;
-        blank.height = canvas.height;
-        return canvas.toDataURL() === blank.toDataURL();
-    }
-});
-
-// Modificar la validación del formulario
-function validarSeccion15() {
-    // Verificar si la firma está guardada
-    if (!document.getElementById('firmaDigitalData').value) {
-        alert('Debes guardar tu firma antes de enviar.');
-        return false;
-    }
-    
-    // Verificar datos del firmante
-    if (!document.getElementById('nombreFirmante').value.trim() || 
-        !document.getElementById('identificacionFirmante').value.trim()) {
-        alert('Completa todos los datos del firmante.');
-        return false;
-    }
-    
-    return true;
-}
-// =============================================
-// INICIALIZACIÓN (al cargar el documento)
-// =============================================
-
-$(document).ready(function() {
-    // Configurar eventos para campos "OTRAS"
-    $('select[onchange*="toggleOtroCampo"]').each(function() {
-        const idCampoOtro = $(this).attr('onchange').match(/toggleOtroCampo\(.*,\s*'(.*)'\)/)[1];
-        toggleOtroCampo(this, idCampoOtro);
-    });
-    
-    // Configurar fecha actual para sesión 14
     const ahora = new Date();
     const opciones = { 
         year: 'numeric', 
@@ -3241,30 +3231,917 @@ $(document).ready(function() {
         hour: '2-digit',
         minute: '2-digit'
     };
-    $('#fecha-actual, #fecha-firma').text(ahora.toLocaleDateString('es-ES', opciones));
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
 });
 
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
 
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
 
-// Validación en tiempo real para campos numéricos
-document.getElementById('total_activos').addEventListener('input', function(e) {
-    this.value = this.value.replace(/[^0-9]/g, '');
-});
-document.getElementById('total_pasivos').addEventListener('input', function(e) {
-    this.value = this.value.replace(/[^0-9]/g, '');
-});
-document.getElementById('total_patrimonio').addEventListener('input', function(e) {
-    this.value = this.value.replace(/[^0-9]/g, '');
-});
-document.getElementById('total_ingresos').addEventListener('input', function(e) {
-    this.value = this.value.replace(/[^0-9]/g, '');
-});
-                
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
 
-        // Validación en tiempo real para el número de identificación
-        document.getElementById('numero_identificacion').addEventListener('input', function(e) {
-            this.value = this.value.replace(/[^0-9]/g, '');
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
         });
-    </script>
-</body>
-</html>
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
+    mostrarSeccion(14);
+}
+
+
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+});
+
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
+
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
+    mostrarSeccion(14);
+}
+
+
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+});
+
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
+
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
+    mostrarSeccion(14);
+}
+
+
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+});
+
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
+
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
+// =============================================
+
+function validarSeccion13() {
+    let valido = true;
+    
+    // Validar selects
+    $('#pills-seccion13 select[required]').each(function() {
+        if (!$(this).val()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    // Validar inputs
+    $('#pills-seccion13 input[required]').each(function() {
+        if (!$(this).val().trim()) {
+            $(this).addClass('is-invalid');
+            valido = false;
+        } else {
+            $(this).removeClass('is-invalid');
+        }
+    });
+    
+    if (!valido) {
+        alert('Debe completar todos los campos obligatorios de certificaciones.');
+        return;
+    }
+    
+    // Si todo está correcto, avanzar
+    guardarSeccion13();
+}
+
+function guardarSeccion13() {
+    // Lógica para guardar los datos
+    mostrarSeccion(14);
+}
+
+
+
+// Validación de la sección 14
+function validarSeccion14() {
+    const acepta = $('input[name="acepta_declaraciones"]:checked');
+    
+    if (!acepta.length || acepta.val() === 'NO') {
+        alert('Debe aceptar las declaraciones y autorizaciones para continuar.');
+        return;
+    }
+    
+    if (acepta.val() === 'SI') {
+        guardarSeccion14();
+    }
+}
+
+function guardarSeccion14() {
+    // Lógica para guardar los datos
+    mostrarSeccion(15); // O la siguiente sección correspondiente
+}
+
+
+// Mostrar fecha actual
+document.addEventListener('DOMContentLoaded', function() {
+    const ahora = new Date();
+    const opciones = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    };
+    document.getElementById('fecha-actual').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    document.getElementById('fecha-firma').textContent = ahora.toLocaleDateString('es-ES', opciones);
+    
+    // Inicializar canvas de firma
+    const canvas = document.getElementById('signature-canvas');
+    const signaturePad = new SignaturePad(canvas);
+    
+    // Limpiar firma
+    document.getElementById('clear-signature').addEventListener('click', function() {
+        signaturePad.clear();
+    });
+    
+    // Ajustar canvas al cambiar tamaño de pantalla
+    function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext("2d").scale(ratio, ratio);
+        signaturePad.clear(); // Limpiar al redimensionar
+    }
+    
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+});
+
+// Validación de la sección 15
+function validarSeccion15() {
+    // Validar firma
+    const signaturePad = new SignaturePad(document.getElementById('signature-canvas'));
+    if (signaturePad.isEmpty()) {
+        alert('Debe proporcionar su firma antes de enviar.');
+        return;
+    }
+    
+    // Validar datos del firmante
+    if (!document.getElementById('nombre-firmante').value.trim() || 
+        !document.getElementById('identificacion-firmante').value.trim()) {
+        alert('Debe completar todos los datos del firmante.');
+        return;
+    }
+    
+    // Validar documentos
+    const archivos = document.getElementById('documentos').files;
+    if (archivos.length === 0) {
+        alert('Debe adjuntar al menos un documento.');
+        return;
+    }
+    
+    // Validar tamaño y tipo de archivos
+    for (let i = 0; i < archivos.length; i++) {
+        if (archivos[i].size > 100 * 1024 * 1024) { // 100MB
+            alert(`El archivo ${archivos[i].name} excede el límite de 100MB.`);
+            return;
+        }
+        
+        const extension = archivos[i].name.split('.').pop().toLowerCase();
+        const permitidos = ['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'jpg', 'jpeg', 'png', 'gif', 'mp4', 'avi', 'mov', 'mp3', 'wav'];
+        if (!permitidos.includes(extension)) {
+            alert(`El tipo de archivo ${extension} no está permitido.`);
+            return;
+        }
+    }
+    
+    // Guardar firma como imagen
+    document.getElementById('signature-data').value = signaturePad.toDataURL();
+    
+    // Si todo está correcto, guardar
+    guardarSeccion15();
+}
+
+function guardarSeccion15() {
+    // Lógica para guardar los datos y documentos
+    alert('Formulario completado exitosamente. Gracias.');
+    // Aquí iría el código para enviar los datos al servidor
+}
+
+// =============================================
+// FUNCIONES COMUNES (EXISTENTES EN EL REPOSITORIO)
+// =============================================
+
+function mostrarSeccion(numero) {
+    // Lógica existente para mostrar secciones
+    $('.tab-pane').removeClass('show active');
+    $(`#pills-seccion${numero}`).addClass('show active');
+    $(`.nav-link`).removeClass('active');
+    $(`#pills-seccion${numero}-tab`).addClass('active');
+}
+
+function anteriorSeccionEspecial() {
+    // Lógica existente para retroceder
+    const seccionActual = obtenerSeccionActual();
+    if (seccionActual > 1) {
+        mostrarSeccion(seccionActual - 1);
+    }
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 12 - REFERENCIA COMERCIAL
+// =============================================
+
+function validarSeccion12() {
+    let valido = true;
+    
+    // Validar que al menos una fila esté completa
+    $('#tablaReferencias tbody tr').each(function() {
+        $(this).find('input[required]').each(function() {
+            if ($(this).val().trim() === '') {
+                $(this).addClass('is-invalid');
+                valido = false;
+            } else {
+                $(this).removeClass('is-invalid');
+            }
+        });
+    });
+    
+    if (!valido) {
+        alert('Debe completar al menos una referencia comercial completa.');
+        return;
+    }
+    
+    // Si todo está bien, avanzar
+    mostrarSeccion(13);
+}
+
+// =============================================
+// FUNCIONES PARA SESIÓN 13 - CERTIFICACIONES
