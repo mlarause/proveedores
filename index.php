@@ -15,8 +15,8 @@
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
 </head>
 
-<body>
-    <div class="container mt-4 mb-5 text-center">
+<body class="justificar-todo">
+    <div class="container mt-4 mb-5">
         <!-- Título y Logo -->
         <div class="container mt-4 mb-5">
             <!-- Título y Logo (centrados solo estos elementos) -->
@@ -1597,6 +1597,13 @@
                                                 <input type="email" class="form-control" name="contacto_email[]"
                                                     required>
                                             </div>
+                                            <div class="col-12 text-end">
+                                                <button type="button" class="btn btn-danger btn-sm eliminar-contacto"
+                                                    onclick="eliminarContacto(this)">
+                                                    <i class="fas fa-trash"></i> Eliminar
+                                                </button>
+                                            </div>
+
                                         </div>
                                     </div>
 
@@ -2888,11 +2895,14 @@
             const inputs = document.querySelectorAll(`#pills-seccion${numActual} [required]`);
             let valido = true;
             inputs.forEach(input => {
-                if (!input.value || (input.type === "checkbox" && !input.checked)) {
-                    input.classList.add('is-invalid');
-                    valido = false;
-                } else {
-                    input.classList.remove('is-invalid');
+                // Solo valida si el campo está visible
+                if (input.offsetParent !== null) {
+                    if (!input.value || (input.type === "checkbox" && !input.checked)) {
+                        input.classList.add('is-invalid');
+                        valido = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
                 }
             });
 
@@ -3146,7 +3156,7 @@
             const detalle = document.getElementById('campos_pep_detalle');
             if (p43 === 'SI' || p44 === 'SI' || p45 === 'SI') {
                 detalle.style.display = 'block';
-                // Hacer requeridos los campos internos si quieres
+                // Hacer requeridos los campos internos
                 detalle.querySelectorAll('input, select, textarea').forEach(el => el.setAttribute('required',
                     'required'));
             } else {
@@ -3154,7 +3164,6 @@
                 detalle.querySelectorAll('input, select, textarea').forEach(el => el.removeAttribute('required'));
             }
         }
-
 
         function toggleOperacionesInternacionales() {
             const select = document.getElementById('operaciones_internacionales');
@@ -3194,37 +3203,7 @@
             }
         });
 
-        function validarSeccionGenerico(numActual, numSiguiente) {
-            const inputs = document.querySelectorAll(`#pills-seccion${numActual} [required]`);
-            let valido = true;
-            inputs.forEach(input => {
-                if (!input.value || (input.type === "checkbox" && !input.checked)) {
-                    input.classList.add('is-invalid');
-                    valido = false;
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-            });
 
-            // Validación especial para la sesión 15 (declaraciones)
-            if (numActual === 15) {
-                const acepta = document.getElementById('acepta_si').checked;
-                if (!acepta) {
-                    alert('Debe aceptar las declaraciones para continuar.');
-                    valido = false;
-                }
-            }
-
-            if (valido) {
-                // Si vas de la 15 a la 16, guarda el origen
-                if (numActual === 15 && numSiguiente === 16) {
-                    seccionAnteriorA16 = 15;
-                }
-                mostrarSeccion(numSiguiente);
-            } else {
-                alert('Por favor complete todos los campos requeridos.');
-            }
-        }
 
         function anteriorSeccion15() {
             if (seccionAnteriorA6 === 16) {
@@ -3302,4 +3281,15 @@
             activarEstadoAutomatico('pills-seccion5');
             // Agrega más si tienes más secciones con archivos
         });
+
+        function eliminarContacto(btn) {
+            const contacto = btn.closest('.contacto-form');
+            const container = document.getElementById('contactos-container');
+            // Solo elimina si hay más de un formulario de contacto
+            if (container.querySelectorAll('.contacto-form').length > 1) {
+                contacto.remove();
+            } else {
+                alert('Debe haber al menos una persona de contacto.');
+            }
+        }
         </script>
