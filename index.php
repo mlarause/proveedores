@@ -1816,7 +1816,7 @@
                                             </div>
 
                                             <!-- Pregunta 53 -->
-                                            <div class="col-md-6">
+                                            <div class="col-md-6" id="grupo_fecha_desvinculacion" style="display:none;">
                                                 <label for="pep_fecha_desvinculacion" class="form-label">53. Fecha
                                                     desvinculación <span class="text-danger">*</span></label>
                                                 <input type="date" class="form-control" id="pep_fecha_desvinculacion"
@@ -2163,7 +2163,7 @@
                                                         identificación <span class="text-danger">*</span></label>
                                                     <select class="form-select" id="beneficiario_tipo_id"
                                                         name="beneficiario_tipo_id"
-                                                        onchange="toggleOtroTipoIdentificacion('beneficiario')">
+                                                        onchange="toggleOtroCampo(this, 'grupo_otro_tipo_beneficiario')">
                                                         <option value="" selected disabled>Seleccione...</option>
                                                         <option value="Cedula Ciudadanía">Cédula de Ciudadanía</option>
                                                         <option value="Cedula de Extranjería">Cédula de Extranjería
@@ -3292,4 +3292,19 @@
                 alert('Debe haber al menos una persona de contacto.');
             }
         }
+
+        // Muestra la pregunta 53 solo si en la 52 seleccionan "NO"
+        document.getElementById('pep_activo').addEventListener('change', function() {
+            var mostrar = this.value === 'NO';
+            var grupo = document.getElementById('grupo_fecha_desvinculacion');
+            var input = document.getElementById('pep_fecha_desvinculacion');
+            grupo.style.display = mostrar ? 'block' : 'none';
+            // Solo es requerido si está visible
+            if (mostrar) {
+                input.setAttribute('required', 'required');
+            } else {
+                input.removeAttribute('required');
+                input.value = '';
+            }
+        });
         </script>
