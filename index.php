@@ -21,9 +21,10 @@
         <div class="container mt-4 mb-5">
             <!-- Título y Logo (centrados solo estos elementos) -->
             <div class="text-center mb-4">
-                <h1>Registro de Proveedores <span class="text-morado">Sightlog</span></h1>
-                <img src="images/Captura.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
-            </div>
+                
+    <h1>Registro de Proveedores <span class="text-morado">Sightlog</span></h1>
+    <img src="images/Captura.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
+</div>
 
             <form id="formProveedor" action="procesar.php" method="post" enctype="multipart/form-data">
                 <!-- Barra de progreso -->
@@ -992,7 +993,7 @@
                             </div>
                         </div>
 
-                        <!-- Nueva Sesión 5 - REQUISITOS Y FORMATOS -->
+                        <!-- Nueva Sesión 5 - Mandatorio -->
                         <div class="tab-pane fade" id="pills-seccion5" role="tabpanel"
                             aria-labelledby="pills-seccion5-tab">
                             <div class="card border-primary">
@@ -1073,6 +1074,65 @@
                                             </select>
                                         </div>
                                     </div>
+
+                                    <!-- descargar archivos -->
+
+                            <div class="col-md-12 mt-3">
+                                <div class="card border-primary">
+                                    <div class="card-header bg-primary text-white">
+                                        <h6 class="mb-0">Formularios disponibles para descargar</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <?php
+                                    $directorio = 'documentos/mandatorio/';
+                                    if(is_dir($directorio)){
+                                        $archivos = array_diff(scandir($directorio), array('..', '.'));
+                                        
+                                        if(count($archivos) > 0){
+                                            foreach($archivos as $archivo){
+                                                $ruta_completa = $directorio.$archivo;
+                                                if(is_file($ruta_completa)){
+                                                    echo '<div class="col-md-4 mb-2">';
+                                                    echo '<a href="'.$ruta_completa.'" class="btn btn-outline-primary w-100" download>';
+                                                    echo '<i class="fas fa-file-download me-2"></i>'.htmlspecialchars($archivo);
+                                                    echo '</a>';
+                                                    echo '</div>';
+                                                }
+                                            }
+                                        } else {
+                                            echo '<div class="col-12">';
+                                            echo '<div class="alert alert-info">No hay archivos disponibles actualmente.</div>';
+                                            echo '</div>';
+                                        }
+                                    } else {
+                                        echo '<div class="col-12">';
+                                        echo '<div class="alert alert-warning">El directorio no existe o no es accesible.</div>';
+                                        echo '</div>';
+                                    }
+                                    ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Formularios a subir -->
+                            <div class="col-md-12">
+                                <label for="formularios_natural" class="form-label">Formularios <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" id="formularios_natural"
+                                        name="formularios_natural[]" accept=".docx,.xlsx" multiple required>
+                                    <select class="form-select" style="max-width: 150px;"
+                                        name="formularios_natural_estado" required>
+                                        <option value="" selected disabled>Estado</option>
+                                        <option value="Completo">Completo</option>
+                                        <option value="No Completado">No Completado</option>
+                                    </select>
+                                </div>
+                                <div class="file-info">Formatos aceptados: DOCX, XLSX (múltiples archivos permitidos)
+                                </div>
+                            </div>
 
                                     <!-- Pregunta SI/NO -->
                                     <div class="mb-4">
@@ -2168,8 +2228,7 @@
                                                         <option value="Cedula Ciudadanía">Cédula de Ciudadanía</option>
                                                         <option value="Cedula de Extranjería">Cédula de Extranjería
                                                         </option>
-                                                        <option value="Diplomático">Diplomático</option>
-                                                        <option value="Documento de identidad Extranjeros">Documento de
+                                                        <option value="Diplomático">Diplomático</option>                                <optio value="Documento de identidad Extranjeros">Documento de
                                                             identidad Extranjeros</option>
                                                         <option value="Identidad Fiscal Extranjero">Identidad Fiscal
                                                             Extranjero</option>
@@ -2778,15 +2837,29 @@
 
         // ----------- NAVEGACIÓN ENTRE SECCIONES (Bootstrap Tabs) -----------
         function mostrarSeccion(numero) {
-            const tabBtn = document.getElementById(`pills-seccion${numero}-tab`);
-            if (tabBtn) tabBtn.style.display = 'block';
-            const tabInstance = new bootstrap.Tab(tabBtn);
-            tabInstance.show();
-            const porcentaje = (numero / totalSecciones) * 100;
-            document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
-            document.querySelector('.progress-bar').textContent = `${numero}/${totalSecciones}`;
-            document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
+    // Guarda el origen de la 6 solo si vienes de 2, 3, 4 o 5
+    if (numero === 6) {
+        const actual = document.querySelector('.tab-pane.active');
+        if (actual) {
+            const id = actual.id;
+            const match = id && id.match(/pills-seccion(\d+)/);
+            if (match) {
+                const origen = parseInt(match[1]);
+                if ([2, 3, 4, 5].includes(origen)) {
+                    seccionAnteriorA6 = origen;
+                }
+            }
         }
+    }
+    const tabBtn = document.getElementById(`pills-seccion${numero}-tab`);
+    if (tabBtn) tabBtn.style.display = 'block';
+    const tabInstance = new bootstrap.Tab(tabBtn);
+    tabInstance.show();
+    const porcentaje = (numero / totalSecciones) * 100;
+    document.querySelector('.progress-bar').style.width = `${porcentaje}%`;
+    document.querySelector('.progress-bar').textContent = `${numero}/${totalSecciones}`;
+    document.querySelector('.progress-bar').setAttribute('aria-valuenow', porcentaje);
+}
 
         // ----------- NAVEGACIÓN GENÉRICA PARA BOTONES "Siguiente" Y "Anterior" -----------
         function navTab(tabId) {
@@ -2804,9 +2877,7 @@
         }
 
         // ----------- FUNCIONES DE NAVEGACIÓN PERSONALIZADAS -----------
-        function irASeccion6() {
-            mostrarSeccion(6);
-        }
+      
 
         function irASeccion1() {
             mostrarSeccion(1);
@@ -2891,50 +2962,44 @@
         }
 
         // ----------- VALIDACIÓN Y AVANCE DE SECCIÓN 6 - 15  (GENÉRICA) -----------
-        function validarSeccionGenerico(numActual, numSiguiente) {
-            const inputs = document.querySelectorAll(`#pills-seccion${numActual} [required]`);
-            let valido = true;
-            inputs.forEach(input => {
-                // Solo valida si el campo está visible
-                if (input.offsetParent !== null) {
-                    if (!input.value || (input.type === "checkbox" && !input.checked)) {
-                        input.classList.add('is-invalid');
-                        valido = false;
-                    } else {
-                        input.classList.remove('is-invalid');
-                    }
-                }
-            });
-
-            // Validación especial para la sesión 15 (declaraciones)
-            if (numActual === 15) {
-                const acepta = document.getElementById('acepta_si').checked;
-                if (!acepta) {
-                    alert('Debe aceptar las declaraciones para continuar.');
-                    valido = false;
-                }
-            }
-
-            if (valido) {
-                // Si vas de la 15 a la 16, guarda el origen
-                if (numActual === 15 && numSiguiente === 16) {
-                    seccionAnteriorA16 = 15;
-                }
-                mostrarSeccion(numSiguiente);
+       function validarSeccionGenerico(numActual, numSiguiente) {
+    const inputs = document.querySelectorAll(`#pills-seccion${numActual} [required]`);
+    let valido = true;
+    inputs.forEach(input => {
+        // Solo valida si el campo está visible
+        if (input.offsetParent !== null) {
+            if (!input.value || (input.type === "checkbox" && !input.checked)) {
+                input.classList.add('is-invalid');
+                valido = false;
             } else {
-                alert('Por favor complete todos los campos requeridos.');
+                input.classList.remove('is-invalid');
             }
         }
+    });
 
-        function anteriorSeccion16() {
-            if (seccionAnteriorA16 === 5) {
-                mostrarSeccion(5);
-            } else if (seccionAnteriorA16 === 15) {
-                mostrarSeccion(15);
-            } else {
-                mostrarSeccion(1); // fallback
-            }
+    // Validación especial para la sesión 15 (declaraciones)
+    if (numActual === 15) {
+        const acepta = document.getElementById('acepta_si').checked;
+        if (!acepta) {
+            alert('Debe aceptar las declaraciones para continuar.');
+            valido = false;
         }
+    }
+
+    if (valido) {
+        // Si vas de la 15 a la 16, guarda el origen
+        if (numActual === 15 && numSiguiente === 16) {
+            seccionAnteriorA16 = 15;
+        }
+        // Si vas a la 6 desde 2, 3, 4, 5 o 14, guarda el origen
+        if (numSiguiente === 6 && [2, 3, 4, 5].includes(numActual)) {
+            seccionAnteriorA6 = numActual;
+        }
+        mostrarSeccion(numSiguiente);
+    } else {
+        alert('Por favor complete todos los campos requeridos.');
+    }
+}
 
         function anteriorSeccion15() {
             if (seccionAnteriorA16 === 16) {
@@ -3307,4 +3372,4 @@
                 input.value = '';
             }
         });
-        </script>
+        </script> 
