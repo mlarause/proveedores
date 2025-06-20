@@ -122,11 +122,11 @@
 
                                     <!-- Formularios a subir -->
                                     <div class="col-md-12">
-                                        <label for="formularios_natural" class="form-label">Formularios <span
+                                        <label for="formularios_natural" class="form-label">Los Formularios deben enviarse con firma certificada para ser válidos <span
                                                 class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <input type="file" class="form-control" id="formularios_natural"
-                                                name="formularios_natural[]" accept=".docx,.xlsx" multiple required>
+                                                name="formularios_natural[]" accept=".pdf" multiple required>
                                             <select class="form-select" style="max-width: 150px;"
                                                 name="formularios_natural_estado" required>
                                                 <option value="" selected disabled>Estado</option>
@@ -134,8 +134,7 @@
                                                 <option value="No Completado">No Completado</option>
                                             </select>
                                         </div>
-                                        <div class="file-info">Formatos aceptados: DOCX, XLSX (múltiples archivos
-                                            permitidos)
+                                        <div class="file-info">La descarga está habilitada únicamente en formato PDF
                                         </div>
                                     </div>
 

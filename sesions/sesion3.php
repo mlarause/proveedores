@@ -249,11 +249,11 @@
 
                             <!-- Formularios a subir -->
                             <div class="col-md-12">
-                                <label for="formularios_nc" class="form-label">Formularios <span
+                                <label for="formularios_nc" class="form-label">Los formularios deben enviarse con firma certificada para ser válidos<span
                                         class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="formularios_nc" name="formularios_nc[]"
-                                        accept=".docx,.xlsx" multiple required>
+                                        accept=".pdf" multiple required>
                                     <select class="form-select" style="max-width: 150px;" name="formularios_nc_estado"
                                         required>
                                         <option value="" selected disabled>Estado</option>
@@ -261,7 +261,7 @@
                                         <option value="No Completado">No Completado</option>
                                     </select>
                                 </div>
-                                <div class="file-info">Formatos aceptados: DOCX, XLSX (múltiples archivos permitidos)
+                                <div class="file-info">La descarga está habilitada unicamente en formato PDF
                                 </div>
                             </div>
 

@@ -80,9 +80,11 @@
                                     <div class="d-flex justify-content-between mt-4">
                                         <button type="button" class="btn btn-secondary"
                                             onclick="anteriorSeccion16()">Anterior</button>
-                                        <button type="button" class="btn btn-success"
-                                            onclick="validarSeccionGenerico(15,16)">Guardar y Enviar</button>
-                                    </div>
+                                       <form action="proveedores2/procesar_sesion16.php" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="numero_identificacion" value="<?php echo $numero_identificacion; ?>">
+    <input type="file" name="documentos[]" multiple required>
+    <button type="submit">Enviar y finalizar</button>
+</form>
                                 </div>
 
                                 <!-- Las demás secciones (15-16) irían aquí -->

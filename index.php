@@ -22,8 +22,11 @@
             <!-- Título y Logo (centrados solo estos elementos) -->
             <div class="text-center mb-4">
 
-                <h1>Registro de Proveedores <span class="text-morado">Sightlog</span></h1>
+                <h1>Registro de Proveedores <span class="text-morado">SIGHTLOG</span></h1>
                 <img src="images/Captura.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
+                <img src="images/Captura2.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
+                <img src="images/Captura3.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
+                <img src="images/Captura4.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
             </div>
 
             <form id="formProveedor" action="procesar.php" method="post" enctype="multipart/form-data">
