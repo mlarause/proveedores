@@ -5,14 +5,7 @@
                                     <h5 class="card-title mb-0">DOCUMENTOS REQUERIDOS</h5>
                                 </div>
                                 <div class="card-body">
-                                    <div class="alert alert-info">
-                                        <i class="fas fa-info-circle"></i> ESTIMADO PROVEEDOR: Para que el proceso de
-                                        registro y/o actualización se dé por concluido, después de dar click en la
-                                        opción
-                                        GUARDAR Y ENVIAR ARCHIVO, por favor no cerrar la ventana y a continuación se
-                                        habilitará la opción para firmar formulario y adjuntar los siguientes
-                                        documentos:
-                                    </div>
+                                   
 
                                     <ol class="list-group list-group-numbered mb-4">
                                     </ol>
@@ -35,9 +28,10 @@
 
                                     <div class="alert alert-warning mb-4">
                                         <p><strong>NOTA:</strong> En este formato solo es admisible la firma del
-                                            Representante Legal - (huella opcional). En constancia de haber leído,
+                                            Representante Legal - En constancia de haber leído,
                                             entendido
-                                            y aceptado lo anterior, firmo el presente documento en la fecha <span
+                                            y aceptado lo anterior, firmo el presente documento en la fecha 
+                                            <?php date_default_timezone_set('America/Bogota'); ?><span
                                                 id="fecha-actual"><?php echo date('d/m/Y H:i'); ?></span></p>
                                     </div>
 
@@ -82,7 +76,7 @@
                                             onclick="anteriorSeccion16()">Anterior</button>
                                        <form action="proveedores2/procesar_sesion16.php" method="post" enctype="multipart/form-data">
     <input type="hidden" name="numero_identificacion" value="<?php echo $numero_identificacion; ?>">
-    <input type="file" name="documentos[]" multiple required>
+   
     <button type="submit">Enviar y finalizar</button>
 </form>
                                 </div>

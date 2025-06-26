@@ -17,7 +17,7 @@ body {
 
 .card-header {
     border-radius: 10px 10px 0 0 !important;
-    background-color:  #004496;
+    background-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     color: white;
     padding: 15px 20px;
 }
@@ -34,7 +34,7 @@ body {
 }
 
 .progress-bar {
-    background-color:  #004496;
+    background-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -59,9 +59,9 @@ body {
 }
 
 .nav-pills .nav-link.active {
-    background-color:  #004496;
+    background-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     color: white;
-    border-color:  #004496;
+    border-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 /* Formulario */
@@ -103,13 +103,13 @@ body {
 }
 
 .btn-primary {
-    background-color:  #004496;
-    border-color:  #004496;
+    background-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
+    border-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 .btn-primary:hover {
-    background-color:  #004496;
-    border-color:  #004496;
+    background-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
+    border-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 .btn-secondary {
@@ -138,7 +138,7 @@ body {
 .alert-info {
     background-color: #e7f5ff;
     border-color: #d0ebff;
-    color:  #004496;
+    color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 /* Responsividad */
@@ -158,7 +158,7 @@ body {
 
 /* Estilos específicos para sección PEP */
 #pills-seccion8 .card-header {
-    background-color:  #004496;
+    background-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     color: white;
     padding: 1rem;
 }
@@ -174,7 +174,7 @@ body {
 
 /* Estilos específicos para sección financiera */
 #pills-seccion10 .card-header {
-    background-color:  #004496;
+    background-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     color: white;
     padding: 1rem;
 }
@@ -195,7 +195,7 @@ body {
 
 /* Estilos específicos para sección de operaciones internacionales */
 #pills-seccion11 .card-header {
-    background-color:  #004496;
+    background-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     color: white;
     padding: 1rem;
 }
@@ -350,33 +350,33 @@ body {
 }
 
 .nav-pills .nav-link.active {
-        background-color:  #004496 !important;
+        background-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     }
     
     .nav-pills .nav-link {
-        color:  #004496;
+        color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     }
     
     .nav-pills .nav-link:hover {
-        color:  #004496;
+        color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     }
 
     .nav-pills .nav-link:focus {
-    color:  #004496;
+    color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 .nav-pills .nav-link.active:hover, 
 .nav-pills .nav-link.active:focus {
-    background-color:  #004496;
+    background-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 .card-header.bg-primary {
-    background-color:  #004496 !important;
-    border-color:  #004496;
+    background-color:  linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
+    border-color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
 }
 
 .text-morado {
-    color:  #004496;
+    color: linear-gradient(90deg, #004496 0%, #7d2d9b 100%) !important;
     font-weight: bold;
 }
 

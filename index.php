@@ -218,6 +218,7 @@
         let seccionAnteriorA6 = 1; // Por defecto
         const totalSecciones = 16;
         let seccionAnteriorA16 = 5; // Valor por defecto
+        let contadorReferencia13 = 1;
 
         // ----------- NAVEGACIÓN ENTRE SECCIONES (Bootstrap Tabs) -----------
         function mostrarSeccion(numero) {
@@ -756,4 +757,89 @@
                 input.value = '';
             }
         });
+
+   function plantillaReferencia13(idx) {
+    return `
+    <div class="row g-3 referencia13 border rounded p-3 mb-3 mt-4 position-relative" data-idx="${idx}">
+        <div class="col-md-12">
+            <label class="form-label">78. Nombre o razón social <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="referencias13[${idx}][nombre_razon_social]" required>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">79. Ciudad Domicilio Principal <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="referencias13[${idx}][ciudad_domicilio]" required>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">80. Nombre y Apellido del Contacto <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="referencias13[${idx}][nombre_contacto]" required>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">81. Cargo <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="referencias13[${idx}][cargo_contacto]" required>
+        </div>
+        <div class="col-md-12">
+            <label class="form-label">82. Teléfono / Celular de Contacto <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="referencias13[${idx}][telefono_contacto]" required>
+        </div>
+        <div class="col-12 d-flex justify-content-end mt-3">
+            <button type="button" class="btn btn-danger eliminar-referencia13" onclick="eliminarReferencia13(${idx})">
+                <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+        </div>
+    </div>
+    `;
+}
+
+function agregarReferencia13() {
+    const contenedor = document.getElementById('contenedor-referencias13');
+    contenedor.insertAdjacentHTML('beforeend', plantillaReferencia13(contadorReferencia13));
+    contadorReferencia13++;
+}
+
+function eliminarReferencia13(idx) {
+    // Cuenta la referencia estática (la que no tiene data-idx) y las dinámicas
+    const referenciasEstaticas = document.querySelectorAll('.row.g-3.referencia13:not([data-idx])');
+    const referenciasDinamicas = document.querySelectorAll('.referencia13[data-idx]');
+    const total = referenciasEstaticas.length + referenciasDinamicas.length;
+
+    // Solo permite eliminar si quedan más de 2 referencias en total
+    if (total > 2) {
+        const ref = document.querySelector(`.referencia13[data-idx="${idx}"]`);
+        if (ref) ref.remove();
+    } else {
+        alert('Debe haber al menos dos referencias comerciales.');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('contenedor-referencias13')) {
+        agregarReferencia13();
+    }
+});
+
+document.getElementById('gestion_calidad').addEventListener('change', function() {
+    const campos = document.getElementById('campos_certificado_calidad');
+    if (this.value === 'SI') {
+        campos.style.display = 'block';
+        document.getElementById('numero_certificado_calidad').setAttribute('required', 'required');
+        document.getElementById('fecha_vigencia_calidad').setAttribute('required', 'required');
+    } else {
+        campos.style.display = 'none';
+        document.getElementById('numero_certificado_calidad').removeAttribute('required');
+        document.getElementById('fecha_vigencia_calidad').removeAttribute('required');
+    }
+});
+
+document.getElementById('seguridad_suministro').addEventListener('change', function() {
+    const campos84 = document.getElementById('campos_certificado_calidad_84');
+    if (this.value === 'SI') {
+        campos84.style.display = 'block';
+        document.getElementById('numero_certificado_calidad_84').setAttribute('required', 'required');
+        document.getElementById('fecha_vigencia_calidad_84').setAttribute('required', 'required');
+    } else {
+        campos84.style.display = 'none';
+        document.getElementById('numero_certificado_calidad_84').removeAttribute('required');
+        document.getElementById('fecha_vigencia_calidad_84').removeAttribute('required');
+    }
+});
         </script>

@@ -149,12 +149,12 @@
                                                 contingencia vigente, o documento firmado por el representante legal
                                                 donde
                                                 certifique que la organización lo tiene establecido <span
-                                                    class="text-danger">*</span></label>
+                                                    class="text-danger"></span></label>
                                             <div class="input-group">
                                                 <input type="file" class="form-control" id="plan_contingencia_nc"
-                                                    name="plan_contingencia_nc" accept=".pdf,.jpg,.png" required>
+                                                    name="plan_contingencia_nc" accept=".pdf,.jpg,.png">
                                                 <select class="form-select" style="max-width: 150px;"
-                                                    name="plan_contingencia_nc_estado" required>
+                                                    name="plan_contingencia_nc_estado">
                                                     <option value="" selected disabled>Estado</option>
                                                     <option value="Completo">Completo</option>
                                                     <option value="No Completado">No Completado</option>
@@ -211,7 +211,7 @@
                             <div class="col-md-12 mt-3">
                                 <div class="card border-primary">
                                     <div class="card-header bg-primary text-white">
-                                        <h6 class="mb-0">Formularios disponibles para descargar</h6>
+                                        <h6 class="mb-0">Formularios disponibles para descargar </h6>
                                     </div>
                                     <div class="card-body">
                                         <div class="row">
@@ -249,7 +249,7 @@
 
                             <!-- Formularios a subir -->
                             <div class="col-md-12">
-                                <label for="formularios_nc" class="form-label">Los formularios deben enviarse con firma certificada para ser válidos<span
+                                <label for="formularios_nc" class="form-label">Los formularios deben enviarse con firma certificada para ser válidos "Nota el formulario FR.GS.15 Visita de seguridad asociado de negocio no necesita firma certificada"<span
                                         class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="file" class="form-control" id="formularios_nc" name="formularios_nc[]"

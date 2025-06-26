@@ -11,29 +11,15 @@
                                     </div>
 
                                     <div class="mb-4">
-                                        <h6>TRATAMIENTO DE DATOS PERSONALES:</h6>
+                                        <h6>Autorización tratamiento de datos y consulta en centrales de riesgo:</h6>
                                         <div class="border p-3 mb-3 bg-light"
                                             style="max-height: 200px; overflow-y: auto;">
-                                            <p>El firmante del presente formulario, en nombre propio y/o en nombre de la
-                                                entidad que representa, autoriza a intramar shipping ("intramar
-                                                shipping") y
-                                                a los terceros que utilice como encargados del tratamiento de bases de
-                                                datos
-                                                de todos los representantes legales, directivos, socios o accionistas,
-                                                revisores fiscales y contadores de la compañía, lo cual incluye;
-                                                recolectarlos, almacenarlos, administrarlos, utilizarlos, destruirlos,
-                                                así
-                                                como transferirlos o transmitirlos a sus matrices, filiales y/o
-                                                subsidiarias
-                                                extranjeras en la forma en que es permitido por la ley, así como en
-                                                cumplimiento de su obligación legal de prevenir y controlar el lavado de
-                                                activos y la financiación del terrorismo, el soborno transnacional, la
-                                                corrupción y demás delitos fuentes. Esta información será utilizada por
-                                                intramar shipping con el propósito de que pueda cumplir con las
-                                                obligaciones
-                                                contractuales y legales a su cargo ,conforme a la relación comercial
-                                                entre
-                                                nosotros existente.</p>
+                                            <p>Como responsables del uso de la información de nuestros Clientes damos cumplimiento a la Ley 1581 de 2012 de protección de datos personales, poniendo a su disposición en www.intramar.com.co el aviso de protección de datos en el que encontrará nuestras políticas para el tratamiento de su información.
+                                                Autorización: Declaro de manera expresa, que he sido informado y reconozco que la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, respeta(n) la privacidad de la información de sus clientes, distribuidores, y proveedores, por lo cual en todo momento tendré la facultad de: (i) revocar mi consentimiento; (ii) solicitar que mi información personal se use de manera restringida; (iii) solicitar que mi información personal no sea transferida al extranjero; y (iv) solicitar la revisión y/o corrección de mis datos personales.
+                                                A través de la firma del presente documento, otorgo mi consentimiento y autorizo expresamente a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, utilizar mis datos personales y/o cualquier otro tipo de información que me sea solicitada, con los fines comerciales y operativos propios del servicio en la cadena de suministro de comercio exterior, en el entendido de que dichos datos se encontrarán debidamente protegidos y su acceso estará limitado a aquellas personas debidamente autorizadas para manejarlos.
+                                                Si _X_ No ___ autorizo de manera expresa a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, para que consulte(n) y/o solicite(n) información legal, jurídica, comercial y financiera de la entidad que legalmente represento, así como la de los socios y personas registradas en el documento de existencia y representación legal de la misma; en las entidades públicas y/o privadas de control a nivel local, nacional y/o internacional; durante el proceso de vinculación, y mientras exista la relación comercial.</p>
+
+
                                             <p>Manifiesto que conozco las políticas de intramar shipping sobre
                                                 protección y
                                                 administración de datos personales y que he leído el Manual de
@@ -59,7 +45,7 @@
                                                 políticas establecidas por nuestra Compañía para el tratamiento de
                                                 datos.
                                                 Dicho manual puede ser consultado en la página web: <a
-                                                    href="https://www.intramar.com.co/"
+                                                    href="https://calidad@sightlog/"
                                                     target="_blank">https://www.intramar.com.co/</a></p>
                                             <p>NOTA: Usted podrá actualizar, rectificar, corregir o solicitar la
                                                 supresión
@@ -136,10 +122,9 @@
                                                 comprometo a mantenerla actualizada, autorizando intramar shipping
                                                 también
                                                 que se compruebe la veracidad de la misma.</p>
-                                            <p>NOTA: El diligenciamiento de este formato no compromete a METECNO DE
-                                                COLOMBIA
-                                                S.A para iniciar el vínculo contractual, comercial o cualquier otro
-                                                vínculo.
+                                            <p>NOTA: El diligenciamiento de este formato no compromete a INTRAMAR SHIPPING
+                                               para iniciar el vínculo contractual, comercial o cualquier otro
+                                               vínculo.
                                             </p>
                                         </div>
 
