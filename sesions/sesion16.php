@@ -5,25 +5,26 @@
                                     <h5 class="card-title mb-0">DOCUMENTOS REQUERIDOS</h5>
                                 </div>
                                 <div class="card-body">
-                                   
+
 
                                     <ol class="list-group list-group-numbered mb-4">
                                     </ol>
 
                                     <div class="alert alert-light border mb-4">
-                                        <p>En Intramar estamos comprometidos con mantener un ambiente íntegro y
-                                            transparente, por lo cual ponemos a su disposición nuestra línea de
-                                            transparencia habilitada en la página web: <a
+                                        <p>En Intramar estamos comprometidos con mantener un entorno íntegro, ético y transparente. Por ello, hemos habilitado una Línea de Transparencia a través de nuestra página web <a
                                                 href="https://www.intramar.com.co/"
-                                                target="_blank">https://www.intramar.com.co/</a> de transparencia para
-                                            informar situaciones o preocupaciones que generen inquietud referente a
-                                            prácticas comerciales indebidas, incumplimiento de políticas y
-                                            procedimientos o
-                                            cualquier otra actividad que afecte el entorno laboral o vaya en contra de
-                                            nuestro código de conducta y de nuestras políticas de administración de
-                                            riesgo
-                                            de lavado de activos y la de prevención ante la corrupción y soborno
-                                            transaccional.</p>
+                                                target="_blank">https://www.intramar.com.co/</a> 
+                                                donde podrá reportar de manera confidencial cualquier situación o inquietud relacionada con:
+                                                <ul>
+                                                <li>Prácticas comerciales indebidas</li>
+                                                <li>Incumplimiento de políticas y procedimientos internos</li>
+                                                <li>Comportamientos que afecten el entorno laboral</li>
+                                                <li>Violaciones a nuestro Código de Conducta</li>
+                                                <li>Riesgos asociados al lavado de activos, corrupción o soborno transnacional</li>
+                                                </ul>
+                                                Adicionalmente, ponemos a su disposición nuestro  <a href="https://www.sightlog.com/contact"> formulario de PQRSF </a> (Peticiones, Quejas, Reclamos, Sugerencias y Felicitaciones), disponible también en la página web, como canal de atención para cualquier comentario relacionado con nuestros servicios.
+                                                Su participación es fundamental para seguir construyendo una organización ética, transparente y responsable.
+                                                </p>
                                     </div>
 
                                     <div class="alert alert-warning mb-4">

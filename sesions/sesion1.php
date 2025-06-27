@@ -24,11 +24,11 @@
                                                 <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
                                                 <option value="Cédula de Extranjería">Cédula de Extranjería</option>
                                                 <option value="Pasaporte">Pasaporte</option>
-                                                <option value="NIT Diplomático">NIT Diplomático</option>
+                                                <option value="NIT Diplomático">Nit</option>
                                                 <option value="Documento de Identidad de Extranjero">Documento de
                                                     Identidad
                                                     de Extranjero</option>
-                                                <option value="NIT de Persona Natural">NIT de Persona Natural</option>
+                                                <option value="NIT de Persona Natural">Nit de Persona Natural</option>
                                             </select>
                                         </div>
 

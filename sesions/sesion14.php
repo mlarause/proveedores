@@ -34,19 +34,32 @@
 
                 <!-- Campos adicionales para certificado de calidad -->
                 <div id="campos_certificado_calidad" style="display:none;">
-                    <div class="col-md-12 mt-3">
-                        <label class="form-label">Escriba el número del certificado del sistema de gestión de calidad
-                            <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="certificaciones[numero_certificado_calidad]"
-                            id="numero_certificado_calidad">
-                    </div>
-                    <div class="col-md-12 mt-3">
-                        <label class="form-label">Fecha de vigencia del sistema de gestión de calidad <span
-                                class="text-danger">*</span></label>
-                        <input type="date" class="form-control" name="certificaciones[fecha_vigencia_calidad]"
-                            id="fecha_vigencia_calidad">
-                    </div>
-                </div>
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Escriba el número o Codigo del certificado
+            <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="certificaciones[numero_certificado_calidad]"
+            id="numero_certificado_calidad">
+    </div>
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Fecha de vigencia del certificado <span
+                class="text-danger">*</span></label>
+        <input type="date" class="form-control" name="certificaciones[fecha_vigencia_calidad]"
+            id="fecha_vigencia_calidad">
+    </div>
+    <!-- AÑADE ESTE BLOQUE PARA EL ADJUNTO -->
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Adjunte el certificado de gestión de calidad <span class="text-danger">*</span></label>
+        <div class="input-group">
+            <input type="file" class="form-control" id="certificado_gestion_calidad" name="certificaciones[certificado_gestion_calidad]" accept=".pdf" required>
+            <select class="form-select" style="max-width: 150px;" name="certificaciones[certificado_gestion_calidad_estado]" required>
+                <option value="" selected disabled>Estado</option>
+                <option value="Completo">Completo</option>
+                <option value="No Completado">No Completado</option>
+            </select>
+        </div>
+        <div class="file-info">Formatos aceptados: PDF</div>
+    </div>
+</div>
 
                
                 <!-- Pregunta 84 -->
@@ -72,13 +85,13 @@
 <!-- SOLO ESTE BLOQUE DEBE QUEDAR, justo después de la 84 -->
 <div id="campos_certificado_calidad" style="display:none;">
     <div class="col-md-12 mt-3">
-        <label class="form-label">Escriba el número del certificado del sistema de gestión de calidad
+        <label class="form-label">Escriba el número o codigo del certificado
             <span class="text-danger">*</span></label>
         <input type="text" class="form-control" name="certificaciones[numero_certificado_calidad]"
             id="numero_certificado_calidad">
     </div>
     <div class="col-md-12 mt-3">
-        <label class="form-label">Fecha de vigencia del sistema de gestión de calidad <span
+        <label class="form-label">Fecha de vigencia del certificado <span
                 class="text-danger">*</span></label>
         <input type="date" class="form-control" name="certificaciones[fecha_vigencia_calidad]"
             id="fecha_vigencia_calidad">
@@ -88,16 +101,29 @@
                 <!-- Campos adicionales para la pregunta 84 -->
 <div id="campos_certificado_calidad_84" style="display:none;">
     <div class="col-md-12 mt-3">
-        <label class="form-label">Escriba el número del certificado del sistema de gestión de calidad
+        <label class="form-label">Escriba el número o codigo del certificado
             <span class="text-danger">*</span></label>
         <input type="text" class="form-control" name="certificaciones[numero_certificado_calidad_84]"
             id="numero_certificado_calidad_84">
     </div>
     <div class="col-md-12 mt-3">
-        <label class="form-label">Fecha de vigencia del sistema de gestión de calidad <span
+        <label class="form-label">Fecha de vigencia del certificado <span
                 class="text-danger">*</span></label>
         <input type="date" class="form-control" name="certificaciones[fecha_vigencia_calidad_84]"
             id="fecha_vigencia_calidad_84">
+    </div>
+    <!-- AGREGA ESTE BLOQUE PARA EL ADJUNTO -->
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Adjunte el certificado sistema de Gestión de seguridad de la cadena de suministro <span class="text-danger">*</span></label>
+        <div class="input-group">
+            <input type="file" class="form-control" id="certificado_gestion_ambiental_84" name="certificaciones[certificado_gestion_ambiental_84]" accept=".pdf" required>
+            <select class="form-select" style="max-width: 150px;" name="certificaciones[certificado_gestion_ambiental_estado_84]" required>
+                <option value="" selected disabled>Estado</option>
+                <option value="Completo">Completo</option>
+                <option value="No Completado">No Completado</option>
+            </select>
+        </div>
+        <div class="file-info">Formatos aceptados: PDF</div>
     </div>
 </div>
 
@@ -114,6 +140,32 @@
                         <option value="N/A">N/A</option>
                     </select>
                 </div>
+
+                <!-- Campos adicionales para la pregunta 85 -->
+<div id="campos_operador_economico" style="display:none;">
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Escriba el número o codigo del certificado <span class="text-danger">*</span></label>
+        <input type="text" class="form-control" name="certificaciones[numero_certificado_operador]" id="numero_certificado_operador">
+    </div>
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Fecha de vigencia del certificado <span class="text-danger">*</span></label>
+        <input type="date" class="form-control" name="certificaciones[fecha_vigencia_operador]" id="fecha_vigencia_operador">
+    </div>
+    <div class="col-md-12 mt-3">
+        <label class="form-label">Adjunte el certificación del Operador Económico Autorizado <span class="text-danger">*</span></label>
+        <div class="input-group">
+            <input type="file" class="form-control" id="certificado_operador_economico" name="certificaciones[certificado_operador_economico]" accept=".pdf" required>
+            <select class="form-select" style="max-width: 150px;" name="certificaciones[certificado_operador_economico_estado]" required>
+                <option value="" selected disabled>Estado</option>
+                <option value="Completo">Completo</option>
+                <option value="No Completado">No Completado</option>
+            </select>
+        </div>
+        <div class="file-info">Formatos aceptados: PDF</div>
+    </div>
+</div>
+
+                
                 <!-- Pregunta 86 (oculta por defecto) -->
                 <div class="col-md-12" id="resolucion_vigencia_group" style="display:none;">
                     <label for="resolucion_vigencia" class="form-label">86. Indique Nro. de

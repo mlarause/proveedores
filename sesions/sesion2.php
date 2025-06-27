@@ -188,7 +188,7 @@
                                                     class="text-danger"></span></label>
                                             <div class="input-group">
                                                 <input type="file" class="form-control" id="plan_contingencia"
-                                                    name="plan_contingencia" accept=".pdf,.jpg,.png">
+                                                    name="plan_contingencia" accept=".pdf">
                                                 <select class="form-select" style="max-width: 150px;"
                                                     name="plan_contingencia_estado">
                                                     <option value="" selected disabled>Estado</option>
@@ -196,7 +196,7 @@
                                                     <option value="No Completado">No Completado</option>
                                                 </select>
                                             </div>
-                                            <div class="file-info">Formatos aceptados: PDF, JPG, PNG</div>
+                                            <div class="file-info">Formatos aceptados: PDF</div>
                                         </div>
 
                                         <!-- Autoevaluación de estándares mínimos de seguridad según la legislación vigente de mini trabajo -->

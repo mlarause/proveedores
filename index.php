@@ -26,7 +26,6 @@
                 <img src="images/Captura.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
                 <img src="images/Captura2.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
                 <img src="images/Captura3.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
-                <img src="images/Captura4.PNG" alt="Logo Sightlog" style="max-height: 60px; width: auto;" class="mt-2">
             </div>
 
             <form id="formProveedor" action="procesar.php" method="post" enctype="multipart/form-data">
@@ -840,6 +839,54 @@ document.getElementById('seguridad_suministro').addEventListener('change', funct
         campos84.style.display = 'none';
         document.getElementById('numero_certificado_calidad_84').removeAttribute('required');
         document.getElementById('fecha_vigencia_calidad_84').removeAttribute('required');
+    }
+});
+
+// Activa el cambio automático de estado para los adjuntos de la 83 y 84
+document.addEventListener('DOMContentLoaded', function() {
+    // Para la pregunta 83
+    document.getElementById('certificado_gestion_calidad')?.addEventListener('change', function() {
+        const selectEstado = document.querySelector('select[name="certificaciones[certificado_gestion_calidad_estado]"]');
+        if (selectEstado && this.files.length > 0) {
+            selectEstado.value = "Completo";
+        }
+    });
+    // Para la pregunta 84
+    document.getElementById('certificado_gestion_ambiental_84')?.addEventListener('change', function() {
+        const selectEstado = document.querySelector('select[name="certificaciones[certificado_gestion_ambiental_estado_84]"]');
+        if (selectEstado && this.files.length > 0) {
+            selectEstado.value = "Completo";
+        }
+    });
+});
+
+// Mostrar/ocultar campos adicionales SOLO para la pregunta 85
+document.getElementById('operador_economico').addEventListener('change', function() {
+    const campos = document.getElementById('campos_operador_economico');
+    if (this.value === 'SI') {
+        campos.style.display = 'block';
+        document.getElementById('numero_certificado_operador').setAttribute('required', 'required');
+        document.getElementById('fecha_vigencia_operador').setAttribute('required', 'required');
+        document.getElementById('certificado_operador_economico').setAttribute('required', 'required');
+    } else {
+        campos.style.display = 'none';
+        document.getElementById('numero_certificado_operador').removeAttribute('required');
+        document.getElementById('fecha_vigencia_operador').removeAttribute('required');
+        document.getElementById('certificado_operador_economico').removeAttribute('required');
+        // Limpia los campos si se ocultan
+        document.getElementById('numero_certificado_operador').value = '';
+        document.getElementById('fecha_vigencia_operador').value = '';
+        document.getElementById('certificado_operador_economico').value = '';
+        const selectEstado = document.querySelector('select[name="certificaciones[certificado_operador_economico_estado]"]');
+        if (selectEstado) selectEstado.value = '';
+    }
+});
+
+// Cambio automático de estado para el adjunto de la 85
+document.getElementById('certificado_operador_economico')?.addEventListener('change', function() {
+    const selectEstado = document.querySelector('select[name="certificaciones[certificado_operador_economico_estado]"]');
+    if (selectEstado && this.files.length > 0) {
+        selectEstado.value = "Completo";
     }
 });
         </script>

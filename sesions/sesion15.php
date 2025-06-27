@@ -11,26 +11,20 @@
                                     </div>
 
                                     <div class="mb-4">
-                                        <h6>Autorización tratamiento de datos y consulta en centrales de riesgo:</h6>
+                                        <h6>92.AUTORIZACIÓN TRATAMIENTO DE DATOS Y CONSULTA EN CENTRALES DE RIESGO:</h6>
                                         <div class="border p-3 mb-3 bg-light"
                                             style="max-height: 200px; overflow-y: auto;">
-                                            <p>Como responsables del uso de la información de nuestros Clientes damos cumplimiento a la Ley 1581 de 2012 de protección de datos personales, poniendo a su disposición en www.intramar.com.co el aviso de protección de datos en el que encontrará nuestras políticas para el tratamiento de su información.
-                                                Autorización: Declaro de manera expresa, que he sido informado y reconozco que la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, respeta(n) la privacidad de la información de sus clientes, distribuidores, y proveedores, por lo cual en todo momento tendré la facultad de: (i) revocar mi consentimiento; (ii) solicitar que mi información personal se use de manera restringida; (iii) solicitar que mi información personal no sea transferida al extranjero; y (iv) solicitar la revisión y/o corrección de mis datos personales.
-                                                A través de la firma del presente documento, otorgo mi consentimiento y autorizo expresamente a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, utilizar mis datos personales y/o cualquier otro tipo de información que me sea solicitada, con los fines comerciales y operativos propios del servicio en la cadena de suministro de comercio exterior, en el entendido de que dichos datos se encontrarán debidamente protegidos y su acceso estará limitado a aquellas personas debidamente autorizadas para manejarlos.
-                                                Si _X_ No ___ autorizo de manera expresa a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, para que consulte(n) y/o solicite(n) información legal, jurídica, comercial y financiera de la entidad que legalmente represento, así como la de los socios y personas registradas en el documento de existencia y representación legal de la misma; en las entidades públicas y/o privadas de control a nivel local, nacional y/o internacional; durante el proceso de vinculación, y mientras exista la relación comercial.</p>
+                                            <p>Como responsables del uso de la información de nuestros Clientes damos cumplimiento a la Ley 1581 de 2012 de protección de datos personales,
+                                             poniendo a su disposición en www.intramar.com.co el aviso de protección
+                                             de datos en el que encontrará nuestras políticas para el tratamiento de su información.</p>
 
+                                            </p>Autorización: Declaro de manera expresa, que he sido informado y reconozco que la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, respeta(n) la privacidad de la información de sus clientes, distribuidores, y proveedores, por lo cual en todo momento tendré la facultad de:<br> (i) revocar mi consentimiento; (ii) solicitar que mi información personal se use de manera restringida; (iii) solicitar que mi información personal no sea transferida al extranjero; y (iv) solicitar la revisión y/o corrección de mis datos personales.</p>
 
-                                            <p>Manifiesto que conozco las políticas de intramar shipping sobre
-                                                protección y
-                                                administración de datos personales y que he leído el Manual de
-                                                Protección y
-                                                Uso de Bases de Datos Personales que se encuentra disponible en la
-                                                página
-                                                web <a href="https://www.intramar.com.co/"
-                                                    target="_blank">https://www.intramar.com.co/</a></p>
+                                            <p>A través de la firma del presente documento, otorgo mi consentimiento y autorizo expresamente a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, utilizar mis datos        personales y/o cualquier otro tipo de información que me sea solicitada, con los fines comerciales y operativos propios del servicio en la cadena de suministro de comercio exterior, en el entendido de que dichos datos se encontrarán debidamente protegidos y su acceso estará limitado a aquellas personas debidamente autorizadas para manejarlos.
+                                            autorizo de manera expresa a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo, para que consulte(n) y/o solicite(n) información legal, jurídica, comercial y financiera de la entidad que legalmente represento, así como la de los socios y personas registradas en el documento de existencia y representación legal de la misma; en las entidades públicas y/o privadas de control a nivel local, nacional y/o internacional; durante el proceso de vinculación, y mientras exista la relación comercial. <a href="https://www.intramar.com.co/"target="_blank">https://www.intramar.com.co/</a></p>
                                         </div>
 
-                                        <h6>AVISO DE PRIVACIDAD:</h6>
+                                        <h6>93.AVISO DE PRIVACIDAD:</h6>
                                         <div class="border p-3 mb-3 bg-light"
                                             style="max-height: 200px; overflow-y: auto;">
                                             <p>De conformidad con lo dispuesto en la Ley 1581 de 2012 y demás normas
@@ -45,14 +39,14 @@
                                                 políticas establecidas por nuestra Compañía para el tratamiento de
                                                 datos.
                                                 Dicho manual puede ser consultado en la página web: <a
-                                                    href="https://calidad@sightlog/"
-                                                    target="_blank">https://www.intramar.com.co/</a></p>
+                                                    href="https://www.intramar.com.co/responsabilidad-corporativa"
+                                                    target="_blank">https://www.intramar.com.co/responsabilidad-corporativa</a></p>
                                             <p>NOTA: Usted podrá actualizar, rectificar, corregir o solicitar la
                                                 supresión
-                                                de sus datos enviando un correo electrónico a -------------------</p>
+                                                de sus datos enviando un correo electrónico a calidad@sightlog.com</p>
                                         </div>
 
-                                        <h6>ORIGEN DE FONDOS Y ADMINISTRACIÓN DE RIESGO DE LAVADO DE ACTIVOS:</h6>
+                                        <h6>94.ORIGEN DE FONDOS Y ADMINISTRACIÓN DE RIESGO DE LAVADO DE ACTIVOS:</h6>
                                         <div class="border p-3 mb-3 bg-light"
                                             style="max-height: 200px; overflow-y: auto;">
                                             <p>Conforme a la información ingresada, actuando en nombre propio y/o como
@@ -90,42 +84,41 @@
                                                 shipping para consultar toda la documentación presentada.</p>
                                         </div>
 
-                                        <h6>93. OTRAS DECLARACIONES:</h6>
+                                        <h6>95.DECLARACIÓN ORIGEN DE FONDO:</h6>
                                         <div class="border p-3 mb-3 bg-light"
                                             style="max-height: 200px; overflow-y: auto;">
-                                            <p>En nombre propio y/o en nombre de la persona jurídica que represento,
-                                                declaro
-                                                que: (i) la empresa que represento cumple con los requisitos mínimos de
-                                                seguridad de la cadena de suministro y en su operación realiza practicas
-                                                que
-                                                permiten mitigar el riesgo de actividades ilícitas o incidentes de
-                                                contaminación; (ii) en el desarrollo de nuestras actividades cumplimos
-                                                con
-                                                los lineamentos de la organización internacional del trabajo (OIT),
-                                                respetamos los derechos laborales de cada uno de los empleados y en
-                                                ningún
-                                                caso incurrimos en conductas de abuso o explotación laboral; (iii)
-                                                cumplimos
-                                                con la legislación ambiental vigente y desarrollamos buenas prácticas
-                                                ambientales; (iv) en la actualidad los representantes, socios o sus
-                                                miembros
-                                                de junta directiva, no tienen ningún parentesco o conflicto de intereses
-                                                con
-                                                la persona responsable de negociar el bien o servicio y si en el futuro
-                                                se
-                                                llegara a presentar esta situación me comprometo a reportar a intramar
-                                                shipping en su canal de denuncia habilitado.</p>
-                                            <p>Con mi firma declaro que cuento con las autorizaciones y facultades
-                                                necesarias para entregar a intramar shipping la información y datos
-                                                personales aquí suministrados. Declaro que esta información es correcta
-                                                y me
-                                                comprometo a mantenerla actualizada, autorizando intramar shipping
-                                                también
-                                                que se compruebe la veracidad de la misma.</p>
+                                            <p>Declaro que mis ingresos y activos y los de la organización que represento no provienen de ninguna de las actividades ilícitas contempladas en la Ley y no admitiré que terceros  efectúen pagos o abonos a mi cargo o a la organización que represento con fondos provenientes de actividades ilícitas contempladas en el Código Penal Colombiano o cualquier Norma   que lo modifique o adicione; ni efectuaremos transacciones destinadas a tales actividades, o a favor de personas relacionadas con las mismas.
+                                            Aceptamos que las relaciones jurídicas que nos vinculen, en cuanto utilice sus productos y/o servicios, se regirán por los contratos y políticas internas.</p>
                                             <p>NOTA: El diligenciamiento de este formato no compromete a INTRAMAR SHIPPING
                                                para iniciar el vínculo contractual, comercial o cualquier otro
                                                vínculo.
                                             </p>
+                                        </div>
+
+                                         <h6>96.ACUERDO MUTUO DE SEGURIDAD:</h6>
+                                        <div class="border p-3 mb-3 bg-light"
+                                            style="max-height: 200px; overflow-y: auto;">
+                                            <p>Mediante firma del presente documento; 	 	se compromete, entre otros aspectos a:
+                                            1. Suministrar la información y los documentos soporte requeridos para el desarrollo de la operación.
+                                            2. Permitir realizar visitas/auditorías a sus instalaciones cuando se considere necesario.
+                                            3. Aplicar procedimientos de seguridad en el lugar del cargue, procedimientos de inspección y sellado de contenedores o tráiler, y de esta manera minimizar el riesgo de contaminación, robo o daños de la mercancía. Los sellos utilizados para precintar los contenedores deben cumplir o exceder los requisitos de la Norma ISO 17712.
+                                            4. Reconocer la importancia de establecer procesos y procedimientos de seguridad en sus actividades, instalaciones y personal, y hacer extensivas estas buenas prácticas a sus asociados de negocio (Clientes, proveedores y terceras partes).
+                                            5. Garantizar que los elementos y/o servicios proveídos son controlados, manipulados y supervisados por personal confiable y que en todo momento recibirán un buen uso, impidiendo que sean distribuidos a personas no autorizadas, ni utilizados en actividades ilícitas como contrabando, lavados de activos, narcotráfico, terrorismo, entre otros aspectos, que atenten contra el buen nombre y el prestigio de la organización, y a la cadena de suministro.
+                                            6. Garantizar que los documentos y anexos necesarios para el correcto desarrollo de la operación sean totalmente legales y así mismo renovar la información de cámara de comercio, estados financieros, y demás documentos aplicables cuando así haya lugar, o cuando la organización lo solicite.
+                                            7. No manejar o traficar con sustancias o elementos narcóticos, explosivos ilícitos o prohibidos, armas o partes de ellas, municiones, material de guerra o sus partes u otros elementos que no cumplan con las obligaciones legales establecidas.
+                                        </p>
+                                        </div>
+
+                                         <h6>97.RESPONSABILIDAD CORPORATIVA EMPRESARIAL:</h6>
+                                        <div class="border p-3 mb-3 bg-light"
+                                            style="max-height: 200px; overflow-y: auto;">
+                                            <p>Declaramos que nuestra organización establece y promueve entre nuestros empleados, clientes, proveedores y demás grupos de interés, conductas éticas que impulsan nuestra cultura de cumplimiento normativo, legal, ambiental y financiero con el fin de mantener nuestra responsabilidad corporativa empresarial.
+                                            Declaramos que la información aquí suministrada concuerda con la realidad y asumo plena responsabilidad por la veracidad de la misma. Yo, el firmante, portador del documento de identificación indicado en este formulario, afirmo que tanto mis actividades como mi profesión, ocupación u oficio son lícitos y los ejerzo dentro de los marcos legales.
+                                            Nos comprometemos a:
+                                            1. Reportar a la(s) empresa(s) por la(s) cual(es) me vinculo o actualizo cualquier cambio que afecte los datos en este documento entregados (Razón social, actividad económica, domicilio principal, correo de facturación electrónica, representantes legales, socios, directivos, etc.).
+                                            2.. Entregar información oportuna cuando así lo requiera(n) la(s) empresa(s) por la(s) cual(es) me vinculé o actualicé.
+                                            3. No será responsabilidad de la(s) empresa(s) por la(s) cual(es) me vinculé o actualicé, los sobrecostos, gastos o causas sancionatorias derivadas en los tiempos de ejecución de la operación por ocasión de la no actualización documental antes del 01 de abril del periodo aplicable.
+                                        </p>
                                         </div>
 
                                         <div class="form-check form-check-inline">
