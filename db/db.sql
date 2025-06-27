@@ -1,257 +1,299 @@
-CREATE DATABASE IF NOT EXISTS proveedores CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE proveedores;
+-- Crear base de datos
+CREATE DATABASE IF NOT EXISTS calidad CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE calidad;
 
--- SESIÓN 1: Información Básica del Proveedor
+-- SESION 1: Información Básica del Proveedor
 CREATE TABLE sesion1 (
-    numero_identificacion VARCHAR(30) PRIMARY KEY,
+    id VARCHAR(30) PRIMARY KEY, -- Número de identificación
     razon_social VARCHAR(255) NOT NULL,
     tipo_identificacion VARCHAR(50) NOT NULL,
+    numero_identificacion VARCHAR(30) NOT NULL,
     tipo_proveedor VARCHAR(100) NOT NULL,
-    numero_celular VARCHAR(30),
-    correo_electronico VARCHAR(100),
-    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP
+    numero_celular VARCHAR(30) NOT NULL,
+    correo_electronico VARCHAR(100) NOT NULL
 );
 
--- SESIÓN 2: Documentación Proveedor no Gran Contribuyente
+-- SESION 2: Proveedor no Gran Contribuyente
 CREATE TABLE sesion2 (
-    numero_identificacion VARCHAR(30),
-    rut_vigente_ruta VARCHAR(500),
+    id VARCHAR(30),
+    rut_vigente_ruta VARCHAR(255),
     rut_vigente_estado VARCHAR(30),
-    certificado_existencia_ruta VARCHAR(500),
+    certificado_existencia_ruta VARCHAR(255),
     certificado_existencia_estado VARCHAR(30),
-    cedula_representante_ruta VARCHAR(500),
+    cedula_representante_ruta VARCHAR(255),
     cedula_representante_estado VARCHAR(30),
-    estados_financieros_ruta VARCHAR(500),
+    estados_financieros_ruta VARCHAR(255),
     estados_financieros_estado VARCHAR(30),
-    declaracion_renta_ruta VARCHAR(500),
+    declaracion_renta_ruta VARCHAR(255),
     declaracion_renta_estado VARCHAR(30),
-    certificacion_bancaria_ruta VARCHAR(500),
+    certificacion_bancaria_ruta VARCHAR(255),
     certificacion_bancaria_estado VARCHAR(30),
-    referencia_comercial_ruta VARCHAR(500),
+    referencia_comercial_ruta VARCHAR(255),
     referencia_comercial_estado VARCHAR(30),
-    certificados_seguridad_ruta VARCHAR(500),
+    certificados_seguridad_ruta VARCHAR(255),
     certificados_seguridad_estado VARCHAR(30),
-    resolucion_habilitacion_ruta VARCHAR(500),
+    resolucion_habilitacion_ruta VARCHAR(255),
     resolucion_habilitacion_estado VARCHAR(30),
-    plan_contingencia_ruta VARCHAR(500),
+    plan_contingencia_ruta VARCHAR(255),
     plan_contingencia_estado VARCHAR(30),
-    fachada_nomenclatura_ruta VARCHAR(500),
+    autoevaluacion_ruta VARCHAR(255),
+    autoevaluacion_estado VARCHAR(30),
+    fachada_nomenclatura_ruta VARCHAR(255),
     fachada_nomenclatura_estado VARCHAR(30),
-    formularios_ruta VARCHAR(500),
+    formularios_ruta VARCHAR(255),
     formularios_estado VARCHAR(30),
-    autoevaluacion_ruta VARCHAR(500),
-    autoevaluacion_estado VARCHAR(30),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    desea_diligenciar VARCHAR(10),
+    motivo_no TEXT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 3: Documentación Proveedor Gran Contribuyente
+-- SESION 3: Proveedor Gran Contribuyente
 CREATE TABLE sesion3 (
-    numero_identificacion VARCHAR(30),
-    rut_vigente_nc_ruta VARCHAR(500),
+    id VARCHAR(30),
+    rut_vigente_nc_ruta VARCHAR(255),
     rut_vigente_nc_estado VARCHAR(30),
-    certificado_existencia_nc_ruta VARCHAR(500),
+    certificado_existencia_nc_ruta VARCHAR(255),
     certificado_existencia_nc_estado VARCHAR(30),
-    cedula_representante_nc_ruta VARCHAR(500),
+    cedula_representante_nc_ruta VARCHAR(255),
     cedula_representante_nc_estado VARCHAR(30),
-    certificacion_bancaria_nc_ruta VARCHAR(500),
+    certificacion_bancaria_nc_ruta VARCHAR(255),
     certificacion_bancaria_nc_estado VARCHAR(30),
-    referencia_comercial_nc_ruta VARCHAR(500),
+    referencia_comercial_nc_ruta VARCHAR(255),
     referencia_comercial_nc_estado VARCHAR(30),
-    certificados_seguridad_nc_ruta VARCHAR(500),
+    certificados_seguridad_nc_ruta VARCHAR(255),
     certificados_seguridad_nc_estado VARCHAR(30),
-    resolucion_habilitacion_nc_ruta VARCHAR(500),
+    resolucion_habilitacion_nc_ruta VARCHAR(255),
     resolucion_habilitacion_nc_estado VARCHAR(30),
-    plan_contingencia_nc_ruta VARCHAR(500),
+    plan_contingencia_nc_ruta VARCHAR(255),
     plan_contingencia_nc_estado VARCHAR(30),
-    fachada_nomenclatura_nc_ruta VARCHAR(500),
+    autoevaluacion_nc_ruta VARCHAR(255),
+    autoevaluacion_nc_estado VARCHAR(30),
+    fachada_nomenclatura_nc_ruta VARCHAR(255),
     fachada_nomenclatura_nc_estado VARCHAR(30),
-    formularios_nc_ruta VARCHAR(500),
+    formularios_nc_ruta VARCHAR(255),
     formularios_nc_estado VARCHAR(30),
-    autoevaluacion_ruta VARCHAR(500),
-    autoevaluacion_estado VARCHAR(30),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 4: Documentación Persona Natural
+-- SESION 4: Persona Natural
 CREATE TABLE sesion4 (
-    numero_identificacion VARCHAR(30),
-    cedula_ciudadania_ruta VARCHAR(500),
+    id VARCHAR(30),
+    cedula_ciudadania_ruta VARCHAR(255),
     cedula_ciudadania_estado VARCHAR(30),
-    rut_natural_ruta VARCHAR(500),
+    rut_natural_ruta VARCHAR(255),
     rut_natural_estado VARCHAR(30),
-    certificacion_bancaria_natural_ruta VARCHAR(500),
+    certificacion_bancaria_natural_ruta VARCHAR(255),
     certificacion_bancaria_natural_estado VARCHAR(30),
-    fachada_nomenclatura_natural_ruta VARCHAR(500),
+    fachada_nomenclatura_natural_ruta VARCHAR(255),
     fachada_nomenclatura_natur_estado VARCHAR(30),
-    formularios_natural_ruta VARCHAR(500),
+    formularios_natural_ruta VARCHAR(255),
     formularios_natural_estado VARCHAR(30),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 5: Documentación Mandatorio
+-- SESION 5: Mandatorio (Aerolinea, Naviera)
 CREATE TABLE sesion5 (
-    numero_identificacion VARCHAR(30),
-    rut_vigente_ruta VARCHAR(500),
+    id VARCHAR(30),
+    rut_vigente_ruta VARCHAR(255),
     rut_vigente_estado VARCHAR(30),
-    camara_comercio_ruta VARCHAR(500),
-    camara_comercio_estado VARCHAR(30),
-    cedula_representante_ruta VARCHAR(500),
-    cedula_representante_estado VARCHAR(30),
-    certificacion_bancaria_ruta VARCHAR(500),
+    certificacion_bancaria_ruta VARCHAR(255),
     certificacion_bancaria_estado VARCHAR(30),
-    formularios_natural_ruta VARCHAR(500),
+    camara_comercio_ruta VARCHAR(255),
+    camara_comercio_estado VARCHAR(30),
+    cedula_representante_ruta VARCHAR(255),
+    cedula_representante_estado VARCHAR(30),
+    formularios_natural_ruta VARCHAR(255),
     formularios_natural_estado VARCHAR(30),
     desea_diligenciar VARCHAR(10),
     motivo_no TEXT,
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 6: Información de Contacto y Empresa
+-- SESION 6: Información de Contacto y Empresa
 CREATE TABLE sesion6 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     direccion_domicilio VARCHAR(255),
-    pais VARCHAR(100),
-    ciudad VARCHAR(100),
+    pais VARCHAR(50),
+    departamento VARCHAR(50),
+    ciudad VARCHAR(50),
     telefono VARCHAR(30),
-    correo_contacto VARCHAR(100),
+    email_contacto VARCHAR(100),
+    codigo_postal VARCHAR(20),
+    anios_experiencia INT,
+    autoretenedor VARCHAR(10),
+    gran_contribuyente VARCHAR(10),
+    numero_resolucion VARCHAR(50),
+    fecha_resolucion DATE,
+    tipo_empresa VARCHAR(50),
+    tipo_sociedad VARCHAR(50),
     fecha_constitucion DATE,
-    productos_ofrecidos VARCHAR(255),
+    productos_ofrecidos VARCHAR(100),
     otros_productos VARCHAR(255),
     zona_franca VARCHAR(10),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 7: Representante Legal
+-- SESION 7: Información del Representante Legal Principal
 CREATE TABLE sesion7 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     representante_nombres VARCHAR(255),
     representante_tipo_id VARCHAR(50),
-    representante_numero_id VARCHAR(50),
+    representante_numero_id VARCHAR(30),
+    representante_tipo VARCHAR(50),
     otro_tipo_representante VARCHAR(100),
     maneja_recursos_publicos VARCHAR(10),
     reconocimiento_publico VARCHAR(10),
     poder_publico VARCHAR(10),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    servidor_publico VARCHAR(10),
+    vinculo_ppe VARCHAR(10),
+    representante_nacionalidad VARCHAR(50),
+    representante_pais_domicilio VARCHAR(50),
+    representante_email VARCHAR(100),
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 8: Personas de Contacto (pueden ser varias)
+-- SESION 8: Personas de Contacto (varios por proveedor, tabla hija)
 CREATE TABLE sesion8 (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    numero_identificacion VARCHAR(30),
-    nombres_apellidos VARCHAR(255),
-    cargo VARCHAR(100),
-    telefono VARCHAR(30),
-    correo VARCHAR(100),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    proveedor_id VARCHAR(30) NOT NULL,
+    contacto_nombres VARCHAR(255) NOT NULL,
+    contacto_cargo VARCHAR(100) NOT NULL,
+    contacto_telefono VARCHAR(50) NOT NULL,
+    contacto_email VARCHAR(100) NOT NULL,
+    FOREIGN KEY (proveedor_id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 9: Conocimiento Mejorado de PEP
+-- SESION 9: Conocimiento Mejorado de Persona Expuesta Políticamente (PEP)
 CREATE TABLE sesion9 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     pep_recursos_publicos VARCHAR(10),
+    pep_cargo_publico VARCHAR(10),
+    pep_relacion VARCHAR(10),
     pep_nombres VARCHAR(255),
     pep_tipo_identificacion VARCHAR(50),
-    pep_otro_tipo_identificacion VARCHAR(100),
+    pep_otro_tipo_identificacion VARCHAR(50),
     pep_numero_identificacion VARCHAR(50),
-    pep_pais_domicilio VARCHAR(100),
-    pep_cargo VARCHAR(255),
-    pep_entidad_publica VARCHAR(255),
+    pep_pais_domicilio VARCHAR(50),
+    pep_cargo VARCHAR(100),
+    pep_entidad_publica VARCHAR(100),
     pep_activo VARCHAR(10),
     pep_fecha_desvinculacion DATE,
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 10: Beneficiarios Finales
+-- SESION 10: Conocimiento de Beneficiarios Finales
 CREATE TABLE sesion10 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     sistema_conocimiento_terceros VARCHAR(10),
     politicas_identificacion VARCHAR(10),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 11: Información Financiera
+-- SESION 11: Información Financiera
 CREATE TABLE sesion11 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     actividad_economica TEXT,
-    total_activos DECIMAL(18,2),
-    total_pasivos DECIMAL(18,2),
-    total_patrimonio DECIMAL(18,2),
-    total_ingresos DECIMAL(18,2),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    sector_economico VARCHAR(100),
+    divisa_reporte VARCHAR(10),
+    otros_ingresos VARCHAR(50),
+    costos_gastos VARCHAR(50),
+    total_activos INT,
+    total_pasivos INT,
+    total_patrimonio INT,
+    total_ingresos INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 12: Operaciones Internacionales
+-- SESION 12: Operaciones Internacionales
 CREATE TABLE sesion12 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     operaciones_internacionales VARCHAR(10),
     importaciones VARCHAR(10),
     exportaciones VARCHAR(10),
     inversiones VARCHAR(10),
+    pago_servicios VARCHAR(10),
     otra_operacion VARCHAR(255),
     tipo_mercancia TEXT,
     obligaciones_tributarias VARCHAR(10),
     beneficiario_nombre VARCHAR(255),
     beneficiario_tipo_id VARCHAR(50),
-    beneficiario_otro_tipo VARCHAR(100),
+    beneficiario_otro_tipo VARCHAR(50),
     beneficiario_numero_id VARCHAR(50),
-    beneficiario_pais VARCHAR(100),
+    beneficiario_pais VARCHAR(50),
     beneficiario_direccion VARCHAR(255),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 13: Referencia Comercial
+-- SESION 13: Referencias Comerciales (varias por proveedor, tabla hija)
 CREATE TABLE sesion13 (
-    numero_identificacion VARCHAR(30),
-    nombre_razon_social VARCHAR(255),
-    ciudad_domicilio VARCHAR(100),
-    nombre_contacto VARCHAR(255),
-    cargo_contacto VARCHAR(100),
-    telefono_contacto VARCHAR(30),
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    proveedor_id VARCHAR(30) NOT NULL,
+    nombre_razon_social VARCHAR(255) NOT NULL,
+    ciudad_domicilio VARCHAR(255) NOT NULL,
+    nombre_contacto VARCHAR(255) NOT NULL,
+    cargo_contacto VARCHAR(255) NOT NULL,
+    telefono_contacto VARCHAR(50) NOT NULL,
+    FOREIGN KEY (proveedor_id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 14: Certificaciones
+-- SESION 14: Certificaciones
 CREATE TABLE sesion14 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     gestion_calidad VARCHAR(10),
     otro_gestion_calidad VARCHAR(255),
+    numero_certificado_calidad VARCHAR(255),
+    fecha_vigencia_calidad DATE,
+    certificado_gestion_calidad VARCHAR(255),
+    certificado_gestion_calidad_estado VARCHAR(30),
     seguridad_suministro VARCHAR(10),
+    otro_seguridad_suministro VARCHAR(255),
+    numero_certificado_calidad_84 VARCHAR(255),
+    fecha_vigencia_calidad_84 DATE,
+    certificado_gestion_ambiental_84 VARCHAR(255),
+    certificado_gestion_ambiental_estado_84 VARCHAR(30),
+    operador_economico VARCHAR(10),
+    numero_certificado_operador VARCHAR(255),
+    fecha_vigencia_operador DATE,
+    certificado_operador_economico VARCHAR(255),
+    certificado_operador_economico_estado VARCHAR(30),
+    resolucion_vigencia VARCHAR(255),
+    sistema_sarlaft VARCHAR(10),
+    otro_sistema_sarlaft VARCHAR(255),
+    licencias_ambientales VARCHAR(10),
+    otro_licencias_ambientales VARCHAR(255),
     seguridad_salud VARCHAR(10),
     otro_seguridad_salud VARCHAR(255),
     avance_ss VARCHAR(50),
     calidad_laboratorios VARCHAR(10),
-    detalle_certificaciones TEXT,
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    otro_calidad_laboratorios VARCHAR(255),
+    detalle_certificaciones VARCHAR(255),
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 15: Declaraciones y Autorizaciones
+-- SESION 15: Declaraciones y Autorizaciones
 CREATE TABLE sesion15 (
-    numero_identificacion VARCHAR(30),
+    id VARCHAR(30),
     acepta_declaraciones VARCHAR(10),
-    fecha_aceptacion DATETIME,
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );
 
--- SESIÓN 16: Documentos Requeridos (PDF y adjuntos en SharePoint)
+-- SESION 16: Firma Digital
 CREATE TABLE sesion16 (
-    numero_identificacion VARCHAR(30),
-    ruta_pdf_sharepoint VARCHAR(500),
-    ruta_adjuntos_sharepoint TEXT,
-    firma_imagen VARCHAR(500),
-    fecha_envio DATETIME DEFAULT CURRENT_TIMESTAMP,
-    PRIMARY KEY (numero_identificacion),
-    FOREIGN KEY (numero_identificacion) REFERENCES sesion1(numero_identificacion) ON DELETE CASCADE
+    id VARCHAR(30),
+    firma_imagen VARCHAR(255), -- Ruta en SharePoint
+    fecha_firma DATETIME,
+    PRIMARY KEY (id),
+    FOREIGN KEY (id) REFERENCES sesion1(id)
 );

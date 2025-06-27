@@ -796,13 +796,11 @@ function agregarReferencia13() {
 }
 
 function eliminarReferencia13(idx) {
-    // Cuenta la referencia estática (la que no tiene data-idx) y las dinámicas
     const referenciasEstaticas = document.querySelectorAll('.row.g-3.referencia13:not([data-idx])');
     const referenciasDinamicas = document.querySelectorAll('.referencia13[data-idx]');
     const total = referenciasEstaticas.length + referenciasDinamicas.length;
 
-    // Solo permite eliminar si quedan más de 2 referencias en total
-    if (total > 2) {
+    if (total - 1 >= 2) {
         const ref = document.querySelector(`.referencia13[data-idx="${idx}"]`);
         if (ref) ref.remove();
     } else {
@@ -810,11 +808,13 @@ function eliminarReferencia13(idx) {
     }
 }
 
+// Al cargar la página, agrega una referencia dinámica para que siempre haya mínimo 2
 document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('contenedor-referencias13')) {
         agregarReferencia13();
     }
 });
+
 
 document.getElementById('gestion_calidad').addEventListener('change', function() {
     const campos = document.getElementById('campos_certificado_calidad');
